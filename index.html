@@ -385,9 +385,9 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
   /* schools (cards), who: n = Nguyên, t = Thái, b = both */
   var Q=[
     {id:"t-moti",who:"t",d:"2027-02-28",own:"2027-01-15",ico:"MOTI",k:"nus",school:"NUS",name:"MSc Management of Technology & Innovation",round:"Xét liên tục",fee:"",
-     notes:["Hồ sơ làm sẵn, có điểm GMAT là nộp, khoảng 10 đến 15/1","GMAT không bắt buộc nhưng được ưu tiên","Không cần referee","Rebate tới 40% cho người ASEAN, trường tự xét sau khi có offer"]},
+     notes:["Hồ sơ làm sẵn, có điểm GMAT là nộp, khoảng 10 đến 15/1","GMAT không bắt buộc nhưng được ưu tiên","Không cần referee","Lớp học 18h đến 21h: hỏi NUS xác nhận Student's Pass trước 31/10","Rebate tới 40% cho người ASEAN, trường tự xét sau khi có offer"]},
     {id:"t-msba",who:"t",d:"2027-01-31",ico:"MSBA",k:"nus",school:"NUS",name:"MSc Business Analytics",round:"Deadline duy nhất",fee:"",
-     notes:["Nộp bằng điểm GMAT lần 1, không kịp thi lại","Nộp rồi thì không bổ sung điểm GMAT được nữa","Bỏ qua BAC scholarship (hạn 15/12, phải nộp trước khi có GMAT)"]},
+     notes:["Nộp bằng điểm GMAT lần 1, không kịp thi lại","Nộp rồi thì không bổ sung điểm GMAT được nữa","Cần essay 350 chữ hoặc video 3 phút, 2 referee","Bỏ qua BAC scholarship (hạn 15/12, phải nộp trước khi có GMAT)"]},
     {id:"t-aii",who:"t",d:"2027-01-31",ico:"AI&I",k:"nus",school:"NUS",name:"MSc AI & Innovation (SCALE)",round:"Deadline duy nhất",fee:"",
      notes:["Không yêu cầu GMAT, nộp trước 31/1","Scholarship cho người ASEAN do trường tự xét, không phải nộp thêm","Lớp core học buổi tối và thứ 7"]},
     {id:"t-ntumsba",who:"t",d:"2027-01-31",alt:"2027-03-31",ico:"MSBA",k:"ntu",school:"NTU",name:"MSc Business Analytics",round:"Round 2 hoặc 3",fee:"",
@@ -402,16 +402,16 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
      notes:["Nộp sau khi có điểm GMAT, trước 15/2","Không cần referee","Motivation letter tối đa 500 chữ","Round cuối không có scholarship, kết quả có thể tới tháng 6, 7"]},
     {id:"n-msi",who:"n",d:"2027-02-15",ico:"MSI",k:"nus",school:"NUS",name:"MSc Strategic Analysis & Innovation",round:"Round cuối",fee:"S$100",
      notes:["Nộp cùng lúc với MAI, trước 15/2","Motivation letter viết riêng, không dùng lại bài MAI","Có interview nếu vào shortlist"]},
-    {id:"n-tip",who:"n",d:"2027-02-26",ico:"TIP",k:"safe",school:"NTU",name:"MSc Technopreneurship & Innovation",round:"Trường backup",fee:"S$50",
-     notes:["Không cần GMAT","2 referee, business-idea statement theo mẫu của trường","Grant phải nộp thêm form và essay riêng, chỉ làm nếu còn sức"]},
     {id:"n-me",who:"n",d:"2027-03-31",ico:"ME",k:"safe",school:"NTU",name:"MSc Managerial Economics",round:"Trường backup",fee:"S$100",
      notes:["Không cần GMAT, không cần referee","Statement of purpose 600 chữ","Xét liên tục, nộp sớm được ưu tiên"]}
   ];
   /* milestones */
   var EV=[
     {who:"b",d:"2026-10-31",t:"Đặt lịch thi GMAT",n:"Thi tại trung tâm, slot ở HCM ít nên đặt sớm",ids:["gmat"],k:"res"},
-    {who:"n",d:"2026-11-15",t:"Chốt 2 referee cho NTU",n:"Dùng chung cho MiM, MMS và TIP",ids:["n-mim","n-mms","n-tip"],k:"ntu"},
+    {who:"n",d:"2026-11-15",t:"Chốt 2 referee cho NTU",n:"Dùng chung cho MiM và MMS",ids:["n-mim","n-mms"],k:"ntu"},
     {who:"b",d:"2026-11-21",t:"Đi Hàn 21 đến 24/11",n:"Nghỉ ôn mấy ngày này",ids:["life"],k:"life",life:1},
+    {who:"t",d:"2026-10-31",t:"Hỏi NUS: MOTI có cấp Student's Pass không",n:"Lớp MOTI học 18h đến 21h, phải có xác nhận của trường trước khi chốt",ids:["t-moti"],k:"nus"},
+    {who:"t",d:"2026-11-30",t:"Chốt 2 referee",n:"Dùng chung cho NUS MSBA, NTU MSBA và SMU MITB",ids:["t-msba","t-ntumsba","t-mitb"],k:"res"},
     {who:"t",d:"2026-12-12",t:"Hồ sơ MOTI sẵn sàng",n:"Chỉ còn chờ điểm GMAT",ids:["t-moti"],k:"nus"},
     {who:"n",d:"2026-12-20",t:"Xong motivation letter và essays",n:"Tháng 1 chỉ còn lo thi và nộp",ids:["n-mai","n-msi","n-mim","n-mms"],k:"res"},
     {who:"b",d:"2027-01-08",t:"Thi GMAT",n:"Thái thi 8/1 ở VNPro. Nguyên thi cùng tuần (dự kiến)",ids:["gmat"],k:"res"},
@@ -420,7 +420,6 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     {who:"t",d:"2027-01-31",t:"Deadline NUS MSBA, NUS AI & Innovation, NTU MSBA round 2",n:"Nộp bằng điểm GMAT lần 1, không kịp thi lại",ids:["t-msba","t-aii","t-ntumsba"],k:"nus"},
     {who:"n",d:"2027-01-31",t:"Nộp NTU MiM và MMS (round 2)",n:"Nếu điểm GMAT lần 1 ổn. Thi lại thì dời sang round 3 (31/3)",ids:["n-mim","n-mms"],k:"ntu"},
     {who:"n",d:"2027-02-15",t:"Deadline NUS MAI và NUS MSI",n:"Round cuối, kịp cả khi thi lại GMAT cuối tháng 1",ids:["n-mai","n-msi"],k:"nus"},
-    {who:"n",d:"2027-02-26",t:"Deadline NTU TIP",n:"Trường backup, không cần GMAT",ids:["n-tip"],k:"safe"},
     {who:"t",d:"2027-02-28",t:"Hạn cuối NUS MOTI",n:"Đã nộp từ tháng 1 thì không cần làm gì",ids:["t-moti"],k:"nus"},
     {who:"b",d:"2027-03-01",t:"Bắt đầu có kết quả",n:"Các trường báo dần từ tháng 3 tới khoảng tháng 6",ids:["offer"],k:"res"},
     {who:"n",d:"2027-03-31",t:"Deadline NTU Managerial Econ, NTU round 3",n:"Round 3 của MiM và MMS nếu đã thi lại GMAT",ids:["n-me","n-mim","n-mms"],k:"safe"},
@@ -531,7 +530,6 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     {id:"n-mms",label:"NTU MMS",k:"ntu",who:"n",prep:["2026-11-01","2027-01-31"],dl:"2027-01-31",retake:["2027-02-01","2027-03-31"],alt:["2027-03-31","R3 31/3"]},
     {id:"n-mai",label:"NUS MAI",k:"nus",who:"n",prep:["2026-10-11","2027-02-15"],dl:"2027-02-15"},
     {id:"n-msi",label:"NUS MSI",k:"nus",who:"n",prep:["2026-10-11","2027-02-15"],dl:"2027-02-15"},
-    {id:"n-tip",label:"NTU TIP",tag:"backup",k:"ntu",who:"n",prep:["2027-01-15","2027-02-26"],dl:"2027-02-26"},
     {id:"n-me",label:"NTU Managerial Econ",tag:"backup",k:"ntu",who:"n",prep:["2027-02-15","2027-03-31"],dl:"2027-03-31"},
     {grp:"Thái",who:"t"},
     {id:"t-moti",label:"NUS MOTI",k:"nus",who:"t",prep:["2026-10-11","2027-01-15"],plan:[["2027-01-15","nộp 15/1"]],slack:["2027-01-16","2027-02-28"],dl:"2027-02-28"},
