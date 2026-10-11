@@ -393,7 +393,7 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     {id:"t-ntumsba",who:"t",d:"2027-01-31",alt:"2027-03-31",ico:"MSBA",k:"ntu",school:"NTU",name:"MSc Business Analytics",round:"Round 2 hoặc 3",fee:"",
      notes:["Điểm GMAT lần 1 ổn thì nộp round 2 (31/1), thi lại thì nộp round 3 (31/3)","Scholarship chỉ xét round 1 nên bỏ qua","Chỉ nhận điểm GMAT thi tại trung tâm"]},
     {id:"t-mitb",who:"t",d:"2027-05-31",own:"2027-03-31",ico:"MITB",k:"smu",school:"SMU",name:"Master of IT in Business",round:"Backup · intake tháng 8",fee:"",
-     notes:["Nộp trước 1/4 để không đụng mùa cưới, hạn của trường là 31/5","Scholarship SMU tự xét, không phải nộp thêm (ASEAN PG cần GMAT 650 thang cũ)","Không apply Vingroup scholarship vì phải về làm cho Vin"]},
+     notes:["Nộp trước 1/4 để không đụng lễ cưới Đà Lạt (3/4) và đám cưới Tây Ninh (15–16/5), hạn của trường là 31/5","Scholarship SMU tự xét, không phải nộp thêm (ASEAN PG cần GMAT 650 thang cũ)","Không apply Vingroup scholarship vì phải về làm cho Vin"]},
     {id:"n-mim",who:"n",d:"2027-01-31",alt:"2027-03-31",ico:"MiM",k:"ntu",school:"NTU",name:"Master in Management",round:"Round 2 hoặc 3",fee:"S$100",
      notes:["Điểm GMAT lần 1 ổn thì nộp round 2 (31/1), thi lại thì nộp round 3 (31/3)","Cần 2 referee và essays","Scholarship chỉ xét round 1 nên bỏ qua","Có video interview nếu vào shortlist"]},
     {id:"n-mms",who:"n",d:"2027-01-31",alt:"2027-03-31",ico:"MMS",k:"ntu",school:"NTU",name:"MSc Marketing Science",round:"Round 2 hoặc 3",fee:"S$100",
@@ -425,8 +425,8 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     {who:"b",d:"2027-03-01",t:"Bắt đầu có kết quả",n:"Các trường báo dần từ tháng 3 tới khoảng tháng 6",ids:["offer"],k:"res"},
     {who:"n",d:"2027-03-31",t:"Deadline NTU Managerial Econ, NTU round 3",n:"Round 3 của MiM và MMS nếu đã thi lại GMAT",ids:["n-me","n-mim","n-mms"],k:"safe"},
     {who:"t",d:"2027-03-31",t:"Nộp SMU MITB, NTU MSBA round 3",n:"MITB nộp trước mùa cưới. NTU MSBA round 3 nếu đã thi lại",ids:["t-mitb","t-ntumsba"],k:"smu"},
-    {who:"b",d:"2027-04-03",t:"Đám cưới ♥",n:"Ngày vui của hai đứa mình",ids:["life"],k:"life",life:1},
-    {who:"b",d:"2027-05-15",t:"Về Tây Ninh 15 đến 16/5",n:"",ids:["life"],k:"life",life:1},
+    {who:"b",d:"2027-04-03",t:"Lễ cưới ở Đà Lạt ♥",n:"Ngày hai đứa nói lời thề",ids:["life"],k:"life",life:1},
+    {who:"b",d:"2027-05-15",t:"Đám cưới ở Tây Ninh 15 đến 16/5 ♥",n:"Tiệc cưới chính với hai bên gia đình",ids:["life"],k:"life",life:1},
     {who:"b",d:"2027-06-30",t:"Chốt offer",n:"Chọn trường, đặt cọc giữ chỗ, rồi làm Student's Pass",ids:["offer","visa"],k:"res"},
     {who:"b",d:"2027-08-01",t:"Nhập học",n:"Tháng 7 nếu học NTU, tháng 8 nếu học NUS hoặc SMU",ids:["start"],k:"res"}
   ];
@@ -521,7 +521,7 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
    *       retake:[from,to] (only if retaking GMAT), alt:[date,label] (round 3 deadline), res:[from,to] (results / visa / start) } */
   var G=[
     {grp:"Việc riêng",who:"b"},
-    {id:"life",label:"Việc riêng",k:"life",who:"b",ev:[["2026-11-21","Hàn 21–24/11"],["2027-04-03","Cưới 3/4"],["2027-05-15","Tây Ninh"]]},
+    {id:"life",label:"Việc riêng",k:"life",who:"b",ev:[["2026-11-21","Hàn 21–24/11"],["2027-04-03","Lễ cưới Đà Lạt 3/4"],["2027-05-15","Cưới Tây Ninh 15–16/5"]]},
     {grp:"Cả hai",who:"b"},
     {id:"gmat",label:"Ôn và thi GMAT",k:"res",who:"b",prep:["2026-10-11","2027-01-08"],plan:[["2026-10-31","đặt lịch"],["2027-01-08","thi 8/1"]],retake:["2027-01-09","2027-01-26"]},
     {grp:"Nguyên",who:"n"},
