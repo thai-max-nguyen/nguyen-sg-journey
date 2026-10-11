@@ -273,6 +273,11 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
 .g-dl.hit,.g-plan.hit{animation:none;outline:3px solid var(--ho-coral);outline-offset:3px}
 .g-ev{top:12px}
 .g-ev.hit{animation:none;background:var(--ho-yellow);border-color:var(--ho-ink)}
+/* fallback = visible but quieter: dashed, lighter */
+.quest.fb{border-style:dashed;opacity:.82}
+.g-row.fb .g-bar{opacity:.5}
+.g-row.fb .g-lab{color:var(--ho-ink-3)}
+.vt-item.fb{opacity:.8}
 .g-tag{font:800 9.5px/1 var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:var(--ho-ink-3);border:1px solid var(--ho-line-2);border-radius:999px;padding:3px 6px;margin-left:4px;vertical-align:1px}
 .g-over{position:absolute;left:var(--lab);right:0;top:0;bottom:0;pointer-events:none;z-index:5}
 .g-guide{position:absolute;top:26px;bottom:0;border-left:1.5px dashed rgba(23,33,58,.38)}
@@ -416,7 +421,11 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     {id:"n-msi",who:"n",d:"2027-02-15",own:"2027-02-07",ico:"MSI",k:"nus",school:"NUS",name:"MSc Strategic Analysis & Innovation",round:"Round cuối",fee:"S$100",
      notes:["Nộp cùng lúc với MAI, trước 15/2","Motivation letter viết riêng, không dùng lại bài MAI","Có interview nếu vào shortlist"]},
     {id:"n-me",who:"n",d:"2027-03-31",own:"2027-03-14",ico:"ME",k:"safe",school:"NTU",name:"MSc Managerial Economics",round:"Trường backup",fee:"S$100",
-     notes:["Không cần GMAT, không cần referee","Statement of purpose 600 chữ","Xét liên tục, nộp sớm được ưu tiên"]}
+     notes:["Không cần GMAT, không cần referee","Statement of purpose 600 chữ","Xét liên tục, nộp sớm được ưu tiên"]},
+    {id:"n-smumim",who:"n",d:"2027-05-31",own:"2027-03-21",ico:"MiM",k:"smu",school:"SMU",name:"MSc in Management",round:"Fallback · intake tháng 8",fee:"S$100",fb:1,
+     notes:["Dự phòng: chỉ nộp nếu muốn chắc thêm một trường, hoặc GMAT không như ý","Nhận GMAT, GRE hoặc SMU Admission Test (thi riêng của trường, thay được GMAT)","2 referee, 18 tháng full-time, có internship, SMU lo Student's Pass","Nếu nộp thì nộp trước 21/3 cho khỏi đụng lễ cưới. Hạn của trường 31/5"]},
+    {id:"n-smumse",who:"n",d:"2027-06-30",own:"2027-03-21",ico:"MSE",k:"smu",school:"SMU",name:"MSc in Economics",round:"Fallback · intake tháng 8",fee:"S$100",fb:1,
+     notes:["Dự phòng, chọn track Applied Economics (nhẹ phần toán hơn track Econometrics)","Lý do từng loại: nặng định lượng hơn MiM. Chỉ cân nhắc nếu thích hướng kinh tế như NTU Managerial Econ","Nhận GMAT, GRE hoặc SMU Admission Test, 2 referee, có thể có interview","Xét liên tục từ tháng 10 tới tháng 6. Nếu nộp thì nộp trước 21/3"]}
   ];
   /* milestones */
   var EV=[
@@ -436,12 +445,33 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     {who:"b",d:"2027-03-01",t:"Bắt đầu có kết quả",n:"Các trường báo dần từ tháng 3 tới khoảng tháng 6",ids:["offer"],k:"res",main:1},
     {who:"n",d:"2027-03-14",t:"Nộp NTU Managerial Econ (+ round 3 nếu thi lại)",n:"Hạn của trường 31/3, nộp trước mùa cưới. Round 3 của MiM và MMS nếu đã thi lại GMAT",ids:["n-me","n-mim","n-mms"],k:"safe",main:1,school:1},
     {who:"t",d:"2027-03-14",t:"Nộp SMU MITB (+ NTU MSBA round 3 nếu thi lại)",n:"Nộp trước mùa cưới. Hạn MITB 31/5, NTU MSBA round 3 31/3",ids:["t-mitb","t-ntumsba"],k:"smu",main:1,school:1},
+    {who:"n",d:"2027-03-21",t:"Fallback: nộp SMU MiM hoặc SMU MSE (nếu cần)",n:"Không bắt buộc. Nộp nếu muốn chắc thêm hoặc GMAT không như ý (SMU nhận SMU Admission Test). Hạn MiM 31/5, MSE cuối tháng 6",ids:["n-smumim","n-smumse"],k:"smu",fb:1,school:1},
     {who:"b",d:"2027-04-03",t:"Lễ cưới ở Đà Lạt ♥",n:"Ngày hai đứa nói lời thề",ids:["life"],k:"life",life:1},
     {who:"b",d:"2027-05-15",t:"Đám cưới ở Tây Ninh 15 đến 16/5 ♥",n:"Tiệc cưới chính với hai bên gia đình",ids:["life"],k:"life",life:1},
     {who:"b",d:"2027-06-30",t:"Chốt offer",n:"Chọn trường, đặt cọc giữ chỗ, rồi làm Student's Pass",ids:["offer","visa"],k:"res",main:1},
     {who:"b",d:"2027-08-01",t:"Nhập học",n:"Tháng 7 nếu học NTU, tháng 8 nếu học NUS hoặc SMU",ids:["start"],k:"res",main:1}
   ];
-  var PILL={"t-moti":"NUS MOTI","t-msba":"NUS MSBA","t-aii":"NUS AI&I","t-ntumsba":"NTU MSBA","t-mitb":"SMU MITB","t-eai":"NTU Enterprise AI","n-mim":"NTU MiM","n-mms":"NTU MMS","n-mai":"NUS MAI","n-msi":"NUS MSI","n-tip":"NTU TIP","n-me":"NTU Managerial Econ"};
+  /* what to prepare for each milestone (used by the reminder email) — key = who|date */
+  var PREP={
+    "b|2026-10-31":["Chọn ngày thi ở VNPro cùng tuần 8/1 (trung tâm chỉ mở thứ 3, 5, 6)","Đặt và trả phí trên mba.com, tên khớp passport","Làm 1 bài thi thử để biết điểm xuất phát"],
+    "t|2026-12-12":["Statement 1 trang cho MOTI"],
+    "t|2026-12-20":["NUS MSBA: essay 350 chữ hoặc video 3 phút","NUS AI & Innovation: statement","NTU MSBA: essays theo đề trong portal","NTU Enterprise AI: personal statement"],
+    "n|2026-12-20":["NUS MAI: motivation letter tối đa 500 chữ","NUS MSI: motivation letter riêng, tối đa 500 chữ","NTU MiM và MMS: essays theo đề trong portal","NTU Managerial Econ: statement of purpose 600 chữ","Nói trước với 2 referee, xin email công ty hoặc trường của họ"],
+    "b|2027-01-08":["Tuần cuối: mỗi người làm 1 bài thi thử full","Mang passport bản gốc tới trung tâm thi"],
+    "b|2027-01-12":["Xem điểm, quyết nộp luôn hay thi lại khoảng 26/1","Gửi điểm cho các trường trên mba.com"],
+    "t|2027-01-15":["Nộp MOTI kèm điểm GMAT, phí S$109"],
+    "t|2027-01-24":["NUS MSBA và NTU MSBA: điền email 2 referee","Upload bài viết","NUS MSBA nộp rồi không bổ sung GMAT được, kiểm điểm trước khi bấm nộp"],
+    "n|2027-01-24":["Điền email 2 referee, trường tự gửi form cho họ","Upload essays","Phí S$100 mỗi chương trình"],
+    "n|2027-02-07":["Upload 2 motivation letter (MAI và MSI riêng)","Không cần referee","Phí S$100 mỗi chương trình"],
+    "t|2027-02-15":["Personal statement kèm điểm GMAT","Phí S$50"],
+    "b|2027-03-01":["Mỗi tuần check email và portal các trường","NUS MAI, MSI, NTU MiM có thể gọi interview"],
+    "n|2027-03-14":["NTU Managerial Econ: statement 600 chữ, không cần referee","Nếu đã thi lại GMAT: nộp round 3 MiM và MMS"],
+    "t|2027-03-14":["SMU MITB: dùng lại 2 essay đã viết, điền email 2 referee","Nếu đã thi lại GMAT: nộp NTU MSBA round 3"],
+    "n|2027-03-21":["Chỉ khi cần: chọn SMU MiM hoặc SMU MSE","Không có GMAT ổn thì đăng ký SMU Admission Test"],
+    "b|2027-06-30":["Chọn trường, đặt cọc giữ chỗ","Làm Student's Pass theo hướng dẫn của trường"]
+  };
+  EV.forEach(function(e){var x=PREP[e.who+"|"+e.d];if(x)e.prep=x});
+  var PILL={"t-moti":"NUS MOTI","t-msba":"NUS MSBA","t-aii":"NUS AI&I","t-ntumsba":"NTU MSBA","t-mitb":"SMU MITB","t-eai":"NTU Enterprise AI","n-mim":"NTU MiM","n-mms":"NTU MMS","n-mai":"NUS MAI","n-msi":"NUS MSI","n-tip":"NTU TIP","n-me":"NTU Managerial Econ","n-smumim":"SMU MiM","n-smumse":"SMU MSE"};
 
   function D(s){var p=s.split("-").map(Number);return new Date(p[0],p[1]-1,p[2])}
   var today=new Date();today.setHours(0,0,0,0);
@@ -468,7 +498,7 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     var qs=Q.filter(function(q){return mine(q.who)&&D(q.d)>=today}).sort(function(a,b){return D(a.own||a.d)-D(b.own||b.d)});
     var el=document.getElementById("next-school");
     el.innerHTML='<span>Deadline các trường</span>'+qs.map(function(q){var u=q.own||q.d,m=days(u);
-      return '<b><i class="dot" style="background:var('+C[q.k][0]+')"></i>'+(view==="all"?'<em>'+WHO[q.who]+'</em>':'')+q.school+' '+(PILL[q.id]||q.name).replace(q.school+' ','')+'<small>'+('nộp '+fmt(q.own||q.d)+(q.own?' · hạn '+(q.alt?'R2 '+fmt(q.d)+'/R3 '+fmt(q.alt):fmt(q.d)):''))+'</small></b><i class="n'+(m<=7?' hot':'')+'">'+m+'</i>'}).join("");
+      return '<b><i class="dot" style="background:var('+C[q.k][0]+')"></i>'+(view==="all"?'<em>'+WHO[q.who]+'</em>':'')+q.school+' '+(PILL[q.id]||q.name).replace(q.school+' ','')+'<small>'+('nộp '+fmt(q.own||q.d)+(q.own?' · hạn '+(q.alt?'R2 '+fmt(q.d)+' · R3 '+fmt(q.alt):fmt(q.d)):''))+'</small></b><i class="n'+(m<=7?' hot':'')+'">'+m+'</i>'}).join("");
   }
 
   /* ---------- mobile vertical timeline ---------- */
@@ -480,7 +510,7 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
       if(!todayDone&&x>=today){h+='<li class="vt-today">hôm nay, '+fmt(iso(today))+'</li>';todayDone=true}
       if(m!==lastM){h+='<li class="vt-month">Tháng '+(x.getMonth()+1)+'/'+x.getFullYear()+'</li>';lastM=m}
       var pills=e.ids.filter(function(id){return PILL[id]}).map(function(id){var q=qById(id);return '<span class="pill" style="--c:'+cv(q.k,2)+';--t:'+cv(q.k,1)+'">'+PILL[id]+'</span>'}).join("");
-      h+='<li class="vt-item'+(e.life?' life':'')+(x<today?' past':'')+'" data-i="'+i+'" style="--c:'+cv(e.k,0)+'">'+
+      h+='<li class="vt-item'+(e.life?' life':'')+(e.fb?' fb':'')+(x<today?' past':'')+'" data-i="'+i+'" style="--c:'+cv(e.k,0)+'">'+
         '<div class="vt-date"><b>'+x.getDate()+'</b><span>T'+(x.getMonth()+1)+'</span></div><div class="vt-dot" aria-hidden="true"></div>'+
         '<div class="vt-card"><p class="vt-when">'+ownChip(e.who)+whenText(e.d)+'</p><h4>'+e.t+'</h4>'+(e.n?'<p class="n">'+e.n+'</p>':'')+(pills?'<div class="vt-pills">'+pills+'</div>':'')+'</div></li>';
     });
@@ -518,7 +548,7 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     L.innerHTML="";
     Q.filter(function(q){return mine(q.who)}).slice().sort(function(a,b){return D(a.own||a.d)-D(b.own||b.d)}).forEach(function(q){
       var key=q.own||q.d,dl=days(key);
-      var el=document.createElement("details");el.className="quest";el.id="q-"+q.id;
+      var el=document.createElement("details");el.className="quest"+(q.fb?" fb":"");el.id="q-"+q.id;
       el.style.setProperty("--c",cv(q.k,2));el.style.setProperty("--t",cv(q.k,1));el.style.setProperty("--ci",cv(q.k,2));
       if(open["q-"+q.id])el.open=true;
       var when=q.own?'Nộp trước '+fmt(q.own)+' · hạn '+(q.alt?'R2 '+fmt(q.d)+' · R3 '+fmt(q.alt):fmt(q.d)):'Deadline '+fmt(q.d);
@@ -547,6 +577,8 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     {id:"n-mai",label:"NUS MAI",k:"nus",who:"n",prep:["2026-10-11","2027-02-07"],plan:[["2027-02-07","nộp 7/2"]],slack:["2027-02-08","2027-02-15"],dl:"2027-02-15"},
     {id:"n-msi",label:"NUS MSI",k:"nus",who:"n",prep:["2026-10-11","2027-02-07"],plan:[["2027-02-07","nộp 7/2"]],slack:["2027-02-08","2027-02-15"],dl:"2027-02-15"},
     {id:"n-me",label:"NTU Managerial Econ",tag:"backup",k:"ntu",who:"n",prep:["2027-02-15","2027-03-14"],plan:[["2027-03-14","nộp 14/3"]],slack:["2027-03-15","2027-03-31"],dl:"2027-03-31"},
+    {id:"n-smumim",label:"SMU MiM",tag:"fallback",k:"smu",who:"n",fb:1,prep:["2027-03-01","2027-03-21"],plan:[["2027-03-21","nộp 21/3"]],slack:["2027-03-22","2027-05-31"],dl:"2027-05-31"},
+    {id:"n-smumse",label:"SMU MSE",tag:"fallback",k:"smu",who:"n",fb:1,prep:["2027-03-01","2027-03-21"],plan:[["2027-03-21","nộp 21/3"]],slack:["2027-03-22","2027-06-30"],dl:"2027-06-30"},
     {grp:"Thái",who:"t"},
     {id:"t-moti",label:"NUS MOTI",k:"nus",who:"t",prep:["2026-10-11","2027-01-15"],plan:[["2027-01-15","nộp 15/1"]],slack:["2027-01-16","2027-02-28"],dl:"2027-02-28"},
     {id:"t-msba",label:"NUS MSBA",k:"nus",who:"t",prep:["2026-10-11","2027-01-24"],plan:[["2027-01-24","nộp 24/1"]],slack:["2027-01-25","2027-01-31"],dl:"2027-01-31"},
@@ -581,7 +613,7 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
       (r.plan||[]).forEach(function(p){tl+='<i class="g-plan" data-d="'+p[0]+'" style="left:'+gp(p[0])+'%"><b>'+p[1]+'</b></i>'});
       (r.ev||[]).forEach(function(e){tl+='<b class="g-ev" data-d="'+e[0]+'" style="left:'+gp(e[0])+'%">'+e[1]+'</b>'});
       var clickable=!!qById(r.id);
-      h+='<div class="g-row" data-q="'+r.id+'"><button type="button" class="g-lab" data-q="'+r.id+'"'+(clickable?'':' aria-disabled="true" tabindex="-1"')+'>'+r.label+(r.tag?' <span class="g-tag">'+r.tag+'</span>':'')+'</button><div class="g-tl">'+tl+'</div></div>';
+      h+='<div class="g-row'+(r.fb?' fb':'')+'" data-q="'+r.id+'"><button type="button" class="g-lab" data-q="'+r.id+'"'+(clickable?'':' aria-disabled="true" tabindex="-1"')+'>'+r.label+(r.tag?' <span class="g-tag">'+r.tag+'</span>':'')+'</button><div class="g-tl">'+tl+'</div></div>';
     });
     var g=document.getElementById("gantt");g.innerHTML=h;
     /* key-date guide lines + today line, drawn across all rows */
