@@ -301,6 +301,11 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
 .vt-item.on .vt-dot{transform:scale(1.25)}
 .vt-now{justify-content:flex-end}
 .vt-now span{font-size:12px;padding:7px 12px}
+
+.next-school{margin:14px 0 0 !important;padding-top:12px;border-top:1.5px dashed var(--ho-line-2);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;align-items:baseline}
+.next-school span{grid-column:1/-1;font:800 10.5px/1.4 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--ho-blue)}
+.next-school b{font:700 15px/1.35 var(--f-body);color:var(--ho-ink)}
+.next-school i{font:800 13px var(--f-body);font-style:normal;color:var(--ho-blue);white-space:nowrap}
 </style>
 </head>
 <body>
@@ -323,6 +328,7 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
       <div class="big" id="next-days">20<small>ngày nữa</small></div>
       <h3 id="next-title">Đặt lịch thi GMAT · 31/10</h3>
       <p id="next-note">Thi tại trung tâm, slot ở HCM ít nên đặt sớm</p>
+      <p class="next-school" id="next-school"></p>
     </aside>
   </header>
 
@@ -414,21 +420,21 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     {who:"b",d:"2026-11-30",t:"Chốt referee và CV",n:"Mỗi người 2 referee, dùng chung cho mọi trường cần. Báo trước để họ kịp viết vào tháng 1",ids:[],k:"res"},
     {who:"t",d:"2026-12-12",t:"Hồ sơ MOTI sẵn sàng",n:"Chỉ còn chờ điểm GMAT",ids:["t-moti"],k:"nus"},
     {who:"n",d:"2026-12-20",t:"Xong motivation letter và essays",n:"Tháng 1 chỉ còn lo thi và nộp",ids:["n-mai","n-msi","n-mim","n-mms"],k:"res"},
-    {who:"b",d:"2027-01-08",t:"Thi GMAT",n:"Thái thi 8/1 ở VNPro. Nguyên thi cùng tuần (dự kiến)",ids:["gmat"],k:"res"},
+    {who:"b",d:"2027-01-08",t:"Thi GMAT",n:"Thái thi 8/1 ở VNPro. Nguyên thi cùng tuần (dự kiến)",ids:["gmat"],k:"res",main:1},
     {who:"b",d:"2027-01-12",t:"Có điểm GMAT lần 1",n:"Điểm ổn thì nộp luôn. Muốn thi lại thì thi khoảng 26/1, các deadline 31/1 sẽ không kịp",ids:["gmat"],k:"res"},
-    {who:"t",d:"2027-01-15",t:"Nộp NUS MOTI",n:"Nộp kèm điểm GMAT, xét liên tục nên nộp sớm",ids:["t-moti"],k:"nus"},
-    {who:"t",d:"2027-01-31",t:"Deadline NUS MSBA, NUS AI & Innovation, NTU MSBA round 2",n:"Nộp bằng điểm GMAT lần 1, không kịp thi lại",ids:["t-msba","t-aii","t-ntumsba"],k:"nus"},
-    {who:"n",d:"2027-01-31",t:"Nộp NTU MiM và MMS (round 2)",n:"Nếu điểm GMAT lần 1 ổn. Thi lại thì dời sang round 3 (31/3)",ids:["n-mim","n-mms"],k:"ntu"},
-    {who:"n",d:"2027-02-15",t:"Deadline NUS MAI và NUS MSI",n:"Round cuối, kịp cả khi thi lại GMAT cuối tháng 1",ids:["n-mai","n-msi"],k:"nus"},
-    {who:"t",d:"2027-02-15",t:"Nộp NTU Enterprise AI",n:"Kèm điểm GMAT, trước mùa cưới. Deadline của trường là 31/3",ids:["t-eai"],k:"ntu"},
+    {who:"t",d:"2027-01-15",t:"Nộp NUS MOTI",n:"Nộp kèm điểm GMAT, xét liên tục nên nộp sớm",ids:["t-moti"],k:"nus",main:1,school:1},
+    {who:"t",d:"2027-01-31",t:"Deadline NUS MSBA, NUS AI & Innovation, NTU MSBA round 2",n:"Nộp bằng điểm GMAT lần 1, không kịp thi lại",ids:["t-msba","t-aii","t-ntumsba"],k:"nus",main:1,school:1},
+    {who:"n",d:"2027-01-31",t:"Nộp NTU MiM và MMS (round 2)",n:"Nếu điểm GMAT lần 1 ổn. Thi lại thì dời sang round 3 (31/3)",ids:["n-mim","n-mms"],k:"ntu",main:1,school:1},
+    {who:"n",d:"2027-02-15",t:"Deadline NUS MAI và NUS MSI",n:"Round cuối, kịp cả khi thi lại GMAT cuối tháng 1",ids:["n-mai","n-msi"],k:"nus",main:1,school:1},
+    {who:"t",d:"2027-02-15",t:"Nộp NTU Enterprise AI",n:"Kèm điểm GMAT, trước mùa cưới. Deadline của trường là 31/3",ids:["t-eai"],k:"ntu",main:1,school:1},
     {who:"t",d:"2027-02-28",t:"Hạn cuối NUS MOTI",n:"Đã nộp từ tháng 1 thì không cần làm gì",ids:["t-moti"],k:"nus"},
-    {who:"b",d:"2027-03-01",t:"Bắt đầu có kết quả",n:"Các trường báo dần từ tháng 3 tới khoảng tháng 6",ids:["offer"],k:"res"},
-    {who:"n",d:"2027-03-31",t:"Deadline NTU Managerial Econ, NTU round 3",n:"Round 3 của MiM và MMS nếu đã thi lại GMAT",ids:["n-me","n-mim","n-mms"],k:"safe"},
-    {who:"t",d:"2027-03-31",t:"Nộp SMU MITB, NTU MSBA round 3",n:"MITB nộp trước mùa cưới. NTU MSBA round 3 nếu đã thi lại",ids:["t-mitb","t-ntumsba"],k:"smu"},
+    {who:"b",d:"2027-03-01",t:"Bắt đầu có kết quả",n:"Các trường báo dần từ tháng 3 tới khoảng tháng 6",ids:["offer"],k:"res",main:1},
+    {who:"n",d:"2027-03-31",t:"Deadline NTU Managerial Econ, NTU round 3",n:"Round 3 của MiM và MMS nếu đã thi lại GMAT",ids:["n-me","n-mim","n-mms"],k:"safe",main:1,school:1},
+    {who:"t",d:"2027-03-31",t:"Nộp SMU MITB, NTU MSBA round 3",n:"MITB nộp trước mùa cưới. NTU MSBA round 3 nếu đã thi lại",ids:["t-mitb","t-ntumsba"],k:"smu",main:1,school:1},
     {who:"b",d:"2027-04-03",t:"Lễ cưới ở Đà Lạt ♥",n:"Ngày hai đứa nói lời thề",ids:["life"],k:"life",life:1},
     {who:"b",d:"2027-05-15",t:"Đám cưới ở Tây Ninh 15 đến 16/5 ♥",n:"Tiệc cưới chính với hai bên gia đình",ids:["life"],k:"life",life:1},
-    {who:"b",d:"2027-06-30",t:"Chốt offer",n:"Chọn trường, đặt cọc giữ chỗ, rồi làm Student's Pass",ids:["offer","visa"],k:"res"},
-    {who:"b",d:"2027-08-01",t:"Nhập học",n:"Tháng 7 nếu học NTU, tháng 8 nếu học NUS hoặc SMU",ids:["start"],k:"res"}
+    {who:"b",d:"2027-06-30",t:"Chốt offer",n:"Chọn trường, đặt cọc giữ chỗ, rồi làm Student's Pass",ids:["offer","visa"],k:"res",main:1},
+    {who:"b",d:"2027-08-01",t:"Nhập học",n:"Tháng 7 nếu học NTU, tháng 8 nếu học NUS hoặc SMU",ids:["start"],k:"res",main:1}
   ];
   var PILL={"t-moti":"NUS MOTI","t-msba":"NUS MSBA","t-aii":"NUS AI&I","t-ntumsba":"NTU MSBA","t-mitb":"SMU MITB","t-eai":"NTU Enterprise AI","n-mim":"NTU MiM","n-mms":"NTU MMS","n-mai":"NUS MAI","n-msi":"NUS MSI","n-tip":"NTU TIP","n-me":"NTU Managerial Econ"};
 
@@ -454,6 +460,8 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     document.getElementById("next-days").innerHTML=n+"<small>"+(n===0?"là hôm nay":"ngày nữa")+"</small>";
     document.getElementById("next-title").textContent=nx.t+" · "+fmt(nx.d);
     document.getElementById("next-note").textContent=nx.n;
+    var sc=evs().filter(function(e){return e.school&&D(e.d)>=today})[0],el=document.getElementById("next-school");
+    if(sc){var m=days(sc.d);el.innerHTML='<span>Deadline trường đầu tiên</span><b>'+(view==="all"&&sc.who!=="b"?WHO[sc.who]+": ":"")+sc.t+' · '+fmt(sc.d)+'</b><i>còn '+m+' ngày</i>'}
   }
 
   /* ---------- mobile vertical timeline ---------- */
