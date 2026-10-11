@@ -2,23 +2,25 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="robots" content="noindex, nofollow" />
-<title>Hành trình Singapore của Nguyên</title>
+<meta name="theme-color" content="#F7F1E7" />
+<title>Lịch apply Singapore của Nguyên</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='18'%20fill='%23FFCD00'/%3E%3Ctext%20x='32'%20y='44'%20text-anchor='middle'%20font-family='Arial'%20font-weight='800'%20font-size='34'%20fill='%2317213A'%3EN%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Shantell+Sans:wght@500;600&display=swap" rel="stylesheet" />
 <style>
-/* Hallmark · warm editorial theme after 360feedback.zalopay.vn (--ho DNA) · display Bricolage Grotesque · body Be Vietnam Pro · annotation Shantell Sans */
+/* Hallmark · warm editorial theme after 360feedback.zalopay.vn (--ho DNA) · iPhone-first
+ * display Bricolage Grotesque · body Be Vietnam Pro · annotation Shantell Sans */
 :root{
-  --ho-canvas:#F7F1E7; --ho-surface:#FFFCF6; --ho-ink:#17213A; --ho-ink-2:#4A5470; --ho-ink-3:#7A8299;
-  --ho-line:rgba(23,33,58,.12); --ho-line-2:rgba(23,33,58,.22);
+  --ho-canvas:#F7F1E7; --ho-surface:#FFFCF6; --ho-ink:#17213A; --ho-ink-2:#465069; --ho-ink-3:#5E6680;
+  --ho-line:rgba(23,33,58,.12); --ho-line-2:rgba(23,33,58,.24);
   --ho-blue:#255BDA; --ho-blue-t:#E7ECF9;
-  --ho-coral:#EF604E; --ho-coral-t:#FDE9E4;
-  --ho-green:#1FA463; --ho-green-t:#E4F9EE;
+  --ho-coral:#EF604E; --ho-coral-ink:#B8372A; --ho-coral-t:#FDE9E4;
+  --ho-green:#1FA463; --ho-green-ink:#137A47; --ho-green-t:#E4F9EE;
   --ho-yellow:#FFCD00; --ho-yellow-t:#FFF6DB;
-  --ho-iris:#8C76D2; --ho-iris-t:#F0ECFB;
-  --ho-mint:#78C8A6;
+  --ho-iris:#8C76D2; --ho-iris-ink:#5B45A6; --ho-iris-t:#F0ECFB;
   --ho-sticker:5px 5px 0 var(--ho-ink); --ho-sticker-s:3px 3px 0 var(--ho-ink);
   --ho-raised:0 2px 6px rgba(23,33,58,.06);
   --ho-blob:47% 53% 45% 55% / 56% 43% 57% 44%;
@@ -30,184 +32,200 @@
 }
 *{box-sizing:border-box}
 html,body{overflow-x:clip}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--ho-canvas);color:var(--ho-ink);font:400 15px/1.65 var(--f-body);-webkit-font-smoothing:antialiased}
-.wrap{max-width:1200px;margin:0 auto;padding:40px 24px 72px}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--ho-canvas);color:var(--ho-ink);font:400 16px/1.6 var(--f-body);-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+.wrap{max-width:1200px;margin:0 auto;padding:max(28px,env(safe-area-inset-top)) max(20px,env(safe-area-inset-right)) max(56px,env(safe-area-inset-bottom)) max(20px,env(safe-area-inset-left))}
 button{font:inherit;color:inherit}
 :focus-visible{outline:3px solid var(--ho-blue);outline-offset:3px;border-radius:8px}
 h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-style:normal}
-.eyebrow{font:800 11px/1.4 var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:var(--ho-ink-3)}
+.eyebrow{font:800 11.5px/1.4 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--ho-ink-3);margin:0}
 .hand{font-family:var(--f-hand);font-weight:600}
+.desk{display:none}
 
 /* hero */
-.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,380px);gap:32px;align-items:center;margin-bottom:56px}
-.hero h1{font-size:clamp(36px,6vw,62px);line-height:1.02;font-weight:800;letter-spacing:-.035em;margin:10px 0 14px}
-.hero h1 span{position:relative;display:inline-block;color:var(--ho-blue)}
+.hero{display:grid;gap:24px;margin-bottom:44px}
+.hero h1{font-size:clamp(34px,8.5vw,62px);line-height:1.04;font-weight:800;letter-spacing:-.035em;margin:10px 0 12px}
+.hero h1 span{position:relative;display:inline-block;color:var(--ho-blue);z-index:0}
 .hero h1 span::after{content:"";position:absolute;left:-4px;right:-4px;bottom:4px;height:12px;background:var(--ho-yellow);opacity:.55;z-index:-1;border-radius:6px}
-.hero p{color:var(--ho-ink-2);max-width:56ch;margin:0;font-size:16px}
-.hero .hand{display:inline-block;color:var(--ho-coral);font-size:20px;margin-top:14px;transform:rotate(-2deg)}
-.next{background:var(--ho-surface);border:2px solid var(--ho-ink);border-radius:22px;box-shadow:var(--ho-sticker);padding:22px 24px;position:relative}
-.next .eyebrow{color:var(--ho-coral)}
-.next .big{font:800 64px/1 var(--f-display);letter-spacing:-.04em;margin:8px 0 2px}
+.hero .lede{color:var(--ho-ink-2);max-width:54ch;margin:0}
+.hero .hand{display:inline-block;color:var(--ho-coral-ink);font-size:19px;margin-top:12px;transform:rotate(-2deg)}
+.next{background:var(--ho-surface);border:2px solid var(--ho-ink);border-radius:22px;box-shadow:var(--ho-sticker);padding:20px 22px;position:relative;margin-right:6px}
+.next .eyebrow{color:var(--ho-coral-ink)}
+.next .big{font:800 60px/1 var(--f-display);letter-spacing:-.04em;margin:8px 0 4px}
 .next .big small{font:600 16px var(--f-body);letter-spacing:0;color:var(--ho-ink-2);margin-left:6px}
-.next h3{font-size:22px;line-height:1.2}
-.next p{margin:6px 0 0;color:var(--ho-ink-2);font-size:14px}
-.next .blob{position:absolute;right:-18px;top:-18px;width:64px;height:64px;border-radius:var(--ho-blob);background:var(--ho-yellow);border:2px solid var(--ho-ink);display:grid;place-items:center;font:600 13px/1.1 var(--f-hand);text-align:center;transform:rotate(8deg)}
+.next h3{font-size:21px;line-height:1.25}
+.next p{margin:6px 0 0;color:var(--ho-ink-2);font-size:15px}
+.next .blob{position:absolute;right:-10px;top:-16px;width:62px;height:62px;border-radius:var(--ho-blob);background:var(--ho-yellow);border:2px solid var(--ho-ink);display:grid;place-items:center;font:600 13px/1.1 var(--f-hand);text-align:center;transform:rotate(8deg)}
 
 /* sections */
-.sec{margin:0 0 56px}
-.sec-h{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
-.sec-h .num{font:800 14px var(--f-display);width:34px;height:34px;display:grid;place-items:center;border-radius:var(--ho-blob);background:var(--ho-ink);color:var(--ho-canvas);flex:none;transform:translateY(-4px)}
-.sec-h h2{font-size:clamp(24px,3.6vw,34px);line-height:1.1;font-weight:800}
-.sec-sub{color:var(--ho-ink-2);margin:0 0 18px 48px;max-width:70ch}
-.panel{background:var(--ho-surface);border:1.5px solid var(--ho-line-2);border-radius:26px;box-shadow:var(--ho-raised)}
+.sec{margin:0 0 48px}
+.sec-h{display:flex;align-items:flex-start;gap:12px;margin-bottom:6px}
+.sec-h .num{font:800 14px var(--f-display);width:32px;height:32px;display:grid;place-items:center;border-radius:var(--ho-blob);background:var(--ho-ink);color:var(--ho-canvas);flex:none;margin-top:2px}
+.sec-h h2{font-size:clamp(24px,6vw,34px);line-height:1.15;font-weight:800}
+.sec-sub{color:var(--ho-ink-2);margin:4px 0 18px;max-width:68ch}
+.panel{background:var(--ho-surface);border:1.5px solid var(--ho-line-2);border-radius:24px;box-shadow:var(--ho-raised)}
 
-/* gantt + time cursor */
+/* path choice */
+.fork{display:grid;gap:14px}
+.path{position:relative;display:block;width:100%;text-align:left;background:var(--ho-surface);border:2px solid var(--ho-line-2);border-radius:22px;padding:18px 20px 18px;cursor:pointer;transition:transform var(--t2) var(--ui-ease),box-shadow var(--t2) var(--ui-ease),border-color var(--t2) var(--ui-ease),background-color var(--t2) var(--ui-ease)}
+.path:active{transform:scale(.99)}
+.path[aria-checked="true"]{border-color:var(--ho-ink);background:var(--ho-coral-t);box-shadow:var(--ho-sticker)}
+.path .tag{display:inline-block;font:800 11px var(--f-body);letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--ho-coral-t);color:var(--ho-coral-ink);border:1.5px solid var(--ho-coral)}
+.path .ttl{display:block;font:800 22px/1.2 var(--f-display);letter-spacing:-.02em;margin:10px 0 4px}
+.path .sub{display:block;color:var(--ho-ink-2)}
+.path .pt{display:block;position:relative;padding-left:16px;margin-top:6px;font-size:15px}
+.path .pt::before{content:"";position:absolute;left:2px;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--ho-ink)}
+.path .check{position:absolute;right:14px;top:14px;width:32px;height:32px;border-radius:var(--ho-blob);border:2px solid var(--ho-ink);background:var(--ho-surface);display:grid;place-items:center;font:800 15px var(--f-body);color:transparent;transition:background-color var(--t2) var(--ui-ease),transform var(--t3) var(--ui-ease)}
+.path[aria-checked="true"] .check{background:var(--ho-green-ink);color:#fff;transform:rotate(-8deg) scale(1.08)}
+.fork-note{margin:4px 2px 0;font-size:17px;color:var(--ho-coral-ink)}
+
+/* ===== mobile vertical timeline (scroll = time) ===== */
+.vt{position:relative;list-style:none;margin:0;padding:6px 0 10px}
+.vt::before{content:"";position:absolute;left:70px;top:0;bottom:0;width:3px;border-radius:2px;background:var(--ho-line)}
+.vt-fill{position:absolute;left:70px;top:0;width:3px;border-radius:2px;background:var(--ho-ink);height:0;transition:height .15s linear}
+.vt-now{position:sticky;top:max(10px,env(safe-area-inset-top));z-index:5;display:flex;justify-content:center;margin:0 0 6px;pointer-events:none}
+.vt-now span{background:var(--ho-ink);color:var(--ho-canvas);font:700 13px/1 var(--f-body);padding:9px 14px;border-radius:999px;box-shadow:0 6px 18px rgba(23,33,58,.18)}
+.vt-month{position:relative;margin:22px 0 8px 86px;font:800 11.5px var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--ho-ink-3)}
+.vt-today{position:relative;display:flex;align-items:center;gap:10px;margin:14px 0 14px 58px;font:600 16px var(--f-hand);color:var(--ho-coral-ink)}
+.vt-today::before{content:"";width:27px;height:27px;border-radius:50%;background:var(--ho-coral);border:3px solid var(--ho-surface);box-shadow:0 0 0 2px var(--ho-coral);flex:none}
+.vt-item{position:relative;display:grid;grid-template-columns:56px 30px minmax(0,1fr);align-items:start;margin:0 0 14px}
+.vt-date{text-align:right;padding-top:12px}
+.vt-date b{display:block;font:800 26px/1 var(--f-display);letter-spacing:-.03em}
+.vt-date span{display:block;font:700 12px/1.3 var(--f-body);color:var(--ho-ink-3)}
+.vt-dot{justify-self:center;margin-top:18px;width:18px;height:18px;border-radius:50%;background:var(--ho-surface);border:3px solid var(--c);z-index:1;transition:transform var(--t3) var(--ui-ease),background-color var(--t3) var(--ui-ease)}
+.vt-card{background:var(--ho-surface);border:1.5px solid var(--ho-line-2);border-radius:18px;padding:12px 14px 13px;transition:background-color var(--t3) var(--ui-ease),border-color var(--t3) var(--ui-ease),box-shadow var(--t3) var(--ui-ease),transform var(--t3) var(--ui-ease)}
+.vt-when{margin:0 0 2px;font:800 11px/1.4 var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:var(--ho-ink-3)}
+.vt-card h4{font-size:19px;line-height:1.25;font-weight:800}
+.vt-card p.n{margin:4px 0 0;color:var(--ho-ink-2);font-size:15px}
+.vt-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.vt-item.life .vt-card{background:var(--ho-iris-t);border-color:transparent}
+.vt-item.past{opacity:.55}
+.vt-item.on .vt-dot{transform:scale(1.35);background:var(--c)}
+.vt-item.on .vt-card{background:var(--ho-yellow-t);border:2px solid var(--ho-ink);box-shadow:var(--ho-sticker-s);transform:translateX(-2px)}
+.vt-item.on .vt-date b{color:var(--ho-coral-ink)}
+.vt-item.pop .vt-card{animation:wiggle .5s var(--ui-ease)}
+@keyframes wiggle{25%{transform:rotate(-1deg) translateY(-3px)}60%{transform:rotate(.6deg)}}
+.vt-conf{position:absolute;width:9px;height:9px;border-radius:2px;z-index:6;pointer-events:none;animation:conf .7s var(--ui-ease) forwards}
+@keyframes conf{to{transform:translate(var(--bx),var(--by)) rotate(160deg);opacity:0}}
+.vt-end{margin:8px 0 0 86px;font:600 16px var(--f-hand);color:var(--ho-ink-3)}
+
+/* pills */
+.pill{display:inline-block;white-space:nowrap;font:800 11px/1 var(--f-body);letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:999px;background:var(--t);color:var(--c);border:1.5px solid currentColor}
+.pill.ghost{background:none;border-style:dashed}
+
+/* ===== desktop gantt + time cursor ===== */
 .gantt{padding:20px 20px 16px}
 .g-scroll{overflow-x:auto;padding:6px 4px 30px}
 .g-in{min-width:920px;position:relative}
-.g-row{display:grid;grid-template-columns:var(--lab) minmax(0,1fr);align-items:center;min-height:38px;border-radius:12px;transition:background-color var(--t2) var(--ui-ease)}
-.g-row.hd{min-height:30px}
+.g-row{display:grid;grid-template-columns:var(--lab) minmax(0,1fr);align-items:center;min-height:38px;border-radius:12px}
 .g-row > :first-child{position:sticky;left:0;z-index:6;background:var(--ho-surface);align-self:stretch;display:flex;align-items:center}
-.g-row.hit > :first-child{background:var(--ho-yellow-t)}
+.g-row.hd{min-height:30px}
 .g-row.sep{min-height:12px}
-.g-lab{font:600 14px/1.2 var(--f-body);text-align:left;background:none;border:0;padding:4px 10px;cursor:pointer;color:var(--ho-ink);border-radius:10px;transition:color var(--t1) var(--ui-ease)}
-.g-lab:hover{color:var(--ho-blue)}
+.g-lab{font:600 14px/1.2 var(--f-body);text-align:left;background:var(--ho-surface);border:0;padding:4px 10px;color:var(--ho-ink);border-radius:10px;cursor:pointer}
+.g-lab[aria-disabled="true"]{cursor:default}
+.g-lab:not([aria-disabled="true"]):hover{color:var(--ho-blue)}
 .g-row.off{opacity:.3}
 .g-row.past .g-lab{color:var(--ho-ink-3)}
-.g-row.hit{background:var(--ho-yellow-t)}
-.g-row.hit .g-lab{color:var(--ho-ink);font-weight:800}
+.g-row.hit,.g-row.hit > :first-child,.g-row.hit .g-lab{background:var(--ho-yellow-t)}
+.g-row.hit .g-lab{font-weight:800}
 .g-tl{position:relative;height:38px}
 .g-mon{display:grid;grid-template-columns:repeat(11,1fr);height:30px;border-bottom:1.5px solid var(--ho-line-2)}
-.g-mon span{font:800 10.5px/1 var(--f-body);letter-spacing:.12em;color:var(--ho-ink-3);padding:8px 0 0 6px;border-left:1px dashed var(--ho-line)}
+.g-mon span{font:800 11px/1 var(--f-body);letter-spacing:.1em;color:var(--ho-ink-3);padding:8px 0 0 6px;border-left:1px dashed var(--ho-line)}
 .g-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(11,1fr);pointer-events:none}
 .g-grid i{border-left:1px dashed var(--ho-line)}
 .g-bar{position:absolute;top:12px;height:14px;border-radius:999px;background:var(--c);transform-origin:left;animation:grow .6s var(--ui-ease) both;animation-delay:var(--dl,0ms)}
-.g-bar.res{background:var(--ho-yellow);border:1.5px solid var(--ho-ink)}
 .g-bar.wait{top:18px;height:2px;border-radius:0;background:repeating-linear-gradient(90deg,var(--ho-line-2) 0 4px,transparent 4px 8px)}
 .g-bar.offer{background:repeating-linear-gradient(-45deg,var(--ho-yellow) 0 5px,var(--ho-yellow-t) 5px 10px);border:1.5px solid var(--ho-ink)}
-.g-bar.tent{background:repeating-linear-gradient(-45deg,var(--c) 0 5px,var(--ho-coral-t) 5px 10px);border:1.5px dashed var(--c)}
+.g-bar.tent{background:repeating-linear-gradient(-45deg,var(--ho-coral) 0 5px,var(--ho-coral-t) 5px 10px);border:1.5px dashed var(--ho-coral)}
+.g-bar.res{background:var(--ho-yellow);border:1.5px solid var(--ho-ink)}
 @keyframes grow{from{transform:scaleX(0)}}
 .g-dl{position:absolute;top:9px;width:20px;height:20px;margin-left:-10px;border-radius:50%;background:var(--ho-surface);border:3px solid var(--c);box-shadow:2px 2px 0 var(--ho-ink);z-index:2}
 .g-dl b{position:absolute;left:24px;top:-1px;font:700 12px var(--f-body);color:var(--ho-ink);white-space:nowrap}
 .g-ev{position:absolute;top:7px;transform:translateX(-50%);font:600 13px/1 var(--f-hand);color:var(--ho-ink);background:var(--ho-iris-t);border:1.5px solid var(--ho-iris);padding:4px 10px;border-radius:999px;white-space:nowrap}
-.g-dl.hit,.g-ev.hit{animation:pop .5s var(--ui-ease)}
+.g-dl.hit{animation:pop .5s var(--ui-ease)}
 @keyframes pop{30%{transform:scale(1.45)}60%{transform:scale(.92)}}
 .g-ev.hit{animation:popc .5s var(--ui-ease);background:var(--ho-yellow);border-color:var(--ho-ink)}
 @keyframes popc{30%{transform:translateX(-50%) scale(1.3)}}
 .g-ticks{position:absolute;left:var(--lab);right:0;top:24px;height:10px;pointer-events:none}
 .g-ticks i{position:absolute;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:var(--ho-ink-3)}
 .g-ticks i.hit{background:var(--ho-coral);box-shadow:0 0 0 4px rgba(239,96,78,.25)}
-.g-cursor{position:absolute;top:30px;bottom:0;width:2px;margin-left:-1px;background:var(--ho-ink);z-index:4;cursor:ew-resize;touch-action:none}
+.g-cursor{position:absolute;top:30px;bottom:0;width:2px;margin-left:-1px;background:var(--ho-ink);z-index:7;touch-action:pan-x pan-y}
 .g-cursor.glide{transition:left .5s var(--ui-ease)}
-.g-cursor::before{content:"";position:absolute;inset:0 -12px}
-.g-knob{position:absolute;top:-14px;left:50%;width:26px;height:26px;transform:translateX(-50%);border-radius:var(--ho-blob);background:var(--ho-yellow);border:2px solid var(--ho-ink);box-shadow:var(--ho-sticker-s);cursor:grab;transition:transform var(--t1) var(--ui-ease)}
-.g-cursor:hover .g-knob{transform:translateX(-50%) rotate(-10deg) scale(1.08)}
+.g-cursor::before{content:"";position:absolute;inset:0 -5px;cursor:ew-resize}
+.g-knob{position:absolute;top:-14px;left:50%;width:28px;height:28px;transform:translateX(-50%);border-radius:var(--ho-blob);background:var(--ho-yellow);border:2px solid var(--ho-ink);box-shadow:var(--ho-sticker-s);cursor:grab;touch-action:none;transition:transform var(--t1) var(--ui-ease)}
+.g-knob:hover{transform:translateX(-50%) rotate(-10deg) scale(1.08)}
 .g-cursor.drag .g-knob{cursor:grabbing;background:var(--ho-coral);transform:translateX(-50%) scale(1.15)}
-.g-cursor:focus-visible{outline:none}
-.g-cursor:focus-visible .g-knob{outline:3px solid var(--ho-blue);outline-offset:3px}
-.g-cursor b{position:absolute;bottom:-28px;left:50%;transform:translateX(-50%);font:700 11.5px var(--f-body);color:var(--ho-canvas);background:var(--ho-ink);padding:3px 9px;border-radius:999px;white-space:nowrap}
-.g-confetti{position:absolute;width:8px;height:8px;border-radius:2px;z-index:5;pointer-events:none;animation:conf .6s var(--ui-ease) forwards}
-@keyframes conf{to{transform:translate(var(--bx),var(--by)) rotate(160deg);opacity:0}}
-.g-card{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px 20px;align-items:center;padding:16px 20px;margin-bottom:16px;background:var(--ho-surface);border:2px solid var(--ho-ink);border-radius:22px;box-shadow:var(--ho-sticker);min-height:96px;transition:background-color var(--t3) var(--ui-ease)}
+.g-knob:focus-visible{outline:3px solid var(--ho-blue);outline-offset:3px}
+.g-cursor b{position:absolute;bottom:-28px;left:50%;transform:translateX(-50%);font:700 12px var(--f-body);color:var(--ho-canvas);background:var(--ho-ink);padding:3px 9px;border-radius:999px;white-space:nowrap}
+.g-confetti{position:absolute;width:9px;height:9px;border-radius:2px;z-index:8;pointer-events:none;animation:conf .7s var(--ui-ease) forwards}
+.g-card{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px 20px;align-items:center;padding:16px 20px;margin:0 6px 18px 0;background:var(--ho-surface);border:2px solid var(--ho-ink);border-radius:22px;box-shadow:var(--ho-sticker);min-height:96px;transition:background-color var(--t3) var(--ui-ease)}
 .g-card.hit{background:var(--ho-yellow-t)}
 .g-card.wiggle{animation:wiggle .45s var(--ui-ease)}
-@keyframes wiggle{25%{transform:rotate(-1deg) translateY(-3px)}60%{transform:rotate(.6deg)}}
 .cd-date{min-width:120px}
 .cd-date strong{display:block;font:800 30px/1 var(--f-display);letter-spacing:-.03em}
-.cd-date small{display:block;font:800 10.5px/1.4 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--ho-ink-3);margin-top:6px}
+.cd-date small{display:block;font:800 11px/1.4 var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:var(--ho-ink-3);margin-top:6px}
 .g-card h4{font-size:22px;line-height:1.2;font-weight:800}
-.g-card.hit h4{color:var(--ho-coral)}
+.g-card.hit h4{color:var(--ho-coral-ink)}
 .g-card p{margin:4px 0 0;color:var(--ho-ink-2);min-height:1.2em}
 .g-nav{display:flex;gap:8px;flex-wrap:wrap}
-.btn{min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--ho-ink);background:var(--ho-surface);font:700 13px var(--f-body);cursor:pointer;transition:transform var(--t1) var(--ui-ease),box-shadow var(--t1) var(--ui-ease),background-color var(--t1) var(--ui-ease)}
+.btn{min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--ho-ink);background:var(--ho-surface);font:700 14px var(--f-body);cursor:pointer;transition:transform var(--t1) var(--ui-ease),box-shadow var(--t1) var(--ui-ease),background-color var(--t1) var(--ui-ease),opacity var(--t1) var(--ui-ease)}
 .btn:hover{background:var(--ho-canvas)}
 .btn.pri{background:var(--ho-ink);color:var(--ho-canvas);box-shadow:var(--ho-sticker-s)}
 .btn.pri:hover{background:var(--ho-blue)}
 .btn:active{transform:translate(2px,2px);box-shadow:none}
-.g-help{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;color:var(--ho-ink-3);font-size:13px;margin:4px 0 0}
-.g-help .hand{color:var(--ho-coral);font-size:16px}
-.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;color:var(--ho-ink-2);margin:10px 0 0}
-.legend i{display:inline-block;width:22px;height:10px;border-radius:999px;vertical-align:0;margin-right:6px;background:var(--c)}
-
-/* path choice */
-.fork{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.path{position:relative;text-align:left;background:var(--ho-surface);border:2px solid var(--ho-line-2);border-radius:22px;padding:20px 22px;cursor:pointer;transition:transform var(--t2) var(--ui-ease),box-shadow var(--t2) var(--ui-ease),border-color var(--t2) var(--ui-ease),background-color var(--t2) var(--ui-ease)}
-.path:hover{transform:translateY(-3px);box-shadow:var(--ho-raised)}
-.path[aria-pressed="true"]{border-color:var(--ho-ink);background:var(--ho-coral-t);box-shadow:var(--ho-sticker)}
-.path .tag{display:inline-block;font:800 11px var(--f-body);letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--ho-coral-t);color:var(--ho-coral);border:1.5px solid var(--ho-coral)}
-.path h4{font-size:24px;margin:10px 0 4px}
-.path p{margin:0;color:var(--ho-ink-2)}
-.path ul{margin:10px 0 0;padding-left:18px;color:var(--ho-ink)}
-.path li{margin:3px 0}
-.path .check{position:absolute;right:16px;top:16px;width:34px;height:34px;border-radius:var(--ho-blob);border:2px solid var(--ho-ink);background:var(--ho-surface);display:grid;place-items:center;font:800 16px var(--f-body);color:transparent;transition:background-color var(--t2) var(--ui-ease),transform var(--t3) var(--ui-ease)}
-.path[aria-pressed="true"] .check{background:var(--ho-green);color:#fff;transform:rotate(-8deg) scale(1.08)}
-.fork-note{grid-column:1/-1;margin:2px 0 0;font-size:18px;color:var(--ho-coral)}
-
-/* journey */
-.journey{padding:28px 22px 22px}
-.j-scroll{overflow-x:auto;padding:8px 4px 8px}
-.track{position:relative;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(92px,1fr);min-width:1060px;padding-top:46px}
-.track::before{content:"";position:absolute;left:46px;right:46px;top:96px;border-top:2.5px dashed var(--ho-line-2)}
-.node{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;background:none;border:0;cursor:pointer;padding:0 4px;text-align:center}
-.node .d{font:700 12px var(--f-body);color:var(--ho-ink-2)}
-.node .blk{width:60px;height:60px;display:grid;place-items:center;border-radius:var(--ho-blob);background:var(--t);border:2px solid var(--ho-ink);font:800 13px/1 var(--f-display);color:var(--ho-ink);box-shadow:var(--ho-sticker-s);transition:transform var(--t2) var(--ui-ease),box-shadow var(--t2) var(--ui-ease)}
-.node:nth-child(odd) .blk{border-radius:53% 47% 55% 45% / 44% 57% 43% 56%}
-.node:hover .blk{transform:translateY(-4px) rotate(-4deg);box-shadow:var(--ho-sticker)}
-.node[aria-current="true"] .blk{background:var(--c);color:#fff;transform:translateY(-4px) scale(1.06)}
-.node.tent .blk{background:repeating-linear-gradient(-45deg,var(--ho-coral-t) 0 5px,var(--ho-surface) 5px 10px);border-style:dashed}
-.node.tent[aria-current="true"] .blk{background:repeating-linear-gradient(-45deg,var(--ho-coral-t) 0 5px,var(--ho-surface) 5px 10px);color:var(--ho-ink)}
-.node.off{opacity:.3}
-.node .n{font:600 13.5px/1.2 var(--f-body);color:var(--ho-ink);max-width:12ch}
-.node .cd{font:800 10px var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:var(--ho-ink-3)}
-.avatar{position:absolute;top:0;transform:translateX(-50%);transition:left .9s var(--ui-ease);z-index:2;pointer-events:none;text-align:center}
-.avatar span{display:block;font:600 15px/1 var(--f-hand);color:var(--ho-coral);margin-bottom:2px;transform:rotate(-4deg)}
-.avatar i{display:block;margin:0 auto;width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:9px solid var(--ho-coral);animation:bob 1.4s var(--ui-ease) infinite}
-@keyframes bob{50%{transform:translateY(4px)}}
+.btn:disabled{opacity:.35;cursor:default;transform:none;box-shadow:none}
+.g-help{color:var(--ho-ink-3);font-size:14px;margin:4px 0 0}
+.g-help .hand{color:var(--ho-coral-ink);font-size:16px;margin-right:6px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px;color:var(--ho-ink-2);margin:10px 0 0}
+.legend i{display:inline-block;width:22px;height:10px;border-radius:999px;margin-right:6px;background:var(--c);vertical-align:0}
+.legend i.dot{width:14px;height:14px;border-radius:50%;background:var(--ho-surface);border:3px solid var(--ho-ink-2);vertical-align:-2px}
 
 /* school cards */
-.log{display:grid;gap:14px}
-.quest{background:var(--ho-surface);border:1.5px solid var(--ho-line-2);border-radius:22px;transition:box-shadow var(--t2) var(--ui-ease),border-color var(--t2) var(--ui-ease)}
-.quest[open]{border-color:var(--ho-ink);box-shadow:var(--ho-sticker)}
+.log{display:grid;gap:12px}
+.quest{background:var(--ho-surface);border:1.5px solid var(--ho-line-2);border-radius:20px;transition:box-shadow var(--t2) var(--ui-ease),border-color var(--t2) var(--ui-ease);margin-right:6px}
+.quest[open]{border-color:var(--ho-ink);box-shadow:var(--ho-sticker-s)}
 .quest.flash{animation:wiggle .45s var(--ui-ease)}
-.quest > summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:60px minmax(0,1fr) auto;gap:16px;align-items:center;padding:16px 20px}
+.quest > summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:12px;align-items:center;padding:14px 16px;min-height:76px}
 .quest > summary::-webkit-details-marker{display:none}
-.q-ico{width:52px;height:52px;display:grid;place-items:center;border-radius:var(--ho-blob);background:var(--t);border:2px solid var(--ho-ink);font:800 12px/1 var(--f-display)}
+.q-ico{width:46px;height:46px;display:grid;place-items:center;border-radius:var(--ho-blob);background:var(--t);border:2px solid var(--ho-ink);font:800 12px/1 var(--f-display)}
 .quest.tent .q-ico{background:repeating-linear-gradient(-45deg,var(--ho-coral-t) 0 5px,var(--ho-surface) 5px 10px);border-style:dashed}
-.q-main h3{font-size:21px;line-height:1.2;font-weight:800}
+.q-main h3{font-size:18px;line-height:1.25;font-weight:800}
 .q-main h3 em{font-style:normal;color:var(--c)}
-.q-meta{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin-top:6px;color:var(--ho-ink-2);font-size:14px}
-.pill{font:800 10.5px/1 var(--f-body);letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--t);color:var(--c);border:1.5px solid var(--c)}
-.pill.ghost{background:none;border-style:dashed}
+.q-meta{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-top:6px;color:var(--ho-ink-2);font-size:14px}
 .q-right{text-align:right}
-.q-right .days{font:800 34px/1 var(--f-display);letter-spacing:-.03em;color:var(--ho-ink)}
-.q-right .lbl{font:800 10px var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--ho-ink-3);margin-top:2px}
-.q-body{padding:0 20px 18px 96px}
+.q-right .days{font:800 28px/1 var(--f-display);letter-spacing:-.03em}
+.q-right .lbl{font:800 10.5px var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:var(--ho-ink-3);margin-top:2px;white-space:nowrap}
+.q-chev{display:inline-block;margin-left:6px;font-size:14px;transition:transform var(--t2) var(--ui-ease)}
+.quest[open] .q-chev{transform:rotate(180deg)}
+.q-body{padding:0 16px 16px}
 .quest[open] .q-body{animation:drop var(--t3) var(--ui-ease)}
 @keyframes drop{from{opacity:0;transform:translateY(-6px)}}
-.note{background:var(--t);border-radius:16px;padding:12px 16px}
-.note .hand{color:var(--c);font-size:16px;display:block;margin-bottom:4px}
+.note{background:var(--t);border-radius:14px;padding:12px 14px}
+.note .hand{color:var(--ci);font-size:16px;display:block;margin-bottom:2px}
 .note ul{margin:0;padding-left:18px}
-.note li{margin:2px 0}
-.foot{margin-top:40px;color:var(--ho-ink-3);font-size:13px}
+.note li{margin:3px 0}
+.foot{margin-top:36px;color:var(--ho-ink-3);font-size:13px}
 
-@media (max-width:860px){
-  :root{--lab:118px}
-  .g-lab{font-size:12.5px;padding:4px 6px}
-  .gantt{padding:14px 12px 12px}
-  .hero{grid-template-columns:minmax(0,1fr)}
-  .next .blob{right:-6px}
-  .fork{grid-template-columns:minmax(0,1fr)}
-  .g-card{grid-template-columns:minmax(0,1fr)}
-  .sec-sub{margin-left:0}
-  .quest > summary{grid-template-columns:48px minmax(0,1fr)}
-  .q-ico{width:44px;height:44px;font-size:11px}
-  .q-right{grid-column:2;text-align:left;display:flex;gap:8px;align-items:baseline}
-  .q-right .days{font-size:26px}
-  .q-body{padding-left:20px}
+/* ===== desktop ===== */
+@media (min-width:860px){
+  .wrap{padding:40px 24px 72px}
+  .mob{display:none}
+  .desk{display:block}
+  .hero{grid-template-columns:minmax(0,1fr) minmax(0,380px);align-items:center;gap:32px;margin-bottom:56px}
+  .next .blob{right:-18px;top:-18px}
+  .sec{margin-bottom:56px}
+  .sec-h .num{width:34px;height:34px}
+  .sec-sub{margin-left:46px}
+  .fork{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  .path:hover{transform:translateY(-3px);box-shadow:var(--ho-raised)}
+  .path[aria-checked="true"]:hover{box-shadow:var(--ho-sticker)}
+  .quest > summary{grid-template-columns:60px minmax(0,1fr) auto;padding:16px 20px;gap:16px}
+  .q-ico{width:52px;height:52px}
+  .q-main h3{font-size:21px}
+  .q-right .days{font-size:34px}
+  .q-body{padding:0 20px 18px 96px}
 }
 @media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
 </style>
@@ -217,76 +235,84 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
 
   <header class="hero">
     <div>
-      <p class="eyebrow">Singapore Master's · Intake 2027</p>
-      <h1>Hành trình Singapore của <span>Nguyên</span></h1>
-      <p>Tất cả các mốc nộp hồ sơ NUS và NTU trên một trang, xếp đúng thứ tự thời gian. Kéo thanh thời gian để đi qua từng mốc, bấm vào trường để xem chi tiết.</p>
+      <p class="eyebrow">Master ở Singapore · nhập học 2027</p>
+      <h1>Lịch apply Singapore của <span>Nguyên</span></h1>
+      <p class="lede">Gom hết deadline NUS và NTU vào một chỗ, xếp theo đúng thứ tự. Mở ra là biết việc nào tới trước.</p>
       <span class="hand">từng bước một thôi nha ✿</span>
     </div>
     <aside class="next" id="next" aria-live="polite">
       <span class="blob" aria-hidden="true">sắp tới</span>
       <p class="eyebrow">Mốc gần nhất</p>
-      <div class="big" id="next-days">0<small>ngày nữa</small></div>
-      <h3 id="next-title">--</h3>
-      <p id="next-note"></p>
+      <div class="big" id="next-days">9<small>ngày nữa</small></div>
+      <h3 id="next-title">Chốt round cho NTU MiM · 20/10</h3>
+      <p id="next-note">Plan A (1/11) hay Plan B (31/1)</p>
     </aside>
   </header>
 
   <section class="sec" aria-labelledby="s1">
-    <div class="sec-h"><span class="num">1</span><h2 id="s1">Nhìn nhanh cả hành trình</h2></div>
-    <p class="sec-sub">Tháng 10/2026 đến tháng 8/2027 trên một trục thời gian thật. Chấm tròn là hạn nộp, vạch chấm là thời gian chờ kết quả.</p>
-    <div class="panel gantt">
+    <div class="sec-h"><span class="num">1</span><h2 id="s1">Chọn round cho NTU MiM</h2></div>
+    <p class="sec-sub">Nên chốt trước khoảng 20/10. Chọn xong thì timeline và danh sách trường bên dưới tự đổi theo.</p>
+    <div class="fork" role="radiogroup" aria-label="Chọn round cho NTU MiM">
+      <button class="path" type="button" role="radio" data-path="r1" aria-checked="false">
+        <span class="check" aria-hidden="true">✓</span>
+        <span class="tag">Plan A · 1/11</span>
+        <span class="ttl">Apply round 1</span>
+        <span class="sub">Còn xét scholarship của Nanyang Business School.</span>
+        <span class="pt">Có ASEAN Development Scholarship, Women in Business</span>
+        <span class="pt">Essay và 2 referee phải xong ngay trong tháng 10</span>
+        <span class="pt">Deadline sớm hơn NUS 2 tuần, khá gấp</span>
+      </button>
+      <button class="path" type="button" role="radio" data-path="r2" aria-checked="false">
+        <span class="check" aria-hidden="true">✓</span>
+        <span class="tag">Plan B · 31/1</span>
+        <span class="ttl">Apply round 2</span>
+        <span class="sub">Tập trung NUS trước, MiM để sau.</span>
+        <span class="pt">Không còn scholarship NBS (chỉ xét round 1)</span>
+        <span class="pt">Có thêm khoảng 3 tháng để chuẩn bị</span>
+        <span class="pt">Vẫn còn round 3 (31/3) nếu muốn đợi kết quả NUS</span>
+      </button>
+    </div>
+    <p class="fork-note hand" id="fork-note">chưa chọn, đang hiện cả hai plan</p>
+  </section>
+
+  <section class="sec" aria-labelledby="s2">
+    <div class="sec-h"><span class="num">2</span><h2 id="s2">Timeline từ giờ tới lúc nhập học</h2></div>
+    <p class="sec-sub mob">Lướt xuống từ từ, tới mốc nào thì mốc đó sáng lên.</p>
+    <p class="sec-sub desk">Kéo nút vàng trên thanh thời gian hoặc bấm “Mốc sau”, tới mốc nào thì mốc đó sáng lên.</p>
+
+    <div class="mob">
+      <div class="vt-now" aria-hidden="true"><span id="vt-now">hôm nay</span></div>
+      <ol class="vt" id="vt"></ol>
+    </div>
+
+    <div class="desk panel gantt">
       <div class="g-card" id="g-card" aria-live="polite">
         <div class="cd-date" id="gc-date"><strong>--</strong><small>hôm nay</small></div>
-        <div><h4 id="gc-title">Kéo thanh thời gian để đi qua từng mốc</h4><p id="gc-note"></p></div>
+        <div><h4 id="gc-title">Kéo nút vàng để đi qua từng mốc</h4><p id="gc-note"></p></div>
         <div class="g-nav"><button class="btn" type="button" id="g-prev">← Mốc trước</button><button class="btn pri" type="button" id="g-next">Mốc sau →</button><button class="btn" type="button" id="g-today">Hôm nay</button></div>
       </div>
       <div class="g-scroll"><div class="g-in" id="gantt"></div></div>
-      <p class="g-help"><span class="hand">mẹo:</span> kéo nút vàng, lăn chuột trên biểu đồ, bấm vào một ngày, hoặc dùng phím ← → (giữ Shift để nhảy 1 tuần). Trên điện thoại, vuốt ngang biểu đồ để xem các tháng sau.</p>
+      <p class="g-help"><span class="hand">mẹo:</span>kéo nút vàng, bấm vào một ngày trên biểu đồ, hoặc bấm vào nút vàng rồi dùng phím ← → (giữ Shift để nhảy 1 tuần).</p>
       <div class="legend">
         <span><i style="--c:var(--ho-blue)"></i>NUS</span>
         <span><i style="--c:var(--ho-coral)"></i>NTU</span>
-        <span><i style="--c:var(--ho-green)"></i>Lưới an toàn</span>
+        <span><i style="--c:repeating-linear-gradient(-45deg,var(--ho-coral) 0 5px,var(--ho-coral-t) 5px 10px)"></i>Chưa chốt</span>
+        <span><i style="--c:var(--ho-green)"></i>Trường backup</span>
+        <span><i class="dot"></i>Deadline</span>
         <span><i style="--c:repeating-linear-gradient(-45deg,var(--ho-yellow) 0 5px,var(--ho-yellow-t) 5px 10px)"></i>Thời gian có kết quả</span>
+        <span><i style="--c:var(--ho-yellow)"></i>Visa, nhập học</span>
         <span><i style="--c:var(--ho-iris)"></i>Việc riêng</span>
       </div>
     </div>
   </section>
 
-  <section class="sec" aria-labelledby="s2">
-    <div class="sec-h"><span class="num">2</span><h2 id="s2">Quyết định đầu tiên: NTU MiM nộp đợt nào?</h2></div>
-    <p class="sec-sub">Nên chốt trước khoảng 20/10. Chọn một đường, cả trang sẽ cập nhật theo.</p>
-    <div class="fork" role="group" aria-label="Chọn đợt nộp NTU MiM">
-      <button class="path" type="button" data-path="r1" aria-pressed="false">
-        <span class="check" aria-hidden="true">✓</span>
-        <span class="tag">Đường A · 1/11</span>
-        <h4>Nộp round 1</h4>
-        <p>Giữ được học bổng của Nanyang Business School.</p>
-        <ul><li>Xét ASEAN Development Scholarship, Women in Business</li><li>Cần xong essay và 2 người giới thiệu trong tháng 10</li><li>Hạn sớm hơn NUS 2 tuần, lịch sẽ dày</li></ul>
-      </button>
-      <button class="path" type="button" data-path="r2" aria-pressed="false">
-        <span class="check" aria-hidden="true">✓</span>
-        <span class="tag">Đường B · 31/1</span>
-        <h4>Nộp round 2</h4>
-        <p>Dồn sức cho NUS trước, làm MiM sau.</p>
-        <ul><li>Không còn học bổng NBS (chỉ xét round 1)</li><li>Có thêm khoảng 3 tháng chuẩn bị</li><li>Vẫn còn round 3 (31/3) nếu muốn đợi kết quả NUS</li></ul>
-      </button>
-      <p class="fork-note hand" id="fork-note">chưa chọn, trang đang hiện cả hai đường</p>
-    </div>
-  </section>
-
   <section class="sec" aria-labelledby="s3">
-    <div class="sec-h"><span class="num">3</span><h2 id="s3">Các chặng trên đường đi</h2></div>
-    <p class="sec-sub">Từ trái sang phải theo ngày. Mũi tên đỏ chỉ chặng tiếp theo, ô gạch chéo là chặng còn đang cân nhắc.</p>
-    <div class="panel journey"><div class="j-scroll"><div class="track" id="track"><div class="avatar" id="avatar" aria-hidden="true"><span>Nguyên</span><i></i></div></div></div></div>
-  </section>
-
-  <section class="sec" aria-labelledby="s4">
-    <div class="sec-h"><span class="num">4</span><h2 id="s4">Chi tiết từng trường</h2></div>
-    <p class="sec-sub">Xếp theo hạn nộp, gần nhất ở trên. Bấm vào để xem ghi chú.</p>
+    <div class="sec-h"><span class="num">3</span><h2 id="s3">Chi tiết từng trường</h2></div>
+    <p class="sec-sub">Xếp theo deadline, gần nhất ở trên. Bấm vào trường để xem note.</p>
     <div class="log" id="log"></div>
   </section>
 
-  <p class="foot">Nguồn: trang tuyển sinh chính thức NUS (mscmarketing, mscstrategy) và NTU (business, ntupreneur, hướng dẫn nộp MME 2026), lấy ngày 11/10/2026.</p>
+  <p class="foot">Nguồn: trang tuyển sinh chính thức của NUS và NTU, cập nhật ngày 11/10/2026.</p>
 </div>
 
 <script>
@@ -296,119 +322,127 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
   function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
   var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  var C={nus:["--ho-blue","--ho-blue-t"],ntu:["--ho-coral","--ho-coral-t"],safe:["--ho-green","--ho-green-t"],res:["--ho-ink","--ho-yellow-t"],life:["--ho-iris","--ho-iris-t"]};
-  /* schools + stops in date order; path = only for that MiM choice */
-  var Q=[
-    {id:"mim1",path:"r1",tent:1,d:"2026-11-01",ico:"MiM",k:"ntu",school:"NTU",short:"MiM R1",name:"Master in Management",round:"Round 1 · đang cân nhắc",fee:"S$100",
-     notes:["Xét học bổng NBS: ASEAN, Women in Business","GMAT không bắt buộc, cần 2 người giới thiệu","Phỏng vấn quay video nếu vào shortlist"]},
-    {id:"mai",d:"2026-11-15",ico:"MAI",k:"nus",school:"NUS",short:"MAI",name:"MSc Marketing Analytics & Insights",round:"Round 1",fee:"S$100",
-     notes:["Study award và ASEAN award chỉ xét round 1","Không cần người giới thiệu, GMAT không bắt buộc","Motivation letter tối đa 500 chữ","Kết quả về từ tháng 1 đến tháng 4"]},
-    {id:"msi",d:"2026-11-15",ico:"MSI",k:"nus",school:"NUS",short:"MSI",name:"MSc Strategic Analysis & Innovation",round:"Round 1",fee:"S$100",
-     notes:["Award chỉ xét round 1","Không cần người giới thiệu","Motivation letter riêng, tối đa 500 chữ","Có phỏng vấn nếu được chọn"]},
-    {id:"mms",d:"2026-11-30",own:"2026-11-19",ico:"MMS",k:"ntu",school:"NTU",short:"MMS",name:"MSc Marketing Science",round:"Round 1",fee:"S$100",
-     notes:["Nộp trước 19/11 vì 21–24/11 đi Hàn","ASEAN scholarship tới 90% học phí, chỉ round 1","2 người giới thiệu, gửi từ email công ty hoặc trường","CV tối đa 3 trang"]},
-    {id:"korea",rest:1,d:"2026-11-21",ico:"Hàn",k:"life",short:"Đi Hàn",name:"Đi Hàn 21–24/11",notes:[]},
-    {id:"mim2",path:"r2",d:"2027-01-31",ico:"MiM",k:"ntu",school:"NTU",short:"MiM R2",name:"Master in Management",round:"Round 2",fee:"S$100",
-     notes:["Không còn học bổng NBS","Round 3 là 31/3 nếu muốn đợi kết quả NUS"]},
-    {id:"tip",d:"2027-02-26",ico:"TIP",k:"safe",school:"NTU",short:"TIP",name:"MSc Technopreneurship & Innovation",round:"Lưới an toàn",fee:"S$50",
-     notes:["Grant tới S$30k, xét tới 26/2, nộp sớm an toàn hơn","Viết business-idea statement theo mẫu","2 người giới thiệu"]},
-    {id:"me",d:"2027-03-31",ico:"ME",k:"safe",school:"NTU",short:"Managerial Econ",name:"MSc Managerial Economics",round:"Lưới an toàn",fee:"S$100",
-     notes:["Xét liên tục, nộp sớm được ưu tiên","Statement of purpose 600 chữ, không cần người giới thiệu"]},
-    {id:"wed",rest:1,d:"2027-04-03",ico:"Cưới",k:"life",short:"Đám cưới",name:"Đám cưới",notes:[]},
-    {id:"offer",d:"2027-04-30",ico:"Offer",k:"res",short:"Chọn offer",name:"Nhận và chọn offer",round:"Tháng 1 đến 4",
-     notes:["So sánh các offer, chọn một trường và đặt cọc","NUS báo kết quả muộn nhất khoảng tháng 6 đến 7"]},
-    {id:"visa",d:"2027-07-10",ico:"Visa",k:"res",short:"Student's Pass",name:"Student's Pass",round:"Tháng 5 đến 7",
-     notes:["Làm qua trường sau khi chốt offer","Tây Ninh 15–16/5 nằm giữa chặng này"]},
-    {id:"start",rest:1,d:"2027-08-01",ico:"Go!",k:"res",short:"Nhập học",name:"Nhập học",notes:[]}
-  ];
-  var G=[
-    ["mim1","NTU MiM · R1 (tạm)","ntu",[["tent","2026-10-11","2026-11-01"],["wait","2026-11-02","2027-01-15"]],"2026-11-01"],
-    ["mai","NUS MAI","nus",[["prep","2026-10-11","2026-11-15"],["wait","2026-11-16","2027-01-14"],["offer","2027-01-15","2027-04-30"]],"2026-11-15"],
-    ["msi","NUS MSI","nus",[["prep","2026-10-11","2026-11-15"],["wait","2026-11-16","2027-01-14"],["offer","2027-01-15","2027-04-30"]],"2026-11-15"],
-    ["mms","NTU MMS","ntu",[["prep","2026-11-02","2026-11-19"],["wait","2026-11-20","2027-02-28"]],"2026-11-19"],
-    ["mim2","NTU MiM · R2","ntu",[["prep","2026-12-01","2027-01-31"],["wait","2027-02-01","2027-04-15"]],"2027-01-31"],
-    ["tip","NTU TIP","safe",[["prep","2027-01-05","2027-02-26"]],"2027-02-26"],
-    ["me","NTU Managerial Econ","safe",[["prep","2027-02-01","2027-03-31"]],"2027-03-31"],
-    null,
-    ["offer","Chọn offer","res",[["offer","2027-01-15","2027-04-30"]],""],
-    ["visa","Student's Pass","res",[["prep","2027-04-15","2027-07-10"]],""],
-    ["start","Nhập học","res",[["prep","2027-07-15","2027-08-10"]],""],
-    ["life","Việc riêng","life",[],"",[["2026-11-22","Hàn"],["2027-04-03","Cưới"],["2027-05-15","Tây Ninh"]]]
-  ];
-  var EV=[
-    ["2026-10-20","Chốt đợt nộp NTU MiM","Round 1 (1/11, còn học bổng) hay round 2 (31/1)",["mim1","mim2"]],
-    ["2026-11-01","Hạn NTU MiM round 1","Học bổng NBS chỉ xét đợt này",["mim1"]],
-    ["2026-11-15","Hạn NUS MAI và NUS MSI","Round 1. Study award và ASEAN award chỉ xét đợt này",["mai","msi"]],
-    ["2026-11-19","Nộp NTU MMS","Tự đặt trước chuyến Hàn. Hạn của trường là 30/11",["mms"]],
-    ["2026-11-22","Đi Hàn 21–24/11","Nghỉ làm hồ sơ mấy ngày này",["life"]],
-    ["2027-01-15","Bắt đầu có kết quả NUS","Offer round 1 về từ tháng 1 đến tháng 4",["mai","msi","offer"]],
-    ["2027-01-31","Hạn NTU MiM round 2","Không còn học bổng NBS. Round 3 là 31/3",["mim2"]],
-    ["2027-02-26","Hạn NTU TIP","Lưới an toàn. Grant tới S$30k, nộp sớm an toàn hơn",["tip"]],
-    ["2027-03-31","Hạn NTU Managerial Economics","Lưới an toàn, xét liên tục",["me"]],
-    ["2027-04-03","Đám cưới","Ngày vui của hai đứa",["life"]],
-    ["2027-04-15","Bắt đầu làm Student's Pass","Làm qua trường sau khi chốt offer",["visa"]],
-    ["2027-04-30","Chốt offer","Chọn một trường, đặt cọc giữ chỗ",["offer"]],
-    ["2027-05-15","Tây Ninh 15–16/5","",["life"]],
-    ["2027-08-01","Nhập học","Tháng 7 nếu học NTU, tháng 8 nếu học NUS",["start"]]
-  ];
+  /* colour keys: [main, tint, text-on-surface] */
+  var C={nus:["--ho-blue","--ho-blue-t","--ho-blue"],ntu:["--ho-coral","--ho-coral-t","--ho-coral-ink"],safe:["--ho-green","--ho-green-t","--ho-green-ink"],res:["--ho-ink","--ho-yellow-t","--ho-ink"],life:["--ho-iris","--ho-iris-t","--ho-iris-ink"]};
+  function cv(k,i){return "var("+C[k][i]+")"}
 
-  var today=new Date(); today.setHours(0,0,0,0);
+  /* schools, in deadline order. path = shown only for that MiM plan */
+  var Q=[
+    {id:"mim1",path:"r1",tent:1,d:"2026-11-01",ico:"MiM",k:"ntu",school:"NTU",name:"Master in Management",round:"Round 1 · chưa chốt",fee:"S$100",
+     notes:["Round duy nhất còn xét scholarship NBS (ASEAN, Women in Business)","GMAT không bắt buộc, cần 2 referee","Có video interview nếu vào shortlist"]},
+    {id:"mai",d:"2026-11-15",ico:"MAI",k:"nus",school:"NUS",name:"MSc Marketing Analytics & Insights",round:"Round 1",fee:"S$100",
+     notes:["Scholarship (study award, ASEAN award) chỉ xét round 1","Không cần referee, GMAT không bắt buộc","Motivation letter tối đa 500 chữ","Round cuối là 15/2 nhưng không còn scholarship","Kết quả round 1 về khoảng tháng 1 đến tháng 4"]},
+    {id:"msi",d:"2026-11-15",ico:"MSI",k:"nus",school:"NUS",name:"MSc Strategic Analysis & Innovation",round:"Round 1",fee:"S$100",
+     notes:["Scholarship chỉ xét round 1","Không cần referee","Motivation letter viết riêng, không dùng lại bài MAI","Có interview nếu vào shortlist","Round cuối là 15/2"]},
+    {id:"mms",d:"2026-11-30",own:"2026-11-19",ico:"MMS",k:"ntu",school:"NTU",name:"MSc Marketing Science",round:"Round 1",fee:"S$100",
+     notes:["Nộp trước 19/11 vì 21/11 đi Hàn","ASEAN scholarship tới 90% học phí, chỉ xét round 1","2 referee, phải gửi từ email công ty hoặc trường","CV tối đa 3 trang"]},
+    {id:"mim2",path:"r2",d:"2027-01-31",ico:"MiM",k:"ntu",school:"NTU",name:"Master in Management",round:"Round 2",fee:"S$100",
+     notes:["Không còn scholarship NBS","Round 3 là 31/3 nếu muốn đợi kết quả NUS","Dùng lại 2 referee của MMS được"]},
+    {id:"tip",d:"2027-02-26",ico:"TIP",k:"safe",school:"NTU",name:"MSc Technopreneurship & Innovation",round:"Trường backup",fee:"S$50",
+     notes:["Grant tới S$30k, xét tới 26/2, nộp sớm thì chắc hơn","Cần business-idea statement theo mẫu của trường","2 referee"]},
+    {id:"me",d:"2027-03-31",ico:"ME",k:"safe",school:"NTU",name:"MSc Managerial Economics",round:"Trường backup",fee:"S$100",
+     notes:["Xét liên tục, nộp sớm được ưu tiên","Statement of purpose 600 chữ, không cần referee"]},
+    {id:"offer",d:"2027-04-30",ico:"Offer",k:"res",name:"Chọn offer",round:"Tháng 1 đến 4",
+     notes:["Offer round 1 của NUS về khoảng tháng 1 đến tháng 4","Chọn trong các offer đã có rồi đặt cọc giữ chỗ"]},
+    {id:"visa",d:"2027-07-10",ico:"Visa",k:"res",name:"Student's Pass",round:"Tháng 4 đến 7",
+     notes:["Làm qua trường sau khi nhận offer","15 đến 16/5 về Tây Ninh, nhớ chừa thời gian"]}
+  ];
+  /* milestones (shared by hero, mobile timeline, desktop cursor) */
+  var EV=[
+    {d:"2026-10-20",t:"Chốt round cho NTU MiM",n:"Plan A (1/11) hay Plan B (31/1)",ids:[],k:"ntu",decide:1},
+    {d:"2026-11-01",t:"Deadline NTU MiM round 1",n:"Round duy nhất còn xét scholarship NBS",ids:["mim1"],k:"ntu",path:"r1"},
+    {d:"2026-11-15",t:"Deadline NUS MAI và NUS MSI",n:"Round 1, cũng là round duy nhất có scholarship",ids:["mai","msi"],k:"nus"},
+    {d:"2026-11-19",t:"Nộp NTU MMS",n:"Tự đặt trước khi đi Hàn. Deadline của trường là 30/11",ids:["mms"],k:"ntu"},
+    {d:"2026-11-21",t:"Đi Hàn 21 đến 24/11",n:"Nghỉ làm hồ sơ mấy ngày này",ids:["life"],k:"life",life:1},
+    {d:"2027-01-15",t:"Bắt đầu có kết quả NUS",n:"Offer round 1 về khoảng tháng 1 đến tháng 4",ids:["mai","msi","offer"],k:"res"},
+    {d:"2027-01-31",t:"Deadline NTU MiM round 2",n:"Không còn scholarship NBS. Round 3 là 31/3",ids:["mim2"],k:"ntu",path:"r2"},
+    {d:"2027-02-26",t:"Deadline NTU TIP",n:"Trường backup. Grant tới S$30k, nộp sớm thì chắc hơn",ids:["tip"],k:"safe"},
+    {d:"2027-03-31",t:"Deadline NTU Managerial Economics",n:"Trường backup, xét liên tục",ids:["me"],k:"safe"},
+    {d:"2027-04-03",t:"Đám cưới ♥",n:"Ngày vui của hai đứa mình",ids:["life"],k:"life",life:1},
+    {d:"2027-04-15",t:"Bắt đầu làm Student's Pass",n:"Làm qua trường sau khi nhận offer",ids:["visa"],k:"res"},
+    {d:"2027-04-30",t:"Chốt offer",n:"Chọn trường, đặt cọc giữ chỗ",ids:["offer"],k:"res"},
+    {d:"2027-05-15",t:"Về Tây Ninh 15 đến 16/5",n:"",ids:["life"],k:"life",life:1},
+    {d:"2027-08-01",t:"Nhập học",n:"Tháng 7 nếu học NTU, tháng 8 nếu học NUS",ids:["start"],k:"res"}
+  ];
+  var PILL={mim1:"NTU MiM",mim2:"NTU MiM",mai:"NUS MAI",msi:"NUS MSI",mms:"NTU MMS",tip:"NTU TIP",me:"NTU Managerial Econ"};
+
   function D(s){var p=s.split("-").map(Number);return new Date(p[0],p[1]-1,p[2])}
+  var today=new Date();today.setHours(0,0,0,0);
+  var qa=location.search.match(/today=(\d{4}-\d{1,2}-\d{1,2})/);if(qa)today=D(qa[1]);
   function days(s){return Math.round((D(s)-today)/864e5)}
   function fmt(s){var x=D(s);return x.getDate()+"/"+(x.getMonth()+1)}
   function iso(d){return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()}
-  function cv(k,i){return "var("+C[k][i]+")"}
+  function qById(id){return Q.filter(function(x){return x.id===id})[0]}
 
   var path=state.__path||"";
-  function qById(id){return Q.filter(function(x){return x.id===id})[0]}
   function visible(q){return !q.path||!path||q.path===path}
-  function evVisible(e){return e[3].length>1||e[3].every(function(id){var q=qById(id);return !q||visible(q)})}
+  function evVis(e){if(e.decide&&path)return false;return !e.path||!path||e.path===path}
+  function evs(){return EV.filter(evVis)}
 
-  /* hero: next milestone */
+  /* ---------- hero ---------- */
   function renderNext(){
-    var nx=EV.filter(evVisible).filter(function(e){return D(e[0])>=today})[0];if(!nx)return;
-    var n=days(nx[0]);
-    document.getElementById("next-days").innerHTML=n+"<small>"+(n===0?"hôm nay":"ngày nữa")+"</small>";
-    document.getElementById("next-title").textContent=nx[1]+" · "+fmt(nx[0]);
-    document.getElementById("next-note").textContent=nx[2];
+    var nx=evs().filter(function(e){return D(e.d)>=today&&!e.life})[0];if(!nx)return;
+    var n=days(nx.d);
+    document.getElementById("next-days").innerHTML=n+"<small>"+(n===0?"là hôm nay":"ngày nữa")+"</small>";
+    document.getElementById("next-title").textContent=nx.t+" · "+fmt(nx.d);
+    document.getElementById("next-note").textContent=nx.n;
   }
 
-  /* journey */
-  function renderMap(){
-    var t=document.getElementById("track"),av=document.getElementById("avatar");
-    t.innerHTML="";t.appendChild(av);
-    Q.forEach(function(q){
-      var b=document.createElement("button");b.type="button";
-      b.className="node"+(q.tent?" tent":"")+(!visible(q)?" off":"");
-      b.style.setProperty("--c",cv(q.k,0));b.style.setProperty("--t",cv(q.k,1));b.dataset.id=q.id;
-      var dl=days(q.own||q.d),cd=q.rest?"":(dl>=0?dl+" ngày":"đã qua");
-      b.innerHTML='<span class="d">'+fmt(q.own||q.d)+'</span><span class="blk">'+q.ico+'</span><span class="n">'+(q.school?q.school+" ":"")+q.short+'</span><span class="cd">'+cd+'</span>';
-      b.setAttribute("aria-label",(q.school?q.school+" ":"")+q.name+", "+fmt(q.own||q.d));
-      b.addEventListener("click",function(){openQuest(q.id)});
-      t.appendChild(b);
+  /* ---------- mobile vertical timeline ---------- */
+  function whenText(s){var n=days(s);return n===0?"hôm nay":n>0?"còn "+n+" ngày":"đã qua"}
+  function renderVT(){
+    var ol=document.getElementById("vt"),h='<li class="vt-fill" aria-hidden="true" id="vt-fill"></li>',lastM="",todayDone=false;
+    evs().forEach(function(e,i){
+      var x=D(e.d),m=x.getFullYear()+"-"+x.getMonth();
+      if(!todayDone&&x>=today){h+='<li class="vt-today" id="vt-today">hôm nay, '+fmt(iso(today))+'</li>';todayDone=true}
+      if(m!==lastM){h+='<li class="vt-month">Tháng '+(x.getMonth()+1)+'/'+x.getFullYear()+'</li>';lastM=m}
+      var pills=e.ids.filter(function(id){return PILL[id]}).map(function(id){var q=qById(id);return '<span class="pill'+(q&&q.tent?' ghost':'')+'" style="--c:'+cv(q.k,2)+';--t:'+cv(q.k,1)+'">'+PILL[id]+'</span>'}).join("");
+      h+='<li class="vt-item'+(e.life?' life':'')+(x<today?' past':'')+'" data-i="'+i+'" style="--c:'+cv(e.k,0)+'">'+
+        '<div class="vt-date"><b>'+x.getDate()+'</b><span>T'+(x.getMonth()+1)+'</span></div><div class="vt-dot" aria-hidden="true"></div>'+
+        '<div class="vt-card"><p class="vt-when">'+whenText(e.d)+'</p><h4>'+e.t+'</h4>'+(e.n?'<p class="n">'+e.n+'</p>':'')+(pills?'<div class="vt-pills">'+pills+'</div>':'')+'</div></li>';
     });
-    placeAvatar();
+    if(!todayDone)h+='<li class="vt-today" id="vt-today">hôm nay, '+fmt(iso(today))+'</li>';
+    h+='<li class="vt-end">hết timeline rồi, giờ thì bay thôi ✈</li>';
+    ol.innerHTML=h;vtActive=-1;seen={};vtScroll();
   }
-  function placeAvatar(){
-    var t=document.getElementById("track"),av=document.getElementById("avatar");
-    var next=Q.filter(function(q){return visible(q)&&!q.rest&&D(q.own||q.d)>=today})[0]||Q[Q.length-1];
-    var n=t.querySelector('[data-id="'+next.id+'"]');if(!n)return;
-    av.style.left=(n.offsetLeft+n.offsetWidth/2)+"px";
-    t.querySelectorAll(".node").forEach(function(x){x.setAttribute("aria-current",x===n?"true":"false")});
+  var vtActive=-1,seen={},vtTick=false;
+  function vtScroll(){
+    var ol=document.getElementById("vt");if(!ol||!ol.offsetParent)return;
+    var mid=window.innerHeight*0.45,items=ol.querySelectorAll(".vt-item"),best=-1,bd=1e9;
+    items.forEach(function(it,j){var r=it.getBoundingClientRect(),c=r.top+Math.min(40,r.height/2),d=Math.abs(c-mid);if(r.bottom>0&&r.top<window.innerHeight&&d<bd){bd=d;best=j}});
+    var r0=ol.getBoundingClientRect(),fill=document.getElementById("vt-fill");
+    if(fill)fill.style.height=Math.max(0,Math.min(r0.height,mid-r0.top))+"px";
+    var now=document.getElementById("vt-now");
+    if(r0.top>mid||r0.bottom<0){best=-1}
+    if(best!==vtActive){
+      items.forEach(function(it,j){it.classList.toggle("on",j===best)});
+      vtActive=best;
+      if(best>=0){
+        var it=items[best],e=evs()[+it.dataset.i];
+        if(!seen[best]&&!reduce){seen[best]=1;it.classList.remove("pop");void it.offsetWidth;it.classList.add("pop");confettiAt(it.querySelector(".vt-dot"),it)}
+      }
+    }
+    if(best>=0){var e2=evs()[+items[best].dataset.i];now.textContent=fmt(e2.d)+" · "+whenText(e2.d)}
+    else now.textContent="hôm nay · "+fmt(iso(today));
   }
+  window.addEventListener("scroll",function(){if(!vtTick){vtTick=true;requestAnimationFrame(function(){vtTick=false;vtScroll()})}},{passive:true});
+  var CONF=["--ho-yellow","--ho-coral","--ho-blue","--ho-green","--ho-iris"];
+  function confettiAt(dot,host){var r=dot.getBoundingClientRect(),hr=host.getBoundingClientRect(),x=r.left-hr.left+r.width/2,y=r.top-hr.top+r.height/2;
+    for(var i=0;i<12;i++){var b=document.createElement("i");b.className="vt-conf";var a=i/12*Math.PI*2;b.style.left=x+"px";b.style.top=y+"px";b.style.background="var("+CONF[i%5]+")";
+      b.style.setProperty("--bx",Math.round(Math.cos(a)*38)+"px");b.style.setProperty("--by",Math.round(Math.sin(a)*38)+"px");host.appendChild(b);setTimeout(function(n){return function(){n.remove()}}(b),750)}}
 
-  /* school cards */
+  /* ---------- school cards ---------- */
   function renderLog(){
     var L=document.getElementById("log"),open={};
     L.querySelectorAll("details[open]").forEach(function(d){open[d.id]=1});
     L.innerHTML="";
-    Q.filter(function(q){return visible(q)&&!q.rest}).forEach(function(q,i){
+    Q.filter(visible).forEach(function(q){
       var dl=days(q.own||q.d);
       var el=document.createElement("details");el.className="quest"+(q.tent?" tent":"");el.id="q-"+q.id;
-      el.style.setProperty("--c",cv(q.k,0));el.style.setProperty("--t",cv(q.k,1));
-      if(open["q-"+q.id]||(!Object.keys(open).length&&i===0))el.open=true;
-      el.innerHTML='<summary><span class="q-ico" aria-hidden="true">'+q.ico+'</span><div class="q-main"><h3>'+(q.school?'<em>'+q.school+'</em> ':'')+q.name+'</h3><div class="q-meta"><span class="pill'+(q.tent?' ghost':'')+'">'+q.round+'</span><span>Hạn '+fmt(q.d)+(q.own?' · tự nộp trước '+fmt(q.own):'')+'</span>'+(q.fee?'<span>Phí '+q.fee+'</span>':'')+'</div></div><div class="q-right"><div class="days">'+(dl>=0?dl:"✓")+'</div><div class="lbl">'+(dl>=0?"ngày nữa":"đã qua")+'</div></div></summary>'+
-        (q.notes.length?'<div class="q-body"><div class="note"><span class="hand">ghi chú</span><ul>'+q.notes.map(function(x){return "<li>"+x+"</li>"}).join("")+'</ul></div></div>':'');
+      el.style.setProperty("--c",cv(q.k,2));el.style.setProperty("--t",cv(q.k,1));el.style.setProperty("--ci",cv(q.k,2));
+      if(open["q-"+q.id])el.open=true;
+      el.innerHTML='<summary><span class="q-ico" aria-hidden="true">'+q.ico+'</span><div class="q-main"><h3>'+(q.school?'<em>'+q.school+'</em> ':'')+q.name+'</h3><div class="q-meta"><span class="pill'+(q.tent?' ghost':'')+'" style="--c:'+cv(q.k,2)+';--t:'+cv(q.k,1)+'">'+q.round+'</span><span>'+(q.school?'Deadline ':'Tới ')+fmt(q.d)+(q.own?', tự nộp trước '+fmt(q.own):'')+'</span>'+(q.fee?'<span>Phí apply '+q.fee+'</span>':'')+'</div></div><div class="q-right"><div class="days">'+(dl>=0?dl:"✓")+'</div><div class="lbl">'+(dl>=0?"ngày nữa":"đã qua")+'<span class="q-chev" aria-hidden="true">▾</span></div></div></summary>'+
+        '<div class="q-body"><div class="note"><span class="hand">note</span><ul>'+q.notes.map(function(x){return "<li>"+x+"</li>"}).join("")+'</ul></div></div>';
       L.appendChild(el);
     });
   }
@@ -418,50 +452,65 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     if(!reduce){el.classList.remove("flash");void el.offsetWidth;el.classList.add("flash")}
   }
 
-  /* gantt */
+  /* ---------- desktop gantt ---------- */
+  var G=[
+    ["mim1","NTU MiM · round 1","ntu",[["tent","2026-10-11","2026-11-01"],["wait","2026-11-02","2027-01-15"]],"2026-11-01"],
+    ["mai","NUS MAI","nus",[["prep","2026-10-11","2026-11-15"],["wait","2026-11-16","2027-01-14"],["offer","2027-01-15","2027-04-30"]],"2026-11-15"],
+    ["msi","NUS MSI","nus",[["prep","2026-10-11","2026-11-15"],["wait","2026-11-16","2027-01-14"],["offer","2027-01-15","2027-04-30"]],"2026-11-15"],
+    ["mms","NTU MMS","ntu",[["prep","2026-10-11","2026-11-19"],["wait","2026-11-20","2027-02-28"]],"2026-11-19"],
+    ["mim2","NTU MiM · round 2","ntu",[["prep","2026-12-01","2027-01-31"],["wait","2027-02-01","2027-04-15"]],"2027-01-31"],
+    ["tip","NTU TIP","safe",[["prep","2027-01-05","2027-02-26"]],"2027-02-26"],
+    ["me","NTU Managerial Econ","safe",[["prep","2027-02-01","2027-03-31"]],"2027-03-31"],
+    null,
+    ["offer","Chọn offer","res",[["offer","2027-01-15","2027-04-30"]],""],
+    ["visa","Student's Pass","res",[["res","2027-04-15","2027-07-10"]],""],
+    ["start","Nhập học","res",[["res","2027-07-15","2027-08-10"]],""],
+    ["life","Việc riêng","life",[],"",[["2026-11-21","Hàn"],["2027-04-03","Cưới"],["2027-05-15","Tây Ninh"]]]
+  ];
   var GM=[[2026,10],[2026,11],[2026,12],[2027,1],[2027,2],[2027,3],[2027,4],[2027,5],[2027,6],[2027,7],[2027,8]];
   var MN=["T10","T11","T12","T1/27","T2","T3","T4","T5","T6","T7","T8"];
-  function gp(s){var p=s.split("-").map(Number),i=GM.findIndex(function(m){return m[0]===p[0]&&m[1]===p[1]});return (i+(p[2]-1)/new Date(p[0],p[1],0).getDate())/GM.length*100}
+  var X0=1.2; /* % inset so 1/10 never hides under the label column */
+  function gp(s){var p=s.split("-").map(Number),i=GM.findIndex(function(m){return m[0]===p[0]&&m[1]===p[1]});return X0+(i+(p[2]-1)/new Date(p[0],p[1],0).getDate())/GM.length*(100-X0)}
   function LAB(){return parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--lab"))||170}
   function renderGantt(){
     var h='<div class="g-row hd"><div></div><div class="g-mon">'+MN.map(function(m){return"<span>"+m+"</span>"}).join("")+'</div></div>',k=0;
     G.forEach(function(r){
       if(!r){h+='<div class="g-row sep"><div></div><div></div></div>';return}
-      var q=qById(r[0]),off=q&&!visible(q),c=cv(r[2],0);
+      var q=qById(r[0]),off=q&&!visible(q),c=cv(r[2],0),clickable=!!q&&!off;
       var tl='<div class="g-grid">'+"<i></i>".repeat(11)+'</div>';
-      r[3].forEach(function(sg){var a=gp(sg[1]),b=gp(sg[2]);tl+='<i class="g-bar '+(r[2]==="res"&&sg[0]==="prep"?"res":sg[0])+'" style="--c:'+c+';left:'+a+'%;width:'+Math.max(.8,b-a)+'%;--dl:'+(reduce?0:k*60)+'ms"></i>'});
-      if(r[4])tl+='<i class="g-dl" style="--c:'+c+';left:'+gp(r[4])+'%"><b>'+fmt(r[4])+'</b></i>';
-      (r[5]||[]).forEach(function(e){tl+='<b class="g-ev" style="left:'+gp(e[0])+'%">'+e[1]+'</b>'});
-      h+='<div class="g-row'+(off?' off':'')+'" data-q="'+r[0]+'"><button type="button" class="g-lab" data-q="'+r[0]+'">'+r[1]+'</button><div class="g-tl">'+tl+'</div></div>';k++;
+      r[3].forEach(function(sg){var a=gp(sg[1]),b=gp(sg[2]);tl+='<i class="g-bar '+sg[0]+'" style="--c:'+c+';left:'+a+'%;width:'+Math.max(.8,b-a)+'%;--dl:'+(reduce?0:k*60)+'ms"></i>'});
+      if(r[4])tl+='<i class="g-dl" data-d="'+r[4]+'" style="--c:'+c+';left:'+gp(r[4])+'%"><b>'+fmt(r[4])+'</b></i>';
+      (r[5]||[]).forEach(function(e){tl+='<b class="g-ev" data-d="'+e[0]+'" style="left:'+gp(e[0])+'%">'+e[1]+'</b>'});
+      h+='<div class="g-row'+(off?' off':'')+'" data-q="'+r[0]+'"><button type="button" class="g-lab" data-q="'+r[0]+'"'+(clickable?'':' aria-disabled="true" tabindex="-1"')+'>'+r[1]+'</button><div class="g-tl">'+tl+'</div></div>';k++;
     });
     var g=document.getElementById("gantt");g.innerHTML=h;
     setupCursor(g);
-    g.querySelectorAll(".g-lab").forEach(function(b){b.addEventListener("click",function(){if(b.dataset.q!=="life")openQuest(b.dataset.q)})});
+    g.querySelectorAll(".g-lab").forEach(function(b){b.addEventListener("click",function(){if(b.getAttribute("aria-disabled")!=="true")openQuest(b.dataset.q)})});
   }
 
   /* time cursor */
-  var cur=null,lastHit=null;
-  var G0=D("2026-10-01"),G1=D("2027-08-31");
+  var cur=null,lastHit=null,G0=D("2026-10-01"),G1=D("2027-08-31");
   function clamp(d){return d<G0?new Date(G0):d>G1?new Date(G1):d}
-  function dateAt(pct){var x=Math.max(0,Math.min(99.999,pct))/100*GM.length,i=Math.floor(x),m=GM[i],dim=new Date(m[0],m[1],0).getDate();return new Date(m[0],m[1]-1,1+Math.floor((x-i)*dim))}
+  function dateAt(pct){var x=(Math.max(X0,Math.min(99.999,pct))-X0)/(100-X0)*GM.length,i=Math.min(GM.length-1,Math.floor(x)),m=GM[i],dim=new Date(m[0],m[1],0).getDate();return new Date(m[0],m[1]-1,1+Math.min(dim-1,Math.floor((x-i)*dim)))}
   function setupCursor(g){
     var tk=document.createElement("div");tk.className="g-ticks";
-    EV.filter(evVisible).forEach(function(e,i){var t=document.createElement("i");t.style.left=gp(e[0])+"%";t.dataset.e=i;tk.appendChild(t)});
+    evs().forEach(function(e,i){var t=document.createElement("i");t.style.left=gp(e.d)+"%";t.dataset.e=i;tk.appendChild(t)});
     g.appendChild(tk);
-    var c=document.createElement("div");c.className="g-cursor";c.tabIndex=0;c.setAttribute("role","slider");c.setAttribute("aria-label","Thanh thời gian, dùng phím mũi tên để di chuyển");
-    c.innerHTML='<span class="g-knob"></span><b></b>';g.appendChild(c);
-    if(!cur){var qa=location.search.match(/at=(\d{4}-\d{1,2}-\d{1,2})/);cur=clamp(qa?D(qa[1]):new Date(today))}
+    var c=document.createElement("div");c.className="g-cursor";
+    c.innerHTML='<span class="g-knob" tabindex="0" role="slider" aria-label="Thanh thời gian" aria-valuemin="0" aria-valuemax="334"></span><b></b>';g.appendChild(c);
+    var knob=c.querySelector(".g-knob");
+    if(!cur){var qa2=location.search.match(/at=(\d{4}-\d{1,2}-\d{1,2})/);cur=clamp(qa2?D(qa2[1]):new Date(today))}
     moveTo(cur,false);
-    var sc=g.parentElement;if(sc&&sc.scrollWidth>sc.clientWidth){var px=LAB()+(g.offsetWidth-LAB())*gp(iso(cur))/100;sc.scrollLeft=Math.max(0,px-LAB()-40)}
     function at(ev){var r=g.getBoundingClientRect(),x0=r.left+LAB(),w=r.width-LAB();return dateAt((ev.clientX-x0)/w*100)}
     var dragging=false;
-    c.addEventListener("pointerdown",function(ev){dragging=true;c.classList.add("drag");c.setPointerCapture(ev.pointerId);ev.preventDefault()});
-    c.addEventListener("pointermove",function(ev){if(dragging)moveTo(at(ev),false)});
-    c.addEventListener("pointerup",function(){dragging=false;c.classList.remove("drag")});
-    c.addEventListener("pointercancel",function(){dragging=false;c.classList.remove("drag")});
-    g.addEventListener("click",function(ev){if(ev.target.closest(".g-cursor,.g-lab"))return;var r=g.getBoundingClientRect();if(ev.clientX<r.left+LAB())return;moveTo(at(ev),true)});
-    g.addEventListener("wheel",function(ev){var dv=Math.abs(ev.deltaY)>Math.abs(ev.deltaX)?ev.deltaY:ev.deltaX;if(!dv)return;ev.preventDefault();step(dv>0?3:-3)},{passive:false});
-    c.addEventListener("keydown",function(ev){var k=ev.key;if(k==="ArrowRight"||k==="ArrowUp"){step(ev.shiftKey?7:1);ev.preventDefault()}else if(k==="ArrowLeft"||k==="ArrowDown"){step(ev.shiftKey?-7:-1);ev.preventDefault()}else if(k==="Home"){moveTo(G0,true)}else if(k==="End"){moveTo(G1,true)}});
+    knob.addEventListener("pointerdown",function(ev){dragging=true;c.classList.add("drag");knob.setPointerCapture(ev.pointerId);ev.preventDefault()});
+    knob.addEventListener("pointermove",function(ev){if(dragging)moveTo(at(ev),false)});
+    function end(){dragging=false;c.classList.remove("drag")}
+    knob.addEventListener("pointerup",end);knob.addEventListener("pointercancel",end);
+    g.addEventListener("click",function(ev){if(ev.target.closest(".g-knob,.g-lab"))return;var r=g.getBoundingClientRect();if(ev.clientX<r.left+LAB())return;moveTo(at(ev),true)});
+    /* only sideways scroll or Shift+wheel moves time; normal vertical scroll keeps scrolling the page */
+    g.addEventListener("wheel",function(ev){var horiz=Math.abs(ev.deltaX)>Math.abs(ev.deltaY);if(!horiz&&!ev.shiftKey)return;var dv=horiz?ev.deltaX:ev.deltaY;if(!dv)return;ev.preventDefault();step(dv>0?3:-3)},{passive:false});
+    knob.addEventListener("keydown",function(ev){var k=ev.key;if(k==="ArrowRight"||k==="ArrowUp"){step(ev.shiftKey?7:1);ev.preventDefault()}else if(k==="ArrowLeft"||k==="ArrowDown"){step(ev.shiftKey?-7:-1);ev.preventDefault()}else if(k==="Home"){moveTo(G0,true);ev.preventDefault()}else if(k==="End"){moveTo(G1,true);ev.preventDefault()}});
   }
   function step(n){var d=new Date(cur);d.setDate(d.getDate()+n);moveTo(d,false)}
   function moveTo(d,glide){
@@ -470,55 +519,57 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     c.classList.toggle("glide",!!glide&&!reduce);
     c.style.left="calc("+LAB()+"px + (100% - "+LAB()+"px) * "+(gp(iso(cur))/100)+")";
     c.querySelector("b").textContent=fmt(iso(cur))+"/"+cur.getFullYear();
-    c.setAttribute("aria-valuetext",fmt(iso(cur))+"/"+cur.getFullYear());
-    var ev=EV.filter(evVisible),hit=null;
-    ev.forEach(function(e){if(Math.abs(D(e[0])-cur)<=2*864e5)hit=e});
+    var kn=c.querySelector(".g-knob");kn.setAttribute("aria-valuenow",String(Math.round((cur-G0)/864e5)));kn.setAttribute("aria-valuetext",fmt(iso(cur))+"/"+cur.getFullYear());
+    var ev=evs(),hit=null,bd=1e15;
+    ev.forEach(function(e){var dd=Math.abs(D(e.d)-cur);if(dd<=2*864e5&&dd<bd){bd=dd;hit=e}});
     g.querySelectorAll(".g-row[data-q]").forEach(function(row){
       var r=G.filter(function(x){return x&&x[0]===row.dataset.q})[0];if(!r)return;
       var s=r[3],b=s.length?D(s[s.length-1][2]):null;
-      row.classList.toggle("hit",!!hit&&hit[3].indexOf(r[0])>=0);
+      row.classList.toggle("hit",!!hit&&(hit.ids.indexOf(r[0])>=0||(!!hit.decide&&(r[0]==="mim1"||r[0]==="mim2"))));
       row.classList.toggle("past",!!b&&cur>b);
     });
     g.querySelectorAll(".g-ticks i").forEach(function(t){t.classList.toggle("hit",hit===ev[+t.dataset.e])});
     var dd=Math.round((cur-today)/864e5),card=document.getElementById("g-card");
-    document.getElementById("gc-date").innerHTML="<strong>"+fmt(iso(cur))+"/"+String(cur.getFullYear()).slice(2)+"</strong><small>"+(dd===0?"hôm nay":dd>0?"sau "+dd+" ngày":dd*-1+" ngày trước")+"</small>";
-    if(hit){
-      card.classList.add("hit");
-      if(lastHit!==hit){
-        lastHit=hit;typeTitle(hit[1]);document.getElementById("gc-note").textContent=hit[2];
+    document.getElementById("gc-date").innerHTML="<strong>"+fmt(iso(cur))+"/"+String(cur.getFullYear()).slice(2)+"</strong><small>"+(dd===0?"hôm nay":dd>0?"sau "+dd+" ngày":(-dd)+" ngày trước")+"</small>";
+    if(hit!==lastHit){
+      g.querySelectorAll(".g-dl.hit,.g-ev.hit").forEach(function(m){m.classList.remove("hit")});
+      if(hit){
+        card.classList.add("hit");typeTitle(hit.t);document.getElementById("gc-note").textContent=hit.n;
         if(!reduce){card.classList.remove("wiggle");void card.offsetWidth;card.classList.add("wiggle");confetti(hit)}
-        g.querySelectorAll(".g-row.hit .g-dl,.g-row.hit .g-ev").forEach(function(m){m.classList.remove("hit");void m.offsetWidth;m.classList.add("hit")});
+        g.querySelectorAll('.g-dl[data-d="'+hit.d+'"],.g-ev[data-d="'+hit.d+'"]').forEach(function(m){void m.offsetWidth;m.classList.add("hit")});
       }
-    }else{
-      card.classList.remove("hit");lastHit=null;
-      var nx=ev.filter(function(e){return D(e[0])>cur})[0];
-      clearInterval(typeT);
-      document.getElementById("gc-title").textContent=nx?"Tiếp theo: "+nx[1]:"Hết hành trình rồi";
-      document.getElementById("gc-note").textContent=nx?"Còn "+Math.round((D(nx[0])-cur)/864e5)+" ngày, vào ngày "+fmt(nx[0]):"Chúc mừng em";
+      lastHit=hit;
     }
+    if(!hit){
+      card.classList.remove("hit");clearInterval(typeT);
+      var nx=ev.filter(function(e){return D(e.d)>cur})[0];
+      document.getElementById("gc-title").textContent=nx?"Tiếp theo: "+nx.t:"Hết timeline rồi";
+      document.getElementById("gc-note").textContent=nx?"Còn "+Math.round((D(nx.d)-cur)/864e5)+" ngày nữa, vào ngày "+fmt(nx.d):"Giờ thì bay thôi ✈";
+    }
+    document.getElementById("g-prev").disabled=!ev.some(function(e){return D(e.d)<cur});
+    document.getElementById("g-next").disabled=!ev.some(function(e){return D(e.d)>cur});
   }
   var typeT;function typeTitle(t){var el=document.getElementById("gc-title");clearInterval(typeT);if(reduce){el.textContent=t;return}var i=0;el.textContent="";typeT=setInterval(function(){el.textContent=t.slice(0,++i);if(i>=t.length)clearInterval(typeT)},20)}
-  var CONF=["--ho-yellow","--ho-coral","--ho-blue","--ho-green","--ho-iris"];
-  function confetti(e){var g=document.getElementById("gantt"),r=g.getBoundingClientRect(),x=LAB()+(r.width-LAB())*gp(e[0])/100;
-    for(var i=0;i<10;i++){var b=document.createElement("i");b.className="g-confetti";var a=i/10*Math.PI*2;b.style.left=x+"px";b.style.top="24px";b.style.background="var("+CONF[i%5]+")";
-      b.style.setProperty("--bx",Math.round(Math.cos(a)*30)+"px");b.style.setProperty("--by",Math.round(Math.sin(a)*30)+"px");g.appendChild(b);setTimeout(function(n){return function(){n.remove()}}(b),650)}}
-  function jump(dir){var ev=EV.filter(evVisible),t=dir>0?ev.filter(function(e){return D(e[0])>new Date(cur.getTime()+2*864e5)})[0]:ev.filter(function(e){return D(e[0])<new Date(cur.getTime()-2*864e5)}).pop();if(t)moveTo(D(t[0]),true)}
+  function confetti(e){var g=document.getElementById("gantt"),r=g.getBoundingClientRect(),x=LAB()+(r.width-LAB())*gp(e.d)/100;
+    for(var i=0;i<14;i++){var b=document.createElement("i");b.className="g-confetti";var a=i/14*Math.PI*2;b.style.left=x+"px";b.style.top="26px";b.style.background="var("+CONF[i%5]+")";
+      b.style.setProperty("--bx",Math.round(Math.cos(a)*50)+"px");b.style.setProperty("--by",Math.round(Math.sin(a)*50)+"px");g.appendChild(b);setTimeout(function(n){return function(){n.remove()}}(b),750)}}
+  function jump(dir){var ev=evs(),t=dir>0?ev.filter(function(e){return D(e.d)>cur})[0]:ev.filter(function(e){return D(e.d)<cur}).pop();if(t)moveTo(D(t.d),true)}
   document.getElementById("g-next").addEventListener("click",function(){jump(1)});
   document.getElementById("g-prev").addEventListener("click",function(){jump(-1)});
   document.getElementById("g-today").addEventListener("click",function(){moveTo(today,true)});
 
-  /* path choice */
+  /* ---------- path choice ---------- */
   function setPath(p){
     path=p;state.__path=p;save();
-    document.querySelectorAll(".path").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.path===p))});
-    document.getElementById("fork-note").textContent=p==="r1"?"đã chọn đường A: nộp MiM round 1 (1/11). bấm lại để bỏ chọn":p==="r2"?"đã chọn đường B: nộp MiM round 2 (31/1). bấm lại để bỏ chọn":"chưa chọn, trang đang hiện cả hai đường";
-    renderNext();renderMap();renderLog();renderGantt();
+    document.querySelectorAll(".path").forEach(function(b){b.setAttribute("aria-checked",String(b.dataset.path===p))});
+    document.getElementById("fork-note").textContent=p==="r1"?"đã chọn Plan A, apply MiM round 1 (1/11). bấm lại để bỏ chọn":p==="r2"?"đã chọn Plan B, apply MiM round 2 (31/1). bấm lại để bỏ chọn":"chưa chọn, đang hiện cả hai plan";
+    lastHit=null;renderNext();renderVT();renderLog();renderGantt();
   }
   document.querySelectorAll(".path").forEach(function(b){b.addEventListener("click",function(){setPath(path===b.dataset.path?"":b.dataset.path)})});
 
   setPath(path);
-  window.addEventListener("resize",function(){placeAvatar();if(cur)moveTo(cur,false)});
-  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){placeAvatar();if(cur)moveTo(cur,false)});
+  window.addEventListener("resize",function(){if(cur)moveTo(cur,false);vtScroll()});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){if(cur)moveTo(cur,false);vtScroll()});
 })();
 </script>
 </body>
