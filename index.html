@@ -440,7 +440,9 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
   function iso(d){return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()}
   function qById(id){return Q.filter(function(x){return x.id===id})[0]}
 
-  var view=state.view||"n";
+  var vq=location.search.match(/view=(n|t|all)/);
+  var view=vq?vq[1]:(state.view||"n");
+  window.__TL={EV:EV,Q:Q};
   function mine(w){return view==="all"||w==="b"||w===view}
   function evs(){return EV.filter(function(e){return mine(e.who)})}
   function ownChip(w){return view==="all"?'<span class="own '+w+'">'+WHO[w]+'</span>':''}
@@ -521,7 +523,7 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
    *       retake:[from,to] (only if retaking GMAT), alt:[date,label] (round 3 deadline), res:[from,to] (results / visa / start) } */
   var G=[
     {grp:"Việc riêng",who:"b"},
-    {id:"life",label:"Việc riêng",k:"life",who:"b",ev:[["2026-11-21","Hàn 21–24/11"],["2027-04-03","Lễ cưới Đà Lạt 3/4"],["2027-05-15","Cưới Tây Ninh 15–16/5"]]},
+    {id:"life",label:"Việc riêng",k:"life",who:"b",ev:[["2026-11-21","Hàn 21–24/11"],["2027-04-03","Đà Lạt 3/4"],["2027-05-15","Tây Ninh 15–16/5"]]},
     {grp:"Cả hai",who:"b"},
     {id:"gmat",label:"Ôn và thi GMAT",k:"res",who:"b",prep:["2026-10-11","2027-01-08"],plan:[["2026-10-31","đặt lịch"],["2027-01-08","thi 8/1"]],retake:["2027-01-09","2027-01-26"]},
     {grp:"Nguyên",who:"n"},
