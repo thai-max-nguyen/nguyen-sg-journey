@@ -136,12 +136,14 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
 .g-bar{position:absolute;top:12px;height:14px;border-radius:999px;background:var(--c);transform-origin:left;animation:grow .6s var(--ui-ease) both;animation-delay:var(--dl,0ms)}
 .g-bar.wait{top:18px;height:2px;border-radius:0;background:repeating-linear-gradient(90deg,var(--ho-line-2) 0 4px,transparent 4px 8px)}
 .g-bar.offer{background:repeating-linear-gradient(-45deg,var(--ho-yellow) 0 5px,var(--ho-yellow-t) 5px 10px);border:1.5px solid var(--ho-ink)}
-.g-bar.tent{background:repeating-linear-gradient(-45deg,var(--ho-coral) 0 5px,var(--ho-coral-t) 5px 10px);border:1.5px dashed var(--ho-coral)}
+.g-bar.tent{background:repeating-linear-gradient(-45deg,var(--c) 0 5px,var(--ho-surface) 5px 10px);border:1.5px dashed var(--c);opacity:.75}
 .g-bar.res{background:var(--ho-yellow);border:1.5px solid var(--ho-ink)}
 @keyframes grow{from{transform:scaleX(0)}}
 .g-dl{position:absolute;top:9px;width:20px;height:20px;margin-left:-10px;border-radius:50%;background:var(--ho-surface);border:3px solid var(--c);box-shadow:2px 2px 0 var(--ho-ink);z-index:2}
 .g-dl b{position:absolute;left:22px;top:-2px;font:700 12px var(--f-body);color:var(--ho-ink);white-space:nowrap;background:var(--ho-surface);padding:1px 6px;border-radius:6px;box-shadow:0 0 0 1px var(--ho-line)}
 .g-ev{position:absolute;top:7px;transform:translateX(-50%);font:600 13px/1 var(--f-hand);color:var(--ho-ink);background:var(--ho-iris-t);border:1.5px solid var(--ho-iris);padding:4px 10px;border-radius:999px;white-space:nowrap}
+.g-ev.plan{top:-6px;font:700 11px/1 var(--f-body);background:var(--ho-surface);border:1.5px solid var(--ho-ink);color:var(--ho-ink);padding:3px 7px;z-index:3}
+.g-ev.plan::after{content:"";position:absolute;left:50%;bottom:-8px;width:2px;height:7px;margin-left:-1px;background:var(--ho-ink)}
 .g-dl.hit{animation:pop .5s var(--ui-ease)}
 @keyframes pop{30%{transform:scale(1.45)}60%{transform:scale(.92)}}
 .g-ev.hit{animation:popc .5s var(--ui-ease);background:var(--ho-yellow);border-color:var(--ho-ink)}
@@ -302,7 +304,7 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
         <span><i style="--c:var(--ho-coral)"></i>NTU</span>
         <span><i style="--c:var(--ho-iris)"></i>SMU, việc riêng</span>
         <span><i style="--c:var(--ho-green)"></i>Trường backup</span>
-        <span><i style="--c:repeating-linear-gradient(-45deg,var(--ho-coral) 0 5px,var(--ho-coral-t) 5px 10px)"></i>Nếu thi lại GMAT</span>
+        <span><i style="--c:repeating-linear-gradient(-45deg,var(--ho-ink-2) 0 5px,var(--ho-surface) 5px 10px)"></i>Còn thời gian nếu thi lại GMAT</span>
         <span><i class="dot"></i>Deadline</span>
         <span><i style="--c:repeating-linear-gradient(-45deg,var(--ho-yellow) 0 5px,var(--ho-yellow-t) 5px 10px)"></i>Thời gian có kết quả</span>
         <span><i style="--c:var(--ho-yellow)"></i>Visa, nhập học</span>
@@ -477,11 +479,11 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     ["n-tip","NTU TIP","safe",[["prep","2027-01-15","2027-02-26"]],"2027-02-26","","n"],
     ["n-me","NTU Managerial Econ","safe",[["prep","2027-02-15","2027-03-31"]],"2027-03-31","","n"],
     ["grp","Thái","",null,"","","t"],
-    ["t-moti","NUS MOTI","nus",[["prep","2026-10-11","2027-01-15"],["wait","2027-01-16","2027-04-30"]],"2027-01-15","","t"],
+    ["t-moti","NUS MOTI","nus",[["prep","2026-10-11","2027-01-15"],["tent","2027-01-16","2027-02-28"],["wait","2027-03-01","2027-04-30"]],"2027-02-28",[["2027-01-15","nộp 15/1","plan"]],"t"],
     ["t-msba","NUS MSBA","nus",[["prep","2026-10-11","2027-01-31"],["wait","2027-02-01","2027-05-15"]],"2027-01-31","","t"],
     ["t-aii","NUS AI & Innovation","nus",[["prep","2026-11-01","2027-01-31"],["wait","2027-02-01","2027-05-15"]],"2027-01-31","","t"],
     ["t-ntumsba","NTU MSBA","ntu",[["prep","2026-11-15","2027-01-31"],["tent","2027-02-01","2027-03-31"]],"2027-01-31","","t"],
-    ["t-mitb","SMU MITB","smu",[["prep","2027-02-01","2027-03-31"],["wait","2027-04-01","2027-06-30"]],"2027-03-31","","t"],
+    ["t-mitb","SMU MITB","smu",[["prep","2027-02-01","2027-03-31"],["tent","2027-04-01","2027-05-31"],["wait","2027-06-01","2027-06-30"]],"2027-05-31",[["2027-03-31","nộp trước 1/4","plan"]],"t"],
     ["grp","Sau khi nộp","",null,"","","b"],
     ["offer","Kết quả và chọn offer","res",[["offer","2027-03-01","2027-06-15"]],"","","b"],
     ["visa","Student's Pass","res",[["res","2027-06-15","2027-07-20"]],"","","b"],
@@ -502,7 +504,7 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
       var tl='<div class="g-grid">'+"<i></i>".repeat(11)+'</div>';
       r[3].forEach(function(sg){var a=gp(sg[1]),b=gp(sg[2]);tl+='<i class="g-bar '+sg[0]+'" style="--c:'+c+';left:'+a+'%;width:'+Math.max(.8,b-a)+'%;--dl:'+(reduce?0:k*50)+'ms"></i>'});
       if(r[4])tl+='<i class="g-dl" data-d="'+r[4]+'" style="--c:'+c+';left:'+gp(r[4])+'%"><b>'+fmt(r[4])+'</b></i>';
-      (r[5]||[]).forEach(function(e){tl+='<b class="g-ev" data-d="'+e[0]+'" style="left:'+gp(e[0])+'%">'+e[1]+'</b>'});
+      (r[5]||[]).forEach(function(e){tl+='<b class="g-ev'+(e[2]?' '+e[2]:'')+'" data-d="'+e[0]+'" style="left:'+gp(e[0])+'%">'+e[1]+'</b>'});
       h+='<div class="g-row" data-q="'+r[0]+'"><button type="button" class="g-lab" data-q="'+r[0]+'"'+(clickable?'':' aria-disabled="true" tabindex="-1"')+'>'+r[1]+'</button><div class="g-tl">'+tl+'</div></div>';k++;
     });
     var g=document.getElementById("gantt");g.innerHTML=h;
