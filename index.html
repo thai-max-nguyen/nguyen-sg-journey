@@ -468,7 +468,7 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     var qs=Q.filter(function(q){return mine(q.who)&&D(q.d)>=today}).sort(function(a,b){return D(a.own||a.d)-D(b.own||b.d)});
     var el=document.getElementById("next-school");
     el.innerHTML='<span>Deadline các trường</span>'+qs.map(function(q){var u=q.own||q.d,m=days(u);
-      return '<b><i class="dot" style="background:var('+C[q.k][0]+')"></i>'+(view==="all"?'<em>'+WHO[q.who]+'</em>':'')+q.school+' '+(PILL[q.id]||q.name).replace(q.school+' ','')+'<small>'+(q.own?'nộp ~'+fmt(q.own):fmt(q.d)+(q.alt?' / '+fmt(q.alt):''))+'</small></b><i class="n'+(m<=7?' hot':'')+'">'+m+'</i>'}).join("");
+      return '<b><i class="dot" style="background:var('+C[q.k][0]+')"></i>'+(view==="all"?'<em>'+WHO[q.who]+'</em>':'')+q.school+' '+(PILL[q.id]||q.name).replace(q.school+' ','')+'<small>'+(q.own?'nộp ~'+fmt(q.own):(q.alt?'R2 '+fmt(q.d)+' · R3 '+fmt(q.alt):fmt(q.d)))+'</small></b><i class="n'+(m<=7?' hot':'')+'">'+m+'</i>'}).join("");
   }
 
   /* ---------- mobile vertical timeline ---------- */
@@ -521,7 +521,7 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
       var el=document.createElement("details");el.className="quest";el.id="q-"+q.id;
       el.style.setProperty("--c",cv(q.k,2));el.style.setProperty("--t",cv(q.k,1));el.style.setProperty("--ci",cv(q.k,2));
       if(open["q-"+q.id])el.open=true;
-      var when=q.own?'Nộp khoảng '+fmt(q.own)+', hạn '+fmt(q.d):q.alt?'Deadline '+fmt(q.d)+' hoặc '+fmt(q.alt):'Deadline '+fmt(q.d);
+      var when=q.own?'Nộp khoảng '+fmt(q.own)+', hạn '+fmt(q.d):q.alt?'Deadline R2 '+fmt(q.d)+' · R3 '+fmt(q.alt):'Deadline '+fmt(q.d);
       el.innerHTML='<summary><span class="q-ico" aria-hidden="true">'+q.ico+'</span><div class="q-main"><h3>'+ownChip(q.who)+'<em>'+q.school+'</em> '+q.name+'</h3><div class="q-meta"><span class="pill" style="--c:'+cv(q.k,2)+';--t:'+cv(q.k,1)+'">'+q.round+'</span><span>'+when+'</span>'+(q.fee?'<span>Phí apply '+q.fee+'</span>':'')+'</div></div><div class="q-right"><div class="days">'+(dl>=0?dl:"✓")+'</div><div class="lbl">'+(dl>=0?"ngày nữa":"đã qua")+'<span class="q-chev" aria-hidden="true">▾</span></div></div></summary>'+
         '<div class="q-body"><div class="note"><span class="hand">note</span><ul>'+q.notes.map(function(x){return "<li>"+x+"</li>"}).join("")+'</ul></div></div>';
       L.appendChild(el);
