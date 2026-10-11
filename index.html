@@ -246,6 +246,61 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
 .g-row.grp{min-height:34px}
 .g-row.grp > :first-child{font:800 11px/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--ho-ink-3);padding:14px 10px 4px}
 .vt-item.hide,.quest.hide{display:none}
+
+/* ===== v5: calm, readable gantt (no layout shift) ===== */
+@media (min-width:860px){:root{--lab:205px}}
+.g-card{position:sticky;top:8px;z-index:9;height:118px;min-height:0;transition:background-color var(--t2) var(--ui-ease)}
+.g-card.wiggle{animation:none}
+#gc-title,#gc-note{display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
+#gc-title{-webkit-line-clamp:2;font-size:20px}
+#gc-note{-webkit-line-clamp:2;font-size:14.5px}
+.g-mon{height:48px}
+.g-row.hd{min-height:48px}
+.g-row{min-height:46px}
+.g-row.grp{min-height:30px}
+.g-tl{height:46px}
+.g-bar{top:22px;height:12px;animation:none}
+.g-bar.slack{top:25px;height:6px;background:none;border:1.5px dashed var(--c);border-radius:999px}
+.g-bar.tent{top:22px;height:12px;background:repeating-linear-gradient(-45deg,var(--c) 0 4px,var(--ho-surface) 4px 9px);border:1.5px solid var(--c);opacity:1}
+.g-bar.offer{top:21px;height:14px;background:repeating-linear-gradient(-45deg,var(--ho-yellow) 0 5px,var(--ho-yellow-t) 5px 10px);border:1.5px solid var(--ho-ink)}
+.g-bar.solid{top:21px;height:14px;background:var(--ho-yellow);border:1.5px solid var(--ho-ink)}
+.g-dl{top:18px;width:20px;height:20px;margin-left:-10px;border:3px solid var(--c);background:var(--c);box-shadow:2px 2px 0 var(--ho-ink)}
+.g-dl b{left:50%;top:-20px;transform:translateX(-50%);background:var(--ho-surface);box-shadow:0 0 0 1px var(--ho-line-2);padding:1px 6px;border-radius:6px;font:700 11.5px var(--f-body)}
+.g-dl.alt{background:var(--ho-surface);border-style:dashed;box-shadow:none}
+.g-dl.alt b{color:var(--ho-ink-2)}
+.g-plan{position:absolute;top:21px;width:14px;height:14px;margin-left:-7px;background:var(--ho-ink);transform:rotate(45deg);border:2px solid var(--ho-surface);z-index:3}
+.g-plan b{position:absolute;left:50%;top:-22px;transform:rotate(-45deg) translate(-50%,0);transform-origin:0 0;white-space:nowrap;font:700 11px var(--f-body);color:var(--ho-ink);background:var(--ho-yellow-t);border:1px solid var(--ho-ink);padding:1px 6px;border-radius:6px}
+.g-dl.hit,.g-plan.hit{animation:none;outline:3px solid var(--ho-coral);outline-offset:3px}
+.g-ev{top:12px}
+.g-ev.hit{animation:none;background:var(--ho-yellow);border-color:var(--ho-ink)}
+.g-tag{font:800 9.5px/1 var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:var(--ho-ink-3);border:1px solid var(--ho-line-2);border-radius:999px;padding:3px 6px;margin-left:4px;vertical-align:1px}
+.g-over{position:absolute;left:var(--lab);right:0;top:0;bottom:0;pointer-events:none;z-index:5}
+.g-guide{position:absolute;top:26px;bottom:0;border-left:1.5px dashed rgba(23,33,58,.38)}
+.g-guide b{position:absolute;top:0;left:0;transform:translateX(-50%);font:800 10.5px/1 var(--f-body);color:var(--ho-ink);background:var(--ho-canvas);border:1px solid var(--ho-ink);border-radius:999px;padding:3px 6px;white-space:nowrap}
+.g-todayline{position:absolute;top:26px;bottom:0;border-left:2px dashed var(--ho-coral)}
+.g-todayline b{position:absolute;top:0;left:4px;font:800 10.5px/1 var(--f-body);color:var(--ho-coral-ink);white-space:nowrap}
+.g-cursor{top:48px}
+.g-cursor b{bottom:-26px}
+.g-row.hit,.g-row.hit > :first-child,.g-row.hit .g-lab{background:var(--ho-yellow-t)}
+.legend2{display:grid;gap:8px;margin-top:12px;font-size:13.5px;color:var(--ho-ink-2)}
+.legend2 div{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+.legend2 .lk{font:800 10.5px var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:var(--ho-ink-3);min-width:64px}
+.legend2 i{display:inline-block;vertical-align:-1px;margin-right:6px}
+.lg-bar{width:22px;height:10px;border-radius:999px;background:var(--c)}
+.lg-slack{width:22px;height:6px;border:1.5px dashed var(--ho-ink-2);border-radius:999px}
+.lg-tent{width:22px;height:10px;border-radius:999px;border:1.5px solid var(--ho-ink-2);background:repeating-linear-gradient(-45deg,var(--ho-ink-2) 0 3px,var(--ho-surface) 3px 7px)}
+.lg-dl{width:13px;height:13px;border-radius:50%;background:var(--ho-ink-2)}
+.lg-alt{width:13px;height:13px;border-radius:50%;border:2px dashed var(--ho-ink-2)}
+.lg-plan{width:10px;height:10px;background:var(--ho-ink);transform:rotate(45deg)}
+.lg-offer{width:22px;height:10px;border:1px solid var(--ho-ink);background:repeating-linear-gradient(-45deg,var(--ho-yellow) 0 4px,var(--ho-yellow-t) 4px 8px)}
+.lg-today{width:0;height:14px;border-left:2px dashed var(--ho-coral)}
+/* mobile: no layout shift on highlight */
+.vt-card{border:2px solid var(--ho-line)}
+.vt-item.on .vt-card{border:2px solid var(--ho-ink);transform:none;box-shadow:var(--ho-sticker-s)}
+.vt-item.pop .vt-card{animation:none}
+.vt-item.on .vt-dot{transform:scale(1.25)}
+.vt-now{justify-content:flex-end}
+.vt-now span{font-size:12px;padding:7px 12px}
 </style>
 </head>
 <body>
@@ -284,7 +339,7 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
   <section class="sec" aria-labelledby="s2">
     <div class="sec-h"><span class="num">2</span><h2 id="s2">Timeline từ giờ tới lúc nhập học</h2></div>
     <p class="sec-sub mob">Lướt xuống từ từ, tới mốc nào thì mốc đó sáng lên.</p>
-    <p class="sec-sub desk">Kéo nút vàng trên thanh thời gian hoặc bấm “Mốc sau”, tới mốc nào thì mốc đó sáng lên.</p>
+    <p class="sec-sub desk">Bấm “Mốc sau” hoặc kéo nút vàng để đi qua từng mốc. Vạch đứt là các ngày quan trọng, vạch đỏ là hôm nay.</p>
 
     <div class="mob">
       <div class="vt-now" aria-hidden="true"><span id="vt-now">hôm nay</span></div>
@@ -299,15 +354,9 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
       </div>
       <div class="g-scroll"><div class="g-in" id="gantt"></div></div>
       <p class="g-help"><span class="hand">mẹo:</span>kéo nút vàng, bấm vào một ngày trên biểu đồ, hoặc bấm vào nút vàng rồi dùng phím ← → (giữ Shift để nhảy 1 tuần).</p>
-      <div class="legend">
-        <span><i style="--c:var(--ho-blue)"></i>NUS</span>
-        <span><i style="--c:var(--ho-coral)"></i>NTU</span>
-        <span><i style="--c:var(--ho-iris)"></i>SMU, việc riêng</span>
-        <span><i style="--c:var(--ho-green)"></i>Trường backup</span>
-        <span><i style="--c:repeating-linear-gradient(-45deg,var(--ho-ink-2) 0 5px,var(--ho-surface) 5px 10px)"></i>Còn thời gian nếu thi lại GMAT</span>
-        <span><i class="dot"></i>Deadline</span>
-        <span><i style="--c:repeating-linear-gradient(-45deg,var(--ho-yellow) 0 5px,var(--ho-yellow-t) 5px 10px)"></i>Thời gian có kết quả</span>
-        <span><i style="--c:var(--ho-yellow)"></i>Visa, nhập học</span>
+      <div class="legend2">
+        <div><span class="lk">Trường</span><span><i class="lg-bar" style="--c:var(--ho-blue)"></i>NUS</span><span><i class="lg-bar" style="--c:var(--ho-coral)"></i>NTU</span><span><i class="lg-bar" style="--c:var(--ho-iris)"></i>SMU</span><span><i class="lg-bar" style="--c:var(--ho-ink)"></i>GMAT</span></div>
+        <div><span class="lk">Ký hiệu</span><span><i class="lg-bar" style="--c:var(--ho-ink-2)"></i>Chuẩn bị hồ sơ</span><span><i class="lg-dl"></i>Deadline của trường</span><span><i class="lg-plan"></i>Ngày mình tự đặt</span><span><i class="lg-slack"></i>Còn dư tới deadline</span><span><i class="lg-tent"></i>Nếu thi lại GMAT</span><span><i class="lg-alt"></i>Round 3</span><span><i class="lg-offer"></i>Có kết quả</span><span><i class="lg-today"></i>Hôm nay</span></div>
       </div>
     </div>
   </section>
@@ -364,7 +413,7 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     {who:"n",d:"2026-11-15",t:"Chốt 2 referee cho NTU",n:"Dùng chung cho MiM, MMS và TIP",ids:["n-mim","n-mms","n-tip"],k:"ntu"},
     {who:"b",d:"2026-11-21",t:"Đi Hàn 21 đến 24/11",n:"Nghỉ ôn mấy ngày này",ids:["life"],k:"life",life:1},
     {who:"t",d:"2026-12-12",t:"Hồ sơ MOTI sẵn sàng",n:"Chỉ còn chờ điểm GMAT",ids:["t-moti"],k:"nus"},
-    {who:"n",d:"2026-12-20",t:"Xong motivation letter và essays",n:"Tháng 1 chỉ còn lo thi và nộp",ids:["n-mai","n-msi","n-mim","n-mms"],k:"nus"},
+    {who:"n",d:"2026-12-20",t:"Xong motivation letter và essays",n:"Tháng 1 chỉ còn lo thi và nộp",ids:["n-mai","n-msi","n-mim","n-mms"],k:"res"},
     {who:"b",d:"2027-01-08",t:"Thi GMAT",n:"Thái thi 8/1 ở VNPro. Nguyên thi cùng tuần (dự kiến)",ids:["gmat"],k:"res"},
     {who:"b",d:"2027-01-12",t:"Có điểm GMAT lần 1",n:"Điểm ổn thì nộp luôn. Muốn thi lại thì thi khoảng 26/1, các deadline 31/1 sẽ không kịp",ids:["gmat"],k:"res"},
     {who:"t",d:"2027-01-15",t:"Nộp NUS MOTI",n:"Nộp kèm điểm GMAT, xét liên tục nên nộp sớm",ids:["t-moti"],k:"nus"},
@@ -378,7 +427,7 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     {who:"t",d:"2027-03-31",t:"Nộp SMU MITB, NTU MSBA round 3",n:"MITB nộp trước mùa cưới. NTU MSBA round 3 nếu đã thi lại",ids:["t-mitb","t-ntumsba"],k:"smu"},
     {who:"b",d:"2027-04-03",t:"Đám cưới ♥",n:"Ngày vui của hai đứa mình",ids:["life"],k:"life",life:1},
     {who:"b",d:"2027-05-15",t:"Về Tây Ninh 15 đến 16/5",n:"",ids:["life"],k:"life",life:1},
-    {who:"b",d:"2027-06-15",t:"Chốt offer",n:"Chọn trường, đặt cọc giữ chỗ, rồi làm Student's Pass",ids:["offer","visa"],k:"res"},
+    {who:"b",d:"2027-06-30",t:"Chốt offer",n:"Chọn trường, đặt cọc giữ chỗ, rồi làm Student's Pass",ids:["offer","visa"],k:"res"},
     {who:"b",d:"2027-08-01",t:"Nhập học",n:"Tháng 7 nếu học NTU, tháng 8 nếu học NUS hoặc SMU",ids:["start"],k:"res"}
   ];
   var PILL={"t-moti":"NUS MOTI","t-msba":"NUS MSBA","t-aii":"NUS AI&I","t-ntumsba":"NTU MSBA","t-mitb":"SMU MITB","n-mim":"NTU MiM","n-mms":"NTU MMS","n-mai":"NUS MAI","n-msi":"NUS MSI","n-tip":"NTU TIP","n-me":"NTU Managerial Econ"};
@@ -467,47 +516,62 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     if(!reduce){el.classList.remove("flash");void el.offsetWidth;el.classList.add("flash")}
   }
 
-  /* ---------- desktop gantt: [id,label,colour,segments,deadline,events,who] ---------- */
+  /* ---------- desktop gantt ----------
+   * row: {id,label,k(colour=school),who,tag, prep:[from,to], dl:deadline, plan:[[date,label]], slack:[from,to] (time left before deadline),
+   *       retake:[from,to] (only if retaking GMAT), alt:[date,label] (round 3 deadline), res:[from,to] (results / visa / start) } */
   var G=[
-    ["grp","Cả hai","",null,"","","b"],
-    ["gmat","Ôn và thi GMAT","res",[["prep","2026-10-11","2027-01-08"],["tent","2027-01-09","2027-01-26"]],"2027-01-08","","b"],
-    ["grp","Nguyên","",null,"","","n"],
-    ["n-mim","NTU MiM","ntu",[["prep","2026-11-01","2027-01-31"],["tent","2027-02-01","2027-03-31"]],"2027-01-31","","n"],
-    ["n-mms","NTU MMS","ntu",[["prep","2026-11-01","2027-01-31"],["tent","2027-02-01","2027-03-31"]],"2027-01-31","","n"],
-    ["n-mai","NUS MAI","nus",[["prep","2026-10-11","2027-02-15"],["wait","2027-02-16","2027-03-31"],["offer","2027-04-01","2027-06-30"]],"2027-02-15","","n"],
-    ["n-msi","NUS MSI","nus",[["prep","2026-10-11","2027-02-15"],["wait","2027-02-16","2027-03-31"],["offer","2027-04-01","2027-06-30"]],"2027-02-15","","n"],
-    ["n-tip","NTU TIP","safe",[["prep","2027-01-15","2027-02-26"]],"2027-02-26","","n"],
-    ["n-me","NTU Managerial Econ","safe",[["prep","2027-02-15","2027-03-31"]],"2027-03-31","","n"],
-    ["grp","Thái","",null,"","","t"],
-    ["t-moti","NUS MOTI","nus",[["prep","2026-10-11","2027-01-15"],["tent","2027-01-16","2027-02-28"],["wait","2027-03-01","2027-04-30"]],"2027-02-28",[["2027-01-15","nộp 15/1","plan"]],"t"],
-    ["t-msba","NUS MSBA","nus",[["prep","2026-10-11","2027-01-31"],["wait","2027-02-01","2027-05-15"]],"2027-01-31","","t"],
-    ["t-aii","NUS AI & Innovation","nus",[["prep","2026-11-01","2027-01-31"],["wait","2027-02-01","2027-05-15"]],"2027-01-31","","t"],
-    ["t-ntumsba","NTU MSBA","ntu",[["prep","2026-11-15","2027-01-31"],["tent","2027-02-01","2027-03-31"]],"2027-01-31","","t"],
-    ["t-mitb","SMU MITB","smu",[["prep","2027-02-01","2027-03-31"],["tent","2027-04-01","2027-05-31"],["wait","2027-06-01","2027-06-30"]],"2027-05-31",[["2027-03-31","nộp trước 1/4","plan"]],"t"],
-    ["grp","Sau khi nộp","",null,"","","b"],
-    ["offer","Kết quả và chọn offer","res",[["offer","2027-03-01","2027-06-15"]],"","","b"],
-    ["visa","Student's Pass","res",[["res","2027-06-15","2027-07-20"]],"","","b"],
-    ["start","Nhập học","res",[["res","2027-07-25","2027-08-10"]],"","","b"],
-    ["life","Việc riêng","life",[],"",[["2026-11-21","Hàn"],["2027-04-03","Cưới"],["2027-05-15","Tây Ninh"]],"b"]
+    {grp:"Việc riêng",who:"b"},
+    {id:"life",label:"Việc riêng",k:"life",who:"b",ev:[["2026-11-21","Hàn 21–24/11"],["2027-04-03","Cưới 3/4"],["2027-05-15","Tây Ninh"]]},
+    {grp:"Cả hai",who:"b"},
+    {id:"gmat",label:"Ôn và thi GMAT",k:"res",who:"b",prep:["2026-10-11","2027-01-08"],plan:[["2026-10-31","đặt lịch"],["2027-01-08","thi 8/1"]],retake:["2027-01-09","2027-01-26"]},
+    {grp:"Nguyên",who:"n"},
+    {id:"n-mim",label:"NTU MiM",k:"ntu",who:"n",prep:["2026-11-01","2027-01-31"],dl:"2027-01-31",retake:["2027-02-01","2027-03-31"],alt:["2027-03-31","R3 31/3"]},
+    {id:"n-mms",label:"NTU MMS",k:"ntu",who:"n",prep:["2026-11-01","2027-01-31"],dl:"2027-01-31",retake:["2027-02-01","2027-03-31"],alt:["2027-03-31","R3 31/3"]},
+    {id:"n-mai",label:"NUS MAI",k:"nus",who:"n",prep:["2026-10-11","2027-02-15"],dl:"2027-02-15"},
+    {id:"n-msi",label:"NUS MSI",k:"nus",who:"n",prep:["2026-10-11","2027-02-15"],dl:"2027-02-15"},
+    {id:"n-tip",label:"NTU TIP",tag:"backup",k:"ntu",who:"n",prep:["2027-01-15","2027-02-26"],dl:"2027-02-26"},
+    {id:"n-me",label:"NTU Managerial Econ",tag:"backup",k:"ntu",who:"n",prep:["2027-02-15","2027-03-31"],dl:"2027-03-31"},
+    {grp:"Thái",who:"t"},
+    {id:"t-moti",label:"NUS MOTI",k:"nus",who:"t",prep:["2026-10-11","2027-01-15"],plan:[["2027-01-15","nộp 15/1"]],slack:["2027-01-16","2027-02-28"],dl:"2027-02-28"},
+    {id:"t-msba",label:"NUS MSBA",k:"nus",who:"t",prep:["2026-10-11","2027-01-31"],dl:"2027-01-31"},
+    {id:"t-aii",label:"NUS AI & Innovation",k:"nus",who:"t",prep:["2026-11-01","2027-01-31"],dl:"2027-01-31"},
+    {id:"t-ntumsba",label:"NTU MSBA",k:"ntu",who:"t",prep:["2026-11-15","2027-01-31"],dl:"2027-01-31",retake:["2027-02-01","2027-03-31"],alt:["2027-03-31","R3 31/3"]},
+    {id:"t-mitb",label:"SMU MITB",tag:"backup",k:"smu",who:"t",prep:["2027-02-01","2027-03-31"],plan:[["2027-03-31","nộp trước 1/4"]],slack:["2027-04-01","2027-05-31"],dl:"2027-05-31"},
+    {grp:"Sau khi nộp",who:"b"},
+    {id:"offer",label:"Kết quả, chọn offer",k:"res",who:"b",res:["2027-03-01","2027-06-30"],cls:"offer"},
+    {id:"visa",label:"Student's Pass",k:"res",who:"b",res:["2027-06-15","2027-07-20"],cls:"solid"},
+    {id:"start",label:"Nhập học",k:"res",who:"b",res:["2027-07-25","2027-08-10"],cls:"solid"}
   ];
+  var KEYD=[["2027-01-08","GMAT 8/1"],["2027-01-31","31/1"],["2027-02-15","15/2"],["2027-03-31","31/3"]];
   var GM=[[2026,10],[2026,11],[2026,12],[2027,1],[2027,2],[2027,3],[2027,4],[2027,5],[2027,6],[2027,7],[2027,8]];
   var MN=["T10","T11","T12","T1/27","T2","T3","T4","T5","T6","T7","T8"];
   var X0=1.2;
   function gp(s){var p=s.split("-").map(Number),i=GM.findIndex(function(m){return m[0]===p[0]&&m[1]===p[1]});return X0+(i+(p[2]-1)/new Date(p[0],p[1],0).getDate())/GM.length*(100-X0)}
   function LAB(){return parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--lab"))||170}
+  function seg(cls,a,b,c){var x=gp(a),y=gp(b);return '<i class="g-bar '+cls+'" style="--c:'+c+';left:'+x+'%;width:'+Math.max(.8,y-x)+'%"></i>'}
   function renderGantt(){
-    var h='<div class="g-row hd"><div></div><div class="g-mon">'+MN.map(function(m){return"<span>"+m+"</span>"}).join("")+'</div></div>',k=0;
+    var h='<div class="g-row hd"><div></div><div class="g-mon">'+MN.map(function(m){return"<span>"+m+"</span>"}).join("")+'</div></div>';
     G.forEach(function(r){
-      if(!mine(r[6]))return;
-      if(r[0]==="grp"){h+='<div class="g-row grp"><div>'+r[1]+'</div><div></div></div>';return}
-      var c=cv(r[2],0),clickable=!!qById(r[0]);
-      var tl='<div class="g-grid">'+"<i></i>".repeat(11)+'</div>';
-      r[3].forEach(function(sg){var a=gp(sg[1]),b=gp(sg[2]);tl+='<i class="g-bar '+sg[0]+'" style="--c:'+c+';left:'+a+'%;width:'+Math.max(.8,b-a)+'%;--dl:'+(reduce?0:k*50)+'ms"></i>'});
-      if(r[4])tl+='<i class="g-dl" data-d="'+r[4]+'" style="--c:'+c+';left:'+gp(r[4])+'%"><b>'+fmt(r[4])+'</b></i>';
-      (r[5]||[]).forEach(function(e){tl+='<b class="g-ev'+(e[2]?' '+e[2]:'')+'" data-d="'+e[0]+'" style="left:'+gp(e[0])+'%">'+e[1]+'</b>'});
-      h+='<div class="g-row" data-q="'+r[0]+'"><button type="button" class="g-lab" data-q="'+r[0]+'"'+(clickable?'':' aria-disabled="true" tabindex="-1"')+'>'+r[1]+'</button><div class="g-tl">'+tl+'</div></div>';k++;
+      if(!mine(r.who))return;
+      if(r.grp){h+='<div class="g-row grp"><div>'+r.grp+'</div><div></div></div>';return}
+      var c=cv(r.k,0),tl="";
+      if(r.prep)tl+=seg("prep",r.prep[0],r.prep[1],c);
+      if(r.slack)tl+=seg("slack",r.slack[0],r.slack[1],c);
+      if(r.retake)tl+=seg("tent",r.retake[0],r.retake[1],c);
+      if(r.res)tl+=seg(r.cls,r.res[0],r.res[1],c);
+      if(r.dl)tl+='<i class="g-dl" data-d="'+r.dl+'" style="--c:'+c+';left:'+gp(r.dl)+'%"><b>'+fmt(r.dl)+'</b></i>';
+      if(r.alt)tl+='<i class="g-dl alt" data-d="'+r.alt[0]+'" style="--c:'+c+';left:'+gp(r.alt[0])+'%"><b>'+r.alt[1]+'</b></i>';
+      (r.plan||[]).forEach(function(p){tl+='<i class="g-plan" data-d="'+p[0]+'" style="left:'+gp(p[0])+'%"><b>'+p[1]+'</b></i>'});
+      (r.ev||[]).forEach(function(e){tl+='<b class="g-ev" data-d="'+e[0]+'" style="left:'+gp(e[0])+'%">'+e[1]+'</b>'});
+      var clickable=!!qById(r.id);
+      h+='<div class="g-row" data-q="'+r.id+'"><button type="button" class="g-lab" data-q="'+r.id+'"'+(clickable?'':' aria-disabled="true" tabindex="-1"')+'>'+r.label+(r.tag?' <span class="g-tag">'+r.tag+'</span>':'')+'</button><div class="g-tl">'+tl+'</div></div>';
     });
     var g=document.getElementById("gantt");g.innerHTML=h;
+    /* key-date guide lines + today line, drawn across all rows */
+    var ov=document.createElement("div");ov.className="g-over";var oh="";
+    KEYD.forEach(function(k){oh+='<i class="g-guide" style="left:'+gp(k[0])+'%"><b>'+k[1]+'</b></i>'});
+    oh+='<i class="g-todayline" style="left:'+gp(iso(today))+'%"><b>hôm nay</b></i>';
+    ov.innerHTML=oh;g.appendChild(ov);
     setupCursor(g);
     g.querySelectorAll(".g-lab").forEach(function(b){b.addEventListener("click",function(){if(b.getAttribute("aria-disabled")!=="true")openQuest(b.dataset.q)})});
   }
@@ -517,9 +581,6 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
   function clamp(d){return d<G0?new Date(G0):d>G1?new Date(G1):d}
   function dateAt(pct){var x=(Math.max(X0,Math.min(99.999,pct))-X0)/(100-X0)*GM.length,i=Math.min(GM.length-1,Math.floor(x)),m=GM[i],dim=new Date(m[0],m[1],0).getDate();return new Date(m[0],m[1]-1,1+Math.min(dim-1,Math.floor((x-i)*dim)))}
   function setupCursor(g){
-    var tk=document.createElement("div");tk.className="g-ticks";
-    evs().forEach(function(e,i){var t=document.createElement("i");t.style.left=gp(e.d)+"%";t.dataset.e=i;tk.appendChild(t)});
-    g.appendChild(tk);
     var c=document.createElement("div");c.className="g-cursor";
     c.innerHTML='<span class="g-knob" tabindex="0" role="slider" aria-label="Thanh thời gian" aria-valuemin="0" aria-valuemax="334"></span><b></b>';g.appendChild(c);
     var knob=c.querySelector(".g-knob");
@@ -541,45 +602,41 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     var g=document.getElementById("gantt"),c=g.querySelector(".g-cursor");if(!c)return;
     c.classList.toggle("glide",!!glide&&!reduce);
     c.style.left="calc("+LAB()+"px + (100% - "+LAB()+"px) * "+(gp(iso(cur))/100)+")";
-    c.querySelector("b").textContent=fmt(iso(cur))+"/"+cur.getFullYear();
+    c.querySelector("b").textContent=fmt(iso(cur));
     var kn=c.querySelector(".g-knob");kn.setAttribute("aria-valuenow",String(Math.round((cur-G0)/864e5)));kn.setAttribute("aria-valuetext",fmt(iso(cur))+"/"+cur.getFullYear());
-    var ev=evs(),hits=[],bd=1e15;
-    ev.forEach(function(e){var dd=Math.abs(D(e.d)-cur);if(dd<=2*864e5){if(dd<bd){bd=dd;hits=[e]}else if(dd===bd)hits.push(e)}});
-    var hit=hits[0]||null,ids=[];hits.forEach(function(h){ids=ids.concat(h.ids)});
-    g.querySelectorAll(".g-row[data-q]").forEach(function(row){
-      var r=G.filter(function(x){return x&&x[0]===row.dataset.q})[0];if(!r)return;
-      var s=r[3]||[],b=s.length?D(s[s.length-1][2]):null;
-      row.classList.toggle("hit",ids.indexOf(r[0])>=0);
-      row.classList.toggle("past",!!b&&cur>b);
-    });
-    g.querySelectorAll(".g-ticks i").forEach(function(t){t.classList.toggle("hit",hits.indexOf(ev[+t.dataset.e])>=0)});
+    /* nearest milestone within 2 days; several only if they share the exact same date */
+    var ev=evs(),hit=null,bd=1e15;
+    ev.forEach(function(e){var dd=Math.abs(D(e.d)-cur);if(dd<=2*864e5&&(dd<bd||(dd===bd&&D(e.d)<D(hit.d)))){bd=dd;hit=e}});
+    var hits=hit?ev.filter(function(e){return e.d===hit.d}):[],ids=[];hits.forEach(function(h){ids=ids.concat(h.ids)});
+    g.querySelectorAll(".g-row[data-q]").forEach(function(row){row.classList.toggle("hit",ids.indexOf(row.dataset.q)>=0)});
     var dd=Math.round((cur-today)/864e5),card=document.getElementById("g-card");
     document.getElementById("gc-date").innerHTML="<strong>"+fmt(iso(cur))+"/"+String(cur.getFullYear()).slice(2)+"</strong><small>"+(dd===0?"hôm nay":dd>0?"sau "+dd+" ngày":(-dd)+" ngày trước")+"</small>";
-    var hk=hits.map(function(h){return h.t}).join("|");
+    var hk=hit?hit.d:"";
     if(hk!==lastHit){
-      g.querySelectorAll(".g-dl.hit,.g-ev.hit").forEach(function(m){m.classList.remove("hit")});
+      g.querySelectorAll(".g-dl.hit,.g-ev.hit,.g-plan.hit").forEach(function(m){m.classList.remove("hit")});
+      var title=document.getElementById("gc-title"),note=document.getElementById("gc-note");
       if(hit){
         card.classList.add("hit");
-        typeTitle(hits.map(function(h){return (view==="all"&&h.who!=="b"?WHO[h.who]+": ":"")+h.t}).join(" · "));
-        document.getElementById("gc-note").textContent=hits.map(function(h){return h.n}).filter(Boolean).join(" ");
-        if(!reduce){card.classList.remove("wiggle");void card.offsetWidth;card.classList.add("wiggle");confetti(hit)}
-        g.querySelectorAll('.g-dl[data-d="'+hit.d+'"],.g-ev[data-d="'+hit.d+'"]').forEach(function(m){void m.offsetWidth;m.classList.add("hit")});
+        var who=function(h){return view==="all"&&h.who!=="b"?WHO[h.who]+": ":""};
+        title.textContent=hits.map(function(h){return who(h)+h.t}).join(" · ");
+        note.textContent=hits.filter(function(h){return h.n}).map(function(h){return (hits.length>1?who(h):"")+h.n}).join(" · ");
+        if(!reduce)confetti(hit);
+        g.querySelectorAll('[data-d="'+hit.d+'"]').forEach(function(m){m.classList.add("hit")});
+      }else{
+        card.classList.remove("hit");
+        var nx=ev.filter(function(e){return D(e.d)>cur})[0];
+        title.textContent=nx?"Tiếp theo: "+nx.t:"Hết timeline rồi";
+        note.textContent=nx?"Còn "+Math.round((D(nx.d)-cur)/864e5)+" ngày nữa, vào ngày "+fmt(nx.d):"Giờ thì bay thôi ✈";
       }
       lastHit=hk;
     }
-    if(!hit){
-      card.classList.remove("hit");clearInterval(typeT);
-      var nx=ev.filter(function(e){return D(e.d)>cur})[0];
-      document.getElementById("gc-title").textContent=nx?"Tiếp theo: "+nx.t:"Hết timeline rồi";
-      document.getElementById("gc-note").textContent=nx?"Còn "+Math.round((D(nx.d)-cur)/864e5)+" ngày nữa, vào ngày "+fmt(nx.d):"Giờ thì bay thôi ✈";
-    }
+    if(!hit){var nx2=ev.filter(function(e){return D(e.d)>cur})[0];if(nx2)document.getElementById("gc-note").textContent="Còn "+Math.round((D(nx2.d)-cur)/864e5)+" ngày nữa, vào ngày "+fmt(nx2.d)}
     document.getElementById("g-prev").disabled=!ev.some(function(e){return D(e.d)<cur});
     document.getElementById("g-next").disabled=!ev.some(function(e){return D(e.d)>cur});
   }
-  var typeT;function typeTitle(t){var el=document.getElementById("gc-title");clearInterval(typeT);if(reduce){el.textContent=t;return}var i=0;el.textContent="";typeT=setInterval(function(){el.textContent=t.slice(0,++i);if(i>=t.length)clearInterval(typeT)},18)}
   function confetti(e){var g=document.getElementById("gantt"),r=g.getBoundingClientRect(),x=LAB()+(r.width-LAB())*gp(e.d)/100;
-    for(var i=0;i<14;i++){var b=document.createElement("i");b.className="g-confetti";var a=i/14*Math.PI*2;b.style.left=x+"px";b.style.top="26px";b.style.background="var("+CONF[i%5]+")";
-      b.style.setProperty("--bx",Math.round(Math.cos(a)*50)+"px");b.style.setProperty("--by",Math.round(Math.sin(a)*50)+"px");g.appendChild(b);setTimeout(function(n){return function(){n.remove()}}(b),750)}}
+    for(var i=0;i<12;i++){var b=document.createElement("i");b.className="g-confetti";var a=i/12*Math.PI*2;b.style.left=x+"px";b.style.top="26px";b.style.background="var("+CONF[i%5]+")";
+      b.style.setProperty("--bx",Math.round(Math.cos(a)*40)+"px");b.style.setProperty("--by",Math.round(Math.sin(a)*40)+"px");g.appendChild(b);setTimeout(function(n){return function(){n.remove()}}(b),750)}}
   function jump(dir){var ev=evs(),t=dir>0?ev.filter(function(e){return D(e.d)>cur})[0]:ev.filter(function(e){return D(e.d)<cur}).pop();if(t)moveTo(D(t.d),true)}
   document.getElementById("g-next").addEventListener("click",function(){jump(1)});
   document.getElementById("g-prev").addEventListener("click",function(){jump(-1)});
