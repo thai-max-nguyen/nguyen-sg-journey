@@ -432,8 +432,8 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     {who:"b",d:"2026-10-31",t:"Đặt lịch thi GMAT",n:"Thi tại trung tâm, slot ở HCM ít nên đặt sớm",ids:["gmat"],k:"res"},
     {who:"b",d:"2026-11-21",t:"Đi Hàn 21 đến 24/11",n:"Nghỉ ôn mấy ngày này",ids:["life"],k:"life",life:1},
     {who:"t",d:"2026-12-12",t:"Hồ sơ MOTI sẵn sàng",n:"Chỉ còn chờ điểm GMAT",ids:["t-moti"],k:"nus"},
-    {who:"t",d:"2026-12-20",t:"Xong CV và bài viết",n:"NUS MSBA (essay 350 chữ hoặc video 3 phút), NTU MSBA essays, NTU Enterprise AI statement",ids:["t-msba","t-ntumsba","t-eai"],k:"res"},
-    {who:"n",d:"2026-12-20",t:"Xong CV và bài viết",n:"Motivation letter NUS, essays NTU, statement Managerial Econ. Tháng 1 chỉ còn lo thi và nộp",ids:["n-mai","n-msi","n-mim","n-mms"],k:"res"},
+    {who:"t",d:"2026-12-20",t:"Xong bài viết",n:"NUS MSBA (essay 350 chữ hoặc video 3 phút), NTU MSBA essays, NTU Enterprise AI statement",ids:["t-msba","t-ntumsba","t-eai"],k:"res"},
+    {who:"n",d:"2026-12-20",t:"Xong bài viết",n:"Thư cho NUS, bài viết cho NTU. Tháng 1 chỉ còn thi và nộp",ids:["n-mai","n-msi","n-mim","n-mms"],k:"res"},
     {who:"b",d:"2027-01-08",t:"Thi GMAT",n:"Thái thi 8/1 ở VNPro. Nguyên thi cùng tuần (dự kiến)",ids:["gmat"],k:"res",main:1},
     {who:"b",d:"2027-01-12",t:"Có điểm GMAT lần 1",n:"Điểm ổn thì nộp luôn. Muốn thi lại thì thi khoảng 26/1, các deadline 31/1 sẽ không kịp",ids:["gmat"],k:"res"},
     {who:"t",d:"2027-01-15",t:"Nộp NUS MOTI",n:"Nộp kèm điểm GMAT, xét liên tục nên nộp sớm",ids:["t-moti"],k:"nus",main:1,school:1},
@@ -453,22 +453,22 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
   ];
   /* what to prepare for each milestone (used by the reminder email) — key = who|date */
   var PREP={
-    "b|2026-10-31":["Chọn ngày thi ở VNPro cùng tuần 8/1 (trung tâm chỉ mở thứ 3, 5, 6)","Đặt và trả phí trên mba.com, tên khớp passport","Làm 1 bài thi thử để biết điểm xuất phát"],
-    "t|2026-12-12":["Statement 1 trang cho MOTI"],
-    "t|2026-12-20":["NUS MSBA: essay 350 chữ hoặc video 3 phút","NUS AI & Innovation: statement","NTU MSBA: essays theo đề trong portal","NTU Enterprise AI: personal statement"],
-    "n|2026-12-20":["NUS MAI: motivation letter tối đa 500 chữ","NUS MSI: motivation letter riêng, tối đa 500 chữ","NTU MiM và MMS: essays theo đề trong portal","NTU Managerial Econ: statement of purpose 600 chữ","Nói trước với 2 referee, xin email công ty hoặc trường của họ"],
-    "b|2027-01-08":["Tuần cuối: mỗi người làm 1 bài thi thử full","Mang passport bản gốc tới trung tâm thi"],
-    "b|2027-01-12":["Xem điểm, quyết nộp luôn hay thi lại khoảng 26/1","Gửi điểm cho các trường trên mba.com"],
-    "t|2027-01-15":["Nộp MOTI kèm điểm GMAT, phí S$109"],
-    "t|2027-01-24":["NUS MSBA và NTU MSBA: điền email 2 referee","Upload bài viết","NUS MSBA nộp rồi không bổ sung GMAT được, kiểm điểm trước khi bấm nộp"],
-    "n|2027-01-24":["Điền email 2 referee, trường tự gửi form cho họ","Upload essays","Phí S$100 mỗi chương trình"],
-    "n|2027-02-07":["Upload 2 motivation letter (MAI và MSI riêng)","Không cần referee","Phí S$100 mỗi chương trình"],
-    "t|2027-02-15":["Personal statement kèm điểm GMAT","Phí S$50"],
-    "b|2027-03-01":["Mỗi tuần check email và portal các trường","NUS MAI, MSI, NTU MiM có thể gọi interview"],
-    "n|2027-03-14":["NTU Managerial Econ: statement 600 chữ, không cần referee","Nếu đã thi lại GMAT: nộp round 3 MiM và MMS"],
-    "t|2027-03-14":["SMU MITB: dùng lại 2 essay đã viết, điền email 2 referee","Nếu đã thi lại GMAT: nộp NTU MSBA round 3"],
-    "n|2027-03-21":["Chỉ khi cần: chọn SMU MiM hoặc SMU MSE","Không có GMAT ổn thì đăng ký SMU Admission Test"],
-    "b|2027-06-30":["Chọn trường, đặt cọc giữ chỗ","Làm Student's Pass theo hướng dẫn của trường"]
+    "b|2026-10-31":["Chọn ngày thi tuần 8/1 ở VNPro","Đặt chỗ và trả phí trên mba.com","Làm 1 bài thi thử"],
+    "t|2026-12-12":["Viết statement 1 trang"],
+    "t|2026-12-20":["Essay NUS MSBA (hoặc video 3 phút)","Essays NTU MSBA","Statement AI & Innovation và Enterprise AI"],
+    "n|2026-12-20":["2 thư cho NUS (MAI, MSI), mỗi thư tối đa 500 chữ","Bài viết NTU MiM và MMS","Bài 600 chữ cho Managerial Econ","Hỏi trước 2 người viết thư giới thiệu"],
+    "b|2027-01-08":["Làm 1 bài thi thử full","Mang passport bản gốc"],
+    "b|2027-01-12":["Xem điểm: nộp luôn hay thi lại","Gửi điểm cho các trường"],
+    "t|2027-01-15":["Nộp MOTI kèm điểm GMAT"],
+    "t|2027-01-24":["Điền email 2 referee","NUS MSBA: kiểm điểm trước khi nộp"],
+    "n|2027-01-24":["Điền email 2 người giới thiệu","Nộp bài viết, trả phí"],
+    "n|2027-02-07":["Nộp 2 thư NUS, trả phí"],
+    "t|2027-02-15":["Statement kèm điểm GMAT"],
+    "b|2027-03-01":["Mỗi tuần xem email của trường"],
+    "n|2027-03-14":["Nộp bài 600 chữ","Nếu thi lại GMAT: nộp thêm MiM, MMS"],
+    "t|2027-03-14":["Dùng lại 2 essay MITB","Nếu thi lại GMAT: nộp NTU MSBA round 3"],
+    "n|2027-03-21":["Chỉ khi cần: chọn SMU MiM hoặc MSE"],
+    "b|2027-06-30":["Chọn trường, đặt cọc","Làm Student's Pass"]
   };
   EV.forEach(function(e){var x=PREP[e.who+"|"+e.d];if(x)e.prep=x});
   var PILL={"t-moti":"NUS MOTI","t-msba":"NUS MSBA","t-aii":"NUS AI&I","t-ntumsba":"NTU MSBA","t-mitb":"SMU MITB","t-eai":"NTU Enterprise AI","n-mim":"NTU MiM","n-mms":"NTU MMS","n-mai":"NUS MAI","n-msi":"NUS MSI","n-tip":"NTU TIP","n-me":"NTU Managerial Econ","n-smumim":"SMU MiM","n-smumse":"SMU MSE"};
