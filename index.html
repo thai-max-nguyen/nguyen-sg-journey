@@ -344,11 +344,12 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
 
   <section class="sec" aria-labelledby="s1">
     <div class="sec-h"><span class="num">1</span><h2 id="s1">Cách mình apply</h2></div>
-    <p class="sec-sub">Ba nguyên tắc chung cho cả hai đứa, chốt sau khi hỏi Phương.</p>
+    <p class="sec-sub">Bốn nguyên tắc chung cho cả hai đứa, chốt sau khi hỏi Phương và đọc kỹ từng trường.</p>
     <div class="rules">
       <p><i style="--t:var(--ho-yellow-t)">1</i><span><b>Có điểm GMAT rồi mới nộp.</b> GPA mình không cao, nộp khi chưa có GMAT thì khả năng đậu thấp, rớt rồi có thể mất luôn lượt của cả mùa (theo Phương).<span class="src">Thi tháng 1, có điểm khoảng 3 đến 5 ngày sau.</span></span></p>
-      <p><i style="--t:var(--ho-blue-t)">2</i><span><b>Scholarship chỉ nhận nếu trường tự xét.</b> Phần lớn scholarship chỉ xét round 1 (tháng 11), mình bỏ qua, không đổi suất đậu lấy tiền.<span class="src">Còn lại: MOTI rebate tới 40%, SMU MITB, NUS SCALE đều tự xét.</span></span></p>
+      <p><i style="--t:var(--ho-blue-t)">2</i><span><b>Scholarship chỉ nhận nếu trường tự xét.</b> Phần lớn scholarship chỉ xét round 1 (tháng 11), mình bỏ qua, không đổi suất đậu lấy tiền.<span class="src">Còn lại: MOTI rebate tới 40% và SMU MITB đều tự xét.</span></span></p>
       <p><i style="--t:var(--ho-green-t)">3</i><span><b>Thi GMAT tại trung tâm, không thi online.</b> NTU không nhận điểm thi online. VNPro chỉ mở thứ 3, 5, 6 nên đặt lịch sớm.</span></p>
+      <p><i style="--t:var(--ho-coral-t)">4</i><span><b>Chỉ giữ trường có internship thật.</b> Trường nào không có internship, hoặc internship quá ngắn, thì bỏ.<span class="src">Chốt ngày 15/10. Đã bỏ NUS AI &amp; Innovation, NTU MSBA, NTU Enterprise AI, NTU Managerial Econ, SMU MSE.</span></span></p>
     </div>
   </section>
 
@@ -383,7 +384,7 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     <div class="log" id="log"></div>
   </section>
 
-  <p class="foot">Nguồn: trang tuyển sinh chính thức của NUS, NTU, SMU và mba.com, cập nhật ngày 11/10/2026. Ngày thi GMAT của Nguyên là dự kiến.</p>
+  <p class="foot">Nguồn: trang tuyển sinh chính thức của NUS, NTU, SMU và mba.com, cập nhật ngày 15/10/2026. Ngày thi GMAT của Nguyên là dự kiến.</p>
 </div>
 
 <script>
@@ -400,52 +401,43 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
 
   /* schools (cards), who: n = Nguyên, t = Thái, b = both */
   var Q=[
-    {id:"t-moti",who:"t",d:"2027-02-28",own:"2027-01-15",ico:"MOTI",k:"nus",school:"NUS",name:"MSc Management of Technology & Innovation",round:"Xét liên tục",fee:"",
-     notes:["Hồ sơ làm sẵn, có điểm GMAT là nộp, khoảng 10 đến 15/1","GMAT không bắt buộc nhưng được ưu tiên","Không cần referee","Rebate tới 40% cho người ASEAN, trường tự xét sau khi có offer"]},
-    {id:"t-msba",who:"t",d:"2027-01-31",own:"2027-01-24",ico:"MSBA",k:"nus",school:"NUS",name:"MSc Business Analytics",round:"Deadline duy nhất",fee:"",
-     notes:["Nộp bằng điểm GMAT lần 1, không kịp thi lại","Nộp rồi thì không bổ sung điểm GMAT được nữa","Cần essay 350 chữ hoặc video 3 phút, 2 referee","Bỏ qua BAC scholarship (hạn 15/12, phải nộp trước khi có GMAT)"]},
-    {id:"t-aii",who:"t",d:"2027-01-31",own:"2027-01-24",ico:"AI&I",k:"nus",school:"NUS",name:"MSc AI & Innovation (SCALE)",round:"Deadline duy nhất",fee:"",
-     notes:["Không yêu cầu GMAT, nộp trước 31/1","Scholarship cho người ASEAN do trường tự xét, không phải nộp thêm","Lớp core học buổi tối và thứ 7"]},
-    {id:"t-ntumsba",who:"t",d:"2027-01-31",own:"2027-01-24",alt:"2027-03-31",ico:"MSBA",k:"ntu",school:"NTU",name:"MSc Business Analytics",round:"Round 2 hoặc 3",fee:"",
-     notes:["Điểm GMAT lần 1 ổn thì nộp round 2 (31/1), thi lại thì nộp round 3 (31/3)","Scholarship chỉ xét round 1 nên bỏ qua","Chỉ nhận điểm GMAT thi tại trung tâm"]},
-    {id:"t-eai",who:"t",d:"2027-03-31",own:"2027-02-15",ico:"EAI",k:"ntu",school:"NTU",name:"MSc Enterprise AI",round:"Xét tới 31/3",fee:"S$50",
-     notes:["Nộp khoảng 15/2 kèm điểm GMAT, trước mùa cưới","Personal statement, GMAT không bắt buộc","Yêu cầu bằng honours hoặc tương đương; FAQ của trường nói GPA không cao mà có kinh nghiệm vẫn được xét","Học full-time khoảng 1 năm, lớp buổi chiều và tối, có capstone với doanh nghiệp","Ra trường: Product Manager, AI Project Lead, Digital Transformation"]},
-    {id:"t-mitb",who:"t",d:"2027-05-31",own:"2027-03-14",ico:"MITB",k:"smu",school:"SMU",name:"Master of IT in Business",round:"Backup · intake tháng 8",fee:"",
-     notes:["Nộp trước 14/3 để không đụng lễ cưới Đà Lạt (3/4) và đám cưới Tây Ninh (15–16/5), hạn của trường là 31/5","Scholarship SMU tự xét, không phải nộp thêm (ASEAN PG cần GMAT 650 thang cũ)","Không apply Vingroup scholarship vì phải về làm cho Vin"]},
+    {id:"t-moti",who:"t",d:"2027-02-28",own:"2027-01-15",ico:"MOTI",k:"nus",school:"NUS",name:"MSc Management of Technology & Innovation (PMDS)",round:"Xét liên tục",fee:"",
+     notes:["Hồ sơ làm sẵn, có điểm GMAT là nộp, khoảng 10 đến 15/1","Học thêm chuyên ngành PMDS, cần GPA lúc tốt nghiệp từ 3.50","Internship MT5766: ít nhất 4 tháng, khoảng 40 giờ/tuần, tự tìm công ty. Trường khuyên làm ở học kỳ 2 (tháng 1 đến 5/2028), nên tìm công ty từ học kỳ 1","GMAT không bắt buộc nhưng được ưu tiên","Không cần referee","Rebate tới 40% cho người ASEAN, trường tự xét sau khi có offer"]},
+    {id:"t-msba",who:"t",d:"2027-01-31",own:"2027-01-24",ico:"MSBA",k:"nus",school:"NUS",name:"MSc Business Analytics",round:"Nếu quant GMAT tốt",fee:"",cond:1,
+     notes:["Chỉ nộp nếu điểm quant của lần thi GMAT 8/1 tốt, không thì bỏ","Nộp bằng điểm GMAT lần 1, không kịp thi lại","Internship nằm trong capstone DBA5102 (bắt buộc), 3 đến 6 tháng full-time, tháng 5 đến 8","Nộp rồi thì không bổ sung điểm GMAT được nữa","Làm video 3 phút (thay cho essay 350 chữ), 2 referee","Bỏ qua BAC scholarship (hạn 15/12, phải nộp trước khi có GMAT)"]},
+    {id:"t-mitb",who:"t",d:"2027-05-31",own:"2027-03-14",ico:"MITB",k:"smu",school:"SMU",name:"Master of IT in Business",round:"Backup · track DT",fee:"",
+     notes:["Đổi sang track Digital Transformation: có vai Digital Product Manager và 2 môn product (IS622, IS624)","Internship 6 tháng, không bắt buộc, công ty chọn người","Nộp trước 14/3 để không đụng lễ cưới Đà Lạt (3/4) và đám cưới Tây Ninh (15–16/5), hạn của trường là 31/5","Scholarship SMU tự xét, không phải nộp thêm (ASEAN PG cần GMAT 650 thang cũ)","Không apply Vingroup scholarship vì phải về làm cho Vin"]},
     {id:"n-mim",who:"n",d:"2027-01-31",own:"2027-01-24",alt:"2027-03-31",ico:"MiM",k:"ntu",school:"NTU",name:"Master in Management",round:"Round 2 hoặc 3",fee:"S$100",
-     notes:["Điểm GMAT lần 1 ổn thì nộp round 2 (31/1), thi lại thì nộp round 3 (31/3)","Cần 2 referee và essays","Scholarship chỉ xét round 1 nên bỏ qua","Có video interview nếu vào shortlist"]},
+     notes:["Điểm GMAT lần 1 ổn thì nộp round 2 (31/1), thi lại thì nộp round 3 (31/3)","Cần 2 referee và essays","Scholarship chỉ xét round 1 nên bỏ qua","Có video interview nếu vào shortlist","Internship không bắt buộc, tháng 7 đến 12. Trước cuối tháng 10 email mim@ntu.edu.sg hỏi internship có tính tín chỉ và có được Student's Pass cover không"]},
     {id:"n-mms",who:"n",d:"2027-01-31",own:"2027-01-24",alt:"2027-03-31",ico:"MMS",k:"ntu",school:"NTU",name:"MSc Marketing Science",round:"Round 2 hoặc 3",fee:"S$100",
-     notes:["Cùng lịch với MiM: round 2 (31/1) hoặc round 3 (31/3)","2 referee, phải gửi từ email công ty hoặc trường","CV tối đa 3 trang"]},
+     notes:["Cùng lịch với MiM: round 2 (31/1) hoặc round 3 (31/3)","2 referee, phải gửi từ email công ty hoặc trường","CV tối đa 3 trang","Internship không bắt buộc, tháng 7 đến 12/2028. Trước cuối tháng 10 email msc-mkg@ntu.edu.sg hỏi internship có tính tín chỉ và có được Student's Pass cover không"]},
     {id:"n-mai",who:"n",d:"2027-02-15",own:"2027-02-07",ico:"MAI",k:"nus",school:"NUS",name:"MSc Marketing Analytics & Insights",round:"Round cuối",fee:"S$100",
-     notes:["Nộp sau khi có điểm GMAT, trước 15/2","Không cần referee","Motivation letter tối đa 500 chữ","Round cuối không có scholarship, kết quả có thể tới tháng 6, 7"]},
+     notes:["Nộp sau khi có điểm GMAT, trước 15/2","Không cần referee","Motivation letter tối đa 500 chữ","Round cuối không có scholarship, kết quả có thể tới tháng 6, 7","Chọn làm internship (BMK5300A, 4 tín chỉ, tự tìm công ty) thay cho consultancy project"]},
     {id:"n-msi",who:"n",d:"2027-02-15",own:"2027-02-07",ico:"MSI",k:"nus",school:"NUS",name:"MSc Strategic Analysis & Innovation",round:"Round cuối",fee:"S$100",
-     notes:["Nộp cùng lúc với MAI, trước 15/2","Motivation letter viết riêng, không dùng lại bài MAI","Có interview nếu vào shortlist"]},
-    {id:"n-me",who:"n",d:"2027-03-31",own:"2027-03-14",ico:"ME",k:"safe",school:"NTU",name:"MSc Managerial Economics",round:"Trường backup",fee:"S$100",
-     notes:["Không cần GMAT, không cần referee","Statement of purpose 600 chữ","Xét liên tục, nộp sớm được ưu tiên"]},
+     notes:["Nộp cùng lúc với MAI, trước 15/2","Motivation letter viết riêng, không dùng lại bài MAI","Có interview nếu vào shortlist","Đăng ký internship BMP5301 (không bắt buộc, thêm S$7,085, học kéo dài tới tháng 11/2028)"]},
     {id:"n-smumim",who:"n",d:"2027-05-31",own:"2027-03-21",ico:"MiM",k:"smu",school:"SMU",name:"MSc in Management",round:"Fallback · intake tháng 8",fee:"S$100",fb:1,
-     notes:["Dự phòng: chỉ nộp nếu muốn chắc thêm một trường, hoặc GMAT không như ý","Nhận GMAT, GRE hoặc SMU Admission Test (thi riêng của trường, thay được GMAT)","2 referee, 18 tháng full-time, có internship, SMU lo Student's Pass","Nếu nộp thì nộp trước 21/3 cho khỏi đụng lễ cưới. Hạn của trường 31/5"]},
-    {id:"n-smumse",who:"n",d:"2027-06-30",own:"2027-03-21",ico:"MSE",k:"smu",school:"SMU",name:"MSc in Economics",round:"Fallback · intake tháng 8",fee:"S$100",fb:1,
-     notes:["Dự phòng, chọn track Applied Economics (nhẹ phần toán hơn track Econometrics)","Lý do từng loại: nặng định lượng hơn MiM. Chỉ cân nhắc nếu thích hướng kinh tế như NTU Managerial Econ","Nhận GMAT, GRE hoặc SMU Admission Test, 2 referee, có thể có interview","Xét liên tục từ tháng 10 tới tháng 6. Nếu nộp thì nộp trước 21/3"]}
+     notes:["Dự phòng duy nhất: chỉ nộp nếu muốn chắc thêm một trường, hoặc GMAT không như ý","Nhận GMAT, GRE hoặc SMU Admission Test (thi riêng của trường, thay được GMAT)","2 referee, 18 tháng full-time, SMU lo Student's Pass","Internship ít nhất 10 tuần, tháng 4 đến 6/2028. Không chọn bỏ internship","Nếu nộp thì nộp trước 21/3 cho khỏi đụng lễ cưới. Hạn của trường 31/5"]}
   ];
   /* milestones */
   var EV=[
     {who:"b",d:"2026-10-31",t:"Đặt lịch thi GMAT",n:"Thi tại trung tâm, slot ở HCM ít nên đặt sớm",ids:["gmat"],k:"res"},
+    {who:"n",d:"2026-10-31",t:"Email NTU hỏi về internship",n:"Gửi msc-mkg@ntu.edu.sg (MMS) và mim@ntu.edu.sg (MiM): internship có tính tín chỉ không, Student's Pass có cover kỳ internship không",ids:["n-mim","n-mms"],k:"ntu"},
+    {who:"t",d:"2026-10-31",t:"Bắt đầu tìm công ty internship cho MOTI",n:"Internship MT5766 phải tự tìm, ít nhất 4 tháng. Bắt đầu kết nối từ giờ để kịp học kỳ 2 (tháng 1/2028)",ids:["t-moti"],k:"nus"},
     {who:"b",d:"2026-11-21",t:"Đi Hàn 21 đến 24/11",n:"Nghỉ ôn mấy ngày này",ids:["life"],k:"life",life:1},
     {who:"t",d:"2026-12-12",t:"Hồ sơ MOTI sẵn sàng",n:"Chỉ còn chờ điểm GMAT",ids:["t-moti"],k:"nus"},
-    {who:"t",d:"2026-12-20",t:"Xong bài viết",n:"NUS MSBA (essay 350 chữ hoặc video 3 phút), NTU MSBA essays, NTU Enterprise AI statement",ids:["t-msba","t-ntumsba","t-eai"],k:"res"},
+    {who:"t",d:"2026-12-20",t:"Xong video NUS MSBA",n:"Video 3 phút cho NUS MSBA. Chỉ dùng nếu điểm quant GMAT tốt",ids:["t-msba"],k:"res"},
     {who:"n",d:"2026-12-20",t:"Xong bài viết",n:"Thư cho NUS, bài viết cho NTU. Tháng 1 chỉ còn thi và nộp",ids:["n-mai","n-msi","n-mim","n-mms"],k:"res"},
     {who:"b",d:"2027-01-08",t:"Thi GMAT",n:"Thái thi 8/1 ở VNPro. Nguyên thi cùng tuần (dự kiến)",ids:["gmat"],k:"res",main:1},
     {who:"b",d:"2027-01-12",t:"Có điểm GMAT lần 1",n:"Điểm ổn thì nộp luôn. Muốn thi lại thì thi khoảng 26/1, các deadline 31/1 sẽ không kịp",ids:["gmat"],k:"res"},
     {who:"t",d:"2027-01-15",t:"Nộp NUS MOTI",n:"Nộp kèm điểm GMAT, xét liên tục nên nộp sớm",ids:["t-moti"],k:"nus",main:1,school:1},
-    {who:"t",d:"2027-01-24",t:"Nộp NUS MSBA, NUS AI & Innovation, NTU MSBA round 2",n:"Hạn của trường 31/1, nộp sớm 1 tuần bằng điểm GMAT lần 1. NUS MSBA và NTU MSBA: điền email 2 referee khi nộp",ids:["t-msba","t-aii","t-ntumsba"],k:"nus",main:1,school:1},
+    {who:"t",d:"2027-01-24",t:"Nộp NUS MSBA (nếu quant GMAT tốt)",n:"Chỉ nộp nếu điểm quant lần thi 8/1 tốt. Hạn của trường 31/1, nộp sớm 1 tuần. Điền email 2 referee khi nộp",ids:["t-msba"],k:"nus",main:1,school:1},
     {who:"n",d:"2027-01-24",t:"Nộp NTU MiM và MMS (round 2)",n:"Hạn của trường 31/1, nộp sớm 1 tuần. Khi nộp điền email 2 referee, trường tự gửi form cho họ. Thi lại GMAT thì dời sang round 3",ids:["n-mim","n-mms"],k:"ntu",main:1,school:1},
     {who:"n",d:"2027-02-07",t:"Nộp NUS MAI và NUS MSI",n:"Round cuối, hạn của trường 15/2. Kịp cả khi thi lại GMAT cuối tháng 1",ids:["n-mai","n-msi"],k:"nus",main:1,school:1},
-    {who:"t",d:"2027-02-15",t:"Nộp NTU Enterprise AI",n:"Kèm điểm GMAT, trước mùa cưới. Deadline của trường là 31/3",ids:["t-eai"],k:"ntu",main:1,school:1},
     {who:"t",d:"2027-02-28",t:"Hạn cuối NUS MOTI",n:"Đã nộp từ tháng 1 thì không cần làm gì",ids:["t-moti"],k:"nus",school:1},
     {who:"b",d:"2027-03-01",t:"Bắt đầu có kết quả",n:"Các trường báo dần từ tháng 3 tới khoảng tháng 6",ids:["offer"],k:"res",main:1},
-    {who:"n",d:"2027-03-14",t:"Nộp NTU Managerial Econ (+ round 3 nếu thi lại)",n:"Hạn của trường 31/3, nộp trước mùa cưới. Round 3 của MiM và MMS nếu đã thi lại GMAT",ids:["n-me","n-mim","n-mms"],k:"safe",main:1,school:1},
-    {who:"t",d:"2027-03-14",t:"Nộp SMU MITB (+ NTU MSBA round 3 nếu thi lại)",n:"Nộp trước mùa cưới. Hạn MITB 31/5, NTU MSBA round 3 31/3",ids:["t-mitb","t-ntumsba"],k:"smu",main:1,school:1},
-    {who:"n",d:"2027-03-21",t:"Fallback: nộp SMU MiM hoặc SMU MSE (nếu cần)",n:"Không bắt buộc. Nộp nếu muốn chắc thêm hoặc GMAT không như ý (SMU nhận SMU Admission Test). Hạn MiM 31/5, MSE cuối tháng 6",ids:["n-smumim","n-smumse"],k:"smu",fb:1,school:1},
+    {who:"n",d:"2027-03-14",t:"Nộp NTU MiM và MMS round 3 (nếu thi lại GMAT)",n:"Chỉ khi đã thi lại GMAT và chưa nộp round 2. Hạn round 3 là 31/3, nộp trước mùa cưới",ids:["n-mim","n-mms"],k:"ntu",main:1,school:1},
+    {who:"t",d:"2027-03-14",t:"Nộp SMU MITB (track Digital Transformation)",n:"Trường backup, nộp trước mùa cưới. Hạn của trường 31/5",ids:["t-mitb"],k:"smu",main:1,school:1},
+    {who:"n",d:"2027-03-21",t:"Fallback: nộp SMU MiM (nếu cần)",n:"Không bắt buộc. Nộp nếu muốn chắc thêm hoặc GMAT không như ý (SMU nhận SMU Admission Test). Hạn của trường 31/5",ids:["n-smumim"],k:"smu",fb:1,school:1},
     {who:"b",d:"2027-04-03",t:"Lễ cưới ở Đà Lạt ♥",n:"Ngày hai đứa nói lời thề",ids:["life"],k:"life",life:1},
     {who:"b",d:"2027-05-15",t:"Đám cưới ở Tây Ninh 15 đến 16/5 ♥",n:"Tiệc cưới chính với hai bên gia đình",ids:["life"],k:"life",life:1},
     {who:"b",d:"2027-06-30",t:"Chốt offer",n:"Chọn trường, đặt cọc giữ chỗ, rồi làm Student's Pass",ids:["offer","visa"],k:"res",main:1},
@@ -454,24 +446,25 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
   /* what to prepare for each milestone (used by the reminder email) — key = who|date */
   var PREP={
     "b|2026-10-31":["Chọn ngày thi tuần 8/1 ở VNPro","Đặt chỗ và trả phí trên mba.com","Làm 1 bài thi thử"],
+    "n|2026-10-31":["Email msc-mkg@ntu.edu.sg (MMS)","Email mim@ntu.edu.sg (MiM)","Hỏi: internship có tính tín chỉ không, Student's Pass có cover không"],
+    "t|2026-10-31":["Lên danh sách công ty muốn làm internship","Bắt đầu nhắn hỏi người quen ở Singapore"],
     "t|2026-12-12":["Viết statement 1 trang"],
-    "t|2026-12-20":["Essay NUS MSBA (hoặc video 3 phút)","Essays NTU MSBA","Statement AI & Innovation và Enterprise AI"],
-    "n|2026-12-20":["2 thư cho NUS (MAI, MSI), mỗi thư tối đa 500 chữ","Bài viết NTU MiM và MMS","Bài 600 chữ cho Managerial Econ","Hỏi trước 2 người viết thư giới thiệu"],
+    "t|2026-12-20":["Quay video 3 phút cho NUS MSBA"],
+    "n|2026-12-20":["2 thư cho NUS (MAI, MSI), mỗi thư tối đa 500 chữ","Bài viết NTU MiM và MMS","Hỏi trước 2 người viết thư giới thiệu"],
     "b|2027-01-08":["Làm 1 bài thi thử full","Mang passport bản gốc"],
-    "b|2027-01-12":["Xem điểm: nộp luôn hay thi lại","Gửi điểm cho các trường"],
+    "b|2027-01-12":["Xem điểm: nộp luôn hay thi lại","Thái: quant tốt thì nộp NUS MSBA, không thì bỏ","Gửi điểm cho các trường"],
     "t|2027-01-15":["Nộp MOTI kèm điểm GMAT"],
-    "t|2027-01-24":["Điền email 2 referee","NUS MSBA: kiểm điểm trước khi nộp"],
+    "t|2027-01-24":["Kiểm điểm quant: tốt mới nộp","Điền email 2 referee","Nộp video 3 phút"],
     "n|2027-01-24":["Điền email 2 người giới thiệu","Nộp bài viết, trả phí"],
     "n|2027-02-07":["Nộp 2 thư NUS, trả phí"],
-    "t|2027-02-15":["Statement kèm điểm GMAT"],
     "b|2027-03-01":["Mỗi tuần xem email của trường"],
-    "n|2027-03-14":["Nộp bài 600 chữ","Nếu thi lại GMAT: nộp thêm MiM, MMS"],
-    "t|2027-03-14":["Dùng lại 2 essay MITB","Nếu thi lại GMAT: nộp NTU MSBA round 3"],
-    "n|2027-03-21":["Chỉ khi cần: chọn SMU MiM hoặc MSE"],
+    "n|2027-03-14":["Chỉ khi thi lại GMAT: nộp MiM, MMS round 3","Điền email 2 người giới thiệu"],
+    "t|2027-03-14":["Dùng lại 2 essay MITB","Chọn track Digital Transformation khi nộp"],
+    "n|2027-03-21":["Chỉ khi cần: nộp SMU MiM","Không chọn bỏ internship"],
     "b|2027-06-30":["Chọn trường, đặt cọc","Làm Student's Pass"]
   };
   EV.forEach(function(e){var x=PREP[e.who+"|"+e.d];if(x)e.prep=x});
-  var PILL={"t-moti":"NUS MOTI","t-msba":"NUS MSBA","t-aii":"NUS AI&I","t-ntumsba":"NTU MSBA","t-mitb":"SMU MITB","t-eai":"NTU Enterprise AI","n-mim":"NTU MiM","n-mms":"NTU MMS","n-mai":"NUS MAI","n-msi":"NUS MSI","n-tip":"NTU TIP","n-me":"NTU Managerial Econ","n-smumim":"SMU MiM","n-smumse":"SMU MSE"};
+  var PILL={"t-moti":"NUS MOTI","t-msba":"NUS MSBA","t-mitb":"SMU MITB","n-mim":"NTU MiM","n-mms":"NTU MMS","n-mai":"NUS MAI","n-msi":"NUS MSI","n-smumim":"SMU MiM"};
 
   function D(s){var p=s.split("-").map(Number);return new Date(p[0],p[1]-1,p[2])}
   var today=new Date();today.setHours(0,0,0,0);
@@ -572,20 +565,15 @@ h1,h2,h3,h4{font-family:var(--f-display);margin:0;letter-spacing:-.025em;font-st
     {grp:"Cả hai",who:"b"},
     {id:"gmat",label:"Ôn và thi GMAT",k:"res",who:"b",prep:["2026-10-11","2027-01-08"],plan:[["2026-10-31","đặt lịch"],["2027-01-08","thi 8/1"]],retake:["2027-01-09","2027-01-26"]},
     {grp:"Nguyên",who:"n"},
-    {id:"n-mim",label:"NTU MiM",k:"ntu",who:"n",prep:["2026-11-01","2027-01-24"],plan:[["2027-01-24","nộp 24/1"]],slack:["2027-01-25","2027-01-31"],dl:"2027-01-31",retake:["2027-02-01","2027-03-31"],alt:["2027-03-31","R3 31/3"]},
-    {id:"n-mms",label:"NTU MMS",k:"ntu",who:"n",prep:["2026-11-01","2027-01-24"],plan:[["2027-01-24","nộp 24/1"]],slack:["2027-01-25","2027-01-31"],dl:"2027-01-31",retake:["2027-02-01","2027-03-31"],alt:["2027-03-31","R3 31/3"]},
+    {id:"n-mim",label:"NTU MiM",k:"ntu",who:"n",prep:["2026-11-01","2027-01-24"],plan:[["2026-10-31","email"],["2027-01-24","nộp 24/1"]],slack:["2027-01-25","2027-01-31"],dl:"2027-01-31",retake:["2027-02-01","2027-03-31"],alt:["2027-03-31","R3 31/3"]},
+    {id:"n-mms",label:"NTU MMS",k:"ntu",who:"n",prep:["2026-11-01","2027-01-24"],plan:[["2026-10-31","email"],["2027-01-24","nộp 24/1"]],slack:["2027-01-25","2027-01-31"],dl:"2027-01-31",retake:["2027-02-01","2027-03-31"],alt:["2027-03-31","R3 31/3"]},
     {id:"n-mai",label:"NUS MAI",k:"nus",who:"n",prep:["2026-10-11","2027-02-07"],plan:[["2027-02-07","nộp 7/2"]],slack:["2027-02-08","2027-02-15"],dl:"2027-02-15"},
     {id:"n-msi",label:"NUS MSI",k:"nus",who:"n",prep:["2026-10-11","2027-02-07"],plan:[["2027-02-07","nộp 7/2"]],slack:["2027-02-08","2027-02-15"],dl:"2027-02-15"},
-    {id:"n-me",label:"NTU Managerial Econ",tag:"backup",k:"ntu",who:"n",prep:["2027-02-15","2027-03-14"],plan:[["2027-03-14","nộp 14/3"]],slack:["2027-03-15","2027-03-31"],dl:"2027-03-31"},
     {id:"n-smumim",label:"SMU MiM",tag:"fallback",k:"smu",who:"n",fb:1,prep:["2027-03-01","2027-03-21"],plan:[["2027-03-21","nộp 21/3"]],slack:["2027-03-22","2027-05-31"],dl:"2027-05-31"},
-    {id:"n-smumse",label:"SMU MSE",tag:"fallback",k:"smu",who:"n",fb:1,prep:["2027-03-01","2027-03-21"],plan:[["2027-03-21","nộp 21/3"]],slack:["2027-03-22","2027-06-30"],dl:"2027-06-30"},
     {grp:"Thái",who:"t"},
-    {id:"t-moti",label:"NUS MOTI",k:"nus",who:"t",prep:["2026-10-11","2027-01-15"],plan:[["2027-01-15","nộp 15/1"]],slack:["2027-01-16","2027-02-28"],dl:"2027-02-28"},
-    {id:"t-msba",label:"NUS MSBA",k:"nus",who:"t",prep:["2026-10-11","2027-01-24"],plan:[["2027-01-24","nộp 24/1"]],slack:["2027-01-25","2027-01-31"],dl:"2027-01-31"},
-    {id:"t-aii",label:"NUS AI & Innovation",k:"nus",who:"t",prep:["2026-11-01","2027-01-24"],plan:[["2027-01-24","nộp 24/1"]],slack:["2027-01-25","2027-01-31"],dl:"2027-01-31"},
-    {id:"t-ntumsba",label:"NTU MSBA",k:"ntu",who:"t",prep:["2026-11-15","2027-01-24"],plan:[["2027-01-24","nộp 24/1"]],slack:["2027-01-25","2027-01-31"],dl:"2027-01-31",retake:["2027-02-01","2027-03-31"],alt:["2027-03-31","R3 31/3"]},
-    {id:"t-eai",label:"NTU Enterprise AI",k:"ntu",who:"t",prep:["2027-01-12","2027-02-15"],plan:[["2027-02-15","nộp 15/2"]],slack:["2027-02-16","2027-03-31"],dl:"2027-03-31"},
-    {id:"t-mitb",label:"SMU MITB",tag:"backup",k:"smu",who:"t",prep:["2027-02-01","2027-03-14"],plan:[["2027-03-14","nộp 14/3"]],slack:["2027-03-15","2027-05-31"],dl:"2027-05-31"},
+    {id:"t-moti",label:"NUS MOTI",tag:"PMDS",k:"nus",who:"t",prep:["2026-10-11","2027-01-15"],plan:[["2026-10-31","tìm host"],["2027-01-15","nộp 15/1"]],slack:["2027-01-16","2027-02-28"],dl:"2027-02-28"},
+    {id:"t-msba",label:"NUS MSBA",tag:"nếu quant tốt",k:"nus",who:"t",prep:["2026-10-11","2027-01-24"],plan:[["2027-01-24","nộp 24/1"]],slack:["2027-01-25","2027-01-31"],dl:"2027-01-31"},
+    {id:"t-mitb",label:"SMU MITB · DT",tag:"backup",k:"smu",who:"t",prep:["2027-02-01","2027-03-14"],plan:[["2027-03-14","nộp 14/3"]],slack:["2027-03-15","2027-05-31"],dl:"2027-05-31"},
     {grp:"Sau khi nộp",who:"b"},
     {id:"offer",label:"Kết quả, chọn offer",k:"res",who:"b",res:["2027-03-01","2027-06-30"],cls:"offer"},
     {id:"visa",label:"Student's Pass",k:"res",who:"b",res:["2027-06-15","2027-07-20"],cls:"solid"},
